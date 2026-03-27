@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-primary-navy: #000D24;
+  --color-secondary-gold: #C5A022;
+  --color-surface: #f9f9fb;
+  --color-surface-low: #f3f3f5;
+  --color-surface-lowest: #ffffff;
+}
+
+.editorial-shadow {
+  box-shadow: 0 20px 40px -10px rgba(0, 13, 36, 0.05);
+}
+
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
