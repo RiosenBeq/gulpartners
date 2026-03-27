@@ -43,9 +43,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           <div className="flex justify-between items-center h-24">
             <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
               <img
-                src="https://lh3.googleusercontent.com/aida-public/AOk_a2I8f8XqE-O1-V4dD5PZc2g0mFk3R9hT1n7lB_y6jW_v5x4pM_s9c8b7a6Z5Y4X3W2V1U0T-S_R=s256"
+                src="/logo.png"
                 alt="Gul Partners Logo"
-                className="h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                className="h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-xl font-bold text-primary-navy tracking-tight leading-none">

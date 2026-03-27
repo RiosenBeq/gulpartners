@@ -14,8 +14,11 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata: Metadata = {
-  title: "GUL Partners | Hukuk ve Danışmanlık",
+  title: "GÜL Partners | Hukuk ve Danışmanlık",
   description: "Karmaşık hukuki süreçlerde stratejik ve sonuç odaklı çözümler sunan yeni nesil hukuk bürosu.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({

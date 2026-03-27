@@ -1,281 +1,155 @@
-import { Clock, Globe, Mail, MapPin, Phone } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Linkedin, Instagram, Twitter } from 'lucide-react';
+import Link from 'next/link';
 
 export default function Contact() {
   return (
-    <div className="bg-surface">
+    <div className="bg-surface selection:bg-secondary-gold/30">
       {/* Hero Section */}
-      <section className="relative pt-40 pb-20 bg-surface overflow-hidden">
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-surface-low rounded-bl-[100px] -mr-20 -mt-20 z-0"></div>
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <section className="relative pt-48 pb-32 bg-primary-navy overflow-hidden">
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-secondary-gold/10 rounded-full translate-x-1/3 translate-y-1/3 blur-[120px]"></div>
+        </div>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left">
           <div className="max-w-3xl">
-            <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-6 block">
-              İletişim
-            </span>
-            <h1 className="font-serif text-5xl md:text-6xl text-primary-navy font-bold tracking-tight leading-[1.1] mb-8">
-              Hukuki Çözümler İçin <span className="italic font-light text-gray-500">Bizimle Bağlantı Kurun</span>
+            <span className="text-secondary-gold text-sm font-bold tracking-[0.4em] uppercase mb-8 block font-sans">İletişim</span>
+            <h1 className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tight leading-tight mb-8">
+              Stratejik Bir <br />
+              <span className="italic font-light text-secondary-gold">Başlangıç İçin</span>
             </h1>
-            <p className="font-sans text-lg text-gray-600 leading-relaxed max-w-2xl">
-              Uzman ekibimizle görüşmek, hukuki süreçleriniz hakkında bilgi almak veya danışmanlık talebinde bulunmak için aşağıdaki formu doldurabilir veya doğrudan ofislerimizle iletişime geçebilirsiniz.
+            <p className="font-sans text-xl text-gray-400 font-light leading-relaxed">
+              Hukuki süreçlerinizi güvenle yönetmek ve proaktif çözümlerimizden yararlanmak için bizimle iletişime geçin.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Info & Form */}
-      <section className="py-24 bg-white">
+      {/* Main Contact Section */}
+      <section className="py-32 bg-white">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            {/* Contact Information */}
-            <div>
-              <h2 className="font-serif text-3xl font-bold text-primary-navy mb-8">
-                Merkez Ofis
-              </h2>
-              <div className="space-y-8">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-surface-low flex items-center justify-center rounded-sm flex-shrink-0">
-                    <MapPin className="w-6 h-6 text-secondary-gold" />
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            {/* Contact Info Cards */}
+            <div className="lg:col-span-4 space-y-8 h-full">
+              <div className="p-10 bg-surface-low border border-gray-100 rounded-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-12 h-12 bg-primary-navy text-white flex items-center justify-center mb-8 rounded-sm group-hover:bg-secondary-gold transition-colors">
+                  <MapPin className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Merkez Ofis</h3>
+                <p className="text-gray-500 leading-relaxed font-light mb-6">
+                  Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul
+                </p>
+                <a 
+                  href="https://goo.gl/maps/shisli-istanbul" 
+                  target="_blank" 
+                  className="text-xs font-bold tracking-widest text-primary-navy/40 hover:text-secondary-gold transition-colors uppercase"
+                >
+                  Haritada Görüntüle &rarr;
+                </a>
+              </div>
+
+              <div className="p-10 bg-surface-low border border-gray-100 rounded-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-12 h-12 bg-primary-navy text-white flex items-center justify-center mb-8 rounded-sm group-hover:bg-secondary-gold transition-colors">
+                  <Phone className="w-6 h-6" />
+                </div>
+                <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Telefon & Destek</h3>
+                <div className="space-y-4">
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-1">Sabit Hat</span>
+                    <a href="tel:+902122113345" className="text-lg text-primary-navy hover:text-secondary-gold transition-colors">+90 (212) 211 3345</a>
                   </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-bold text-primary-navy mb-2">Adres</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Levent, Büyükdere Cd. No:195<br />
-                      34394 Şişli/İstanbul, Türkiye
-                    </p>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] text-gray-400 font-bold uppercase tracking-wider mb-1">GSM / WhatsApp</span>
+                    <a href="tel:+905330940792" className="text-lg text-primary-navy hover:text-secondary-gold transition-colors">+90 533 094 0792</a>
                   </div>
                 </div>
+              </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-surface-low flex items-center justify-center rounded-sm flex-shrink-0">
-                    <Phone className="w-6 h-6 text-secondary-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-bold text-primary-navy mb-2">Telefon</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      <a href="tel:+902125550123" className="hover:text-secondary-gold transition-colors">
-                        +90 (212) 555 0123
-                      </a>
-                      <br />
-                      <a href="tel:+902125550124" className="hover:text-secondary-gold transition-colors">
-                        +90 (212) 555 0124
-                      </a>
-                    </p>
-                  </div>
+              <div className="p-10 bg-surface-low border border-gray-100 rounded-sm hover:shadow-xl transition-all duration-500 group">
+                <div className="w-12 h-12 bg-primary-navy text-white flex items-center justify-center mb-8 rounded-sm group-hover:bg-secondary-gold transition-colors">
+                  <Linkedin className="w-6 h-6" />
                 </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-surface-low flex items-center justify-center rounded-sm flex-shrink-0">
-                    <Mail className="w-6 h-6 text-secondary-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-bold text-primary-navy mb-2">E-posta</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      <a href="mailto:info@gulpartners.com" className="hover:text-secondary-gold transition-colors">
-                        info@gulpartners.com
-                      </a>
-                      <br />
-                      <a href="mailto:careers@gulpartners.com" className="hover:text-secondary-gold transition-colors">
-                        careers@gulpartners.com
-                      </a>
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-surface-low flex items-center justify-center rounded-sm flex-shrink-0">
-                    <Clock className="w-6 h-6 text-secondary-gold" />
-                  </div>
-                  <div>
-                    <h3 className="font-serif text-xl font-bold text-primary-navy mb-2">Çalışma Saatleri</h3>
-                    <p className="text-gray-600 leading-relaxed">
-                      Pazartesi - Cuma: 09:00 - 18:00<br />
-                      Hafta sonu: Kapalı
-                    </p>
-                  </div>
+                <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Dijital Varlık</h3>
+                <div className="flex gap-4">
+                  <a href="https://www.linkedin.com/in/avbatuhanbulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                  <a href="https://www.instagram.com/batuhan_bulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="https://x.com/avbatuhanbulut" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                    <Twitter className="w-5 h-5" />
+                  </a>
                 </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <div className="bg-surface p-10 rounded-sm editorial-shadow">
-              <h2 className="font-serif text-2xl font-bold text-primary-navy mb-8">
-                Mesaj Gönderin
-              </h2>
-              <form className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Adınız
-                    </label>
-                    <input
-                      type="text"
-                      id="firstName"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-secondary-gold focus:ring-1 focus:ring-secondary-gold transition-colors"
-                      placeholder="Adınız"
+            <div className="lg:col-span-8 bg-surface-low p-12 md:p-20 border border-gray-100 rounded-sm">
+              <h2 className="font-serif text-3xl font-bold text-primary-navy mb-12">Detaylı Bilgi Formu</h2>
+              <form className="space-y-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+                  <div className="relative group">
+                    <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Ad Soyad</label>
+                    <input 
+                      type="text" 
+                      className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
+                      placeholder="Örn: Batuhan Bulut"
                     />
                   </div>
-                  <div>
-                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">
-                      Soyadınız
-                    </label>
-                    <input
-                      type="text"
-                      id="lastName"
-                      className="w-full px-4 py-3 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-secondary-gold focus:ring-1 focus:ring-secondary-gold transition-colors"
-                      placeholder="Soyadınız"
+                  <div className="relative group">
+                    <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">E-Posta Adresi</label>
+                    <input 
+                      type="email" 
+                      className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
+                      placeholder="info@gulpartners.com"
                     />
                   </div>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    E-posta Adresiniz
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-secondary-gold focus:ring-1 focus:ring-secondary-gold transition-colors"
-                    placeholder="ornek@sirket.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Konu
-                  </label>
-                  <select
-                    id="subject"
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-secondary-gold focus:ring-1 focus:ring-secondary-gold transition-colors"
-                  >
-                    <option value="">Lütfen bir konu seçin</option>
-                    <option value="corporate">Şirketler Hukuku</option>
-                    <option value="arbitration">Uluslararası Tahkim</option>
-                    <option value="ip">Fikri Mülkiyet</option>
-                    <option value="other">Diğer</option>
+                <div className="relative group">
+                  <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Konu / Uzmanlık Alanı</label>
+                  <select className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg appearance-none cursor-pointer">
+                    <option>Kira ve Gayrimenkul Hukuku</option>
+                    <option>İş ve Sosyal Güvenlik Hukuku</option>
+                    <option>Ticaret ve Şirketler Hukuku</option>
+                    <option>Diğer</option>
                   </select>
                 </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Mesajınız
-                  </label>
-                  <textarea
-                    id="message"
-                    rows={5}
-                    className="w-full px-4 py-3 bg-white border border-gray-200 rounded-sm focus:outline-none focus:border-secondary-gold focus:ring-1 focus:ring-secondary-gold transition-colors resize-none"
-                    placeholder="Size nasıl yardımcı olabiliriz?"
+                <div className="relative group">
+                  <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Mesajınız</label>
+                  <textarea 
+                    rows={4} 
+                    className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg resize-none"
+                    placeholder="Hukuki durumunuzu kısaca özetleyin..."
                   ></textarea>
                 </div>
-                <button
-                  type="button"
-                  className="w-full bg-primary-navy text-white px-8 py-4 rounded-sm text-sm font-bold hover:bg-opacity-90 transition-all duration-300"
+                <button 
+                  type="submit" 
+                  className="w-full md:w-auto px-16 py-6 bg-primary-navy text-white font-bold rounded-sm hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500 flex items-center justify-center gap-4 group"
                 >
-                  Mesajı Gönder
+                  Gönder <Send className="w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                 </button>
               </form>
             </div>
+
           </div>
         </div>
       </section>
 
-      {/* Global Offices */}
-      <section className="py-24 bg-surface-low">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-16 text-center">
-            <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">
-              Global Ağımız
-            </span>
-            <h2 className="font-serif text-3xl md:text-4xl text-primary-navy font-bold tracking-tight">
-              Uluslararası Ofislerimiz
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Office 1 */}
-            <div className="bg-white rounded-sm editorial-shadow overflow-hidden group">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?q=80&w=800&auto=format&fit=crop"
-                  alt="London"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary-navy/20"></div>
-              </div>
-              <div className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <Globe className="w-5 h-5 text-secondary-gold" />
-                  <h3 className="font-serif text-xl font-bold text-primary-navy">Londra</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  100 Bishopsgate<br />
-                  London EC2N 4AG, UK
-                </p>
-                <a href="#" className="text-sm font-medium text-primary-navy hover:text-secondary-gold transition-colors">
-                  Yol Tarifi Al &rarr;
-                </a>
-              </div>
-            </div>
-
-            {/* Office 2 */}
-            <div className="bg-white rounded-sm editorial-shadow overflow-hidden group">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?q=80&w=800&auto=format&fit=crop"
-                  alt="New York"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary-navy/20"></div>
-              </div>
-              <div className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <Globe className="w-5 h-5 text-secondary-gold" />
-                  <h3 className="font-serif text-xl font-bold text-primary-navy">New York</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  One World Trade Center<br />
-                  New York, NY 10007, USA
-                </p>
-                <a href="#" className="text-sm font-medium text-primary-navy hover:text-secondary-gold transition-colors">
-                  Yol Tarifi Al &rarr;
-                </a>
-              </div>
-            </div>
-
-            {/* Office 3 */}
-            <div className="bg-white rounded-sm editorial-shadow overflow-hidden group">
-              <div className="h-48 overflow-hidden relative">
-                <img
-                  src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?q=80&w=800&auto=format&fit=crop"
-                  alt="Dubai"
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary-navy/20"></div>
-              </div>
-              <div className="p-8">
-                <div className="flex items-center gap-2 mb-4">
-                  <Globe className="w-5 h-5 text-secondary-gold" />
-                  <h3 className="font-serif text-xl font-bold text-primary-navy">Dubai</h3>
-                </div>
-                <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                  DIFC, Gate Village 4<br />
-                  Dubai, UAE
-                </p>
-                <a href="#" className="text-sm font-medium text-primary-navy hover:text-secondary-gold transition-colors">
-                  Yol Tarifi Al &rarr;
-                </a>
-              </div>
-            </div>
-          </div>
+      {/* Map Placeholder */}
+      <section className="h-[600px] w-full bg-gray-100 flex items-center justify-center relative group">
+        <div className="absolute inset-0 grayscale contrast-125 opacity-70 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000">
+           <iframe 
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.232334812376!2d29.006859776510304!3d41.06385221664426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab652f75845c1%3A0xc66519183617349b!2sEsentepe%2C%20Kore%20Şehitleri%20Cd.%20No%3A30%2C%2034394%20Şişli%2Fİstanbul!5e0!3m2!1str!2str!4v1711550000000!5m2!1str!2str" 
+             width="100%" 
+             height="100%" 
+             style={{ border: 0 }} 
+             allowFullScreen 
+             loading="lazy"
+           ></iframe>
         </div>
-      </section>
-
-      {/* Map Image (Placeholder for actual map) */}
-      <section className="h-96 w-full relative">
-        <img
-          src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2000&auto=format&fit=crop"
-          alt="Map"
-          className="w-full h-full object-cover grayscale opacity-80"
-        />
-        <div className="absolute inset-0 bg-primary-navy/10"></div>
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-          <div className="bg-white p-4 rounded-full shadow-2xl animate-pulse">
-            <MapPin className="w-8 h-8 text-secondary-gold" />
-          </div>
+        <div className="relative z-10 bg-white/50 backdrop-blur-md px-10 py-6 border border-white/20 pointer-events-none group-hover:opacity-0 transition-opacity">
+            <span className="text-primary-navy font-bold tracking-widest text-xs uppercase">Konum Bilgisini Keşfedin</span>
         </div>
       </section>
     </div>
