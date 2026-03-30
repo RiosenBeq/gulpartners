@@ -42,7 +42,7 @@ export default function Home() {
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
             className="w-full h-full object-cover grayscale brightness-75 scale-105"
-            alt="Gul Partners Office"
+            alt="Gül Partners Ofisi"
           />
           <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-white to-transparent z-10"></div>
         </div>

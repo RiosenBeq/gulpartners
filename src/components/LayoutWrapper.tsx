@@ -244,10 +244,10 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="lg:col-span-2">
-              <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">DISIPLINLER</h4>
+              <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">DİSİPLİNLER</h4>
               <ul className="space-y-6">
                 <li><Link href="/uzmanlik#gayrimenkul" className="text-gray-500 hover:text-white transition-all text-[11px] uppercase tracking-[0.3em] font-medium block hover:pl-3">Gayrimenkul</Link></li>
-                <li><Link href="/uzmanlik#ticaret-hukuku" className="text-gray-500 hover:text-white transition-all text-[11px] uppercase tracking-[0.3em] font-medium block hover:pl-3">Ticaret & M&A</Link></li>
+                <li><Link href="/uzmanlik#ticaret-hukuku" className="text-gray-500 hover:text-white transition-all text-[11px] uppercase tracking-[0.3em] font-medium block hover:pl-3">Ticaret & Şirketler</Link></li>
                 <li><Link href="/uzmanlik#ceza-hukuku" className="text-gray-500 hover:text-white transition-all text-[11px] uppercase tracking-[0.3em] font-medium block hover:pl-3">Ceza Eliti</Link></li>
                 <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-gray-500 hover:text-white transition-all text-[11px] uppercase tracking-[0.3em] font-medium block hover:pl-3">Fikri Mülkiyet</Link></li>
               </ul>
@@ -265,7 +265,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                   <p className="text-sm leading-relaxed max-w-[240px]">Esentepe, Kore Şehitleri Cd. No:30/10 <br/> 34394 Şişli/İstanbul</p>
                 </div>
                 <div className="text-gray-400 pt-4">
-                  <span className="block text-secondary-gold/40 font-bold mb-4 uppercase tracking-[0.5em] text-[10px]">DIJITAL İLETİŞİM</span>
+                  <span className="block text-secondary-gold/40 font-bold mb-4 uppercase tracking-[0.5em] text-[10px]">DİJİTAL İLETİŞİM</span>
                   <a href="mailto:av.ferdigul@gmail.com" className="text-white hover:text-secondary-gold transition-colors block italic font-serif text-lg">av.ferdigul@gmail.com</a>
                 </div>
               </div>
@@ -276,13 +276,13 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             <div className="flex items-center gap-6">
                <div className="w-16 h-px bg-secondary-gold/30"></div>
                <p className="text-gray-600 text-[10px] uppercase font-bold tracking-[0.7em]">
-                 &copy; {new Date().getFullYear()} GÜL PARTNERS. ARCHITECTS OF JUSTICE.
+                 &copy; {new Date().getFullYear()} GÜL PARTNERS. ADALETİN MİMARLARI.
                </p>
             </div>
             <div className="flex flex-wrap justify-center gap-10 md:gap-16">
-               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">PRIVACY POLICY</Link>
-               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">TERMS OF SERVICE</Link>
-               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">KVKK</Link>
+               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">GİZLİLİK POLİTİKASI</Link>
+               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">KULLANIM KOŞULLARI</Link>
+               <Link href="#" className="text-gray-700 hover:text-white text-[9px] uppercase font-bold tracking-[0.5em] transition-colors">KVKK AYDINLATMA METNİ</Link>
             </div>
             {/* Scroll to Top */}
             <button 

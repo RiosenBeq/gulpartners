@@ -33,7 +33,7 @@ export default function Expertise() {
       subtitle: 'Global Ticaret Hukuku',
       description: 'Yerli ve yabancı ortaklı şirketlerin kuruluş, birleşme, devralma ve günlük ticari operasyonlarının hukuki zeminini oluşturuyoruz.',
       image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2600&auto=format&fit=crop',
-      features: ['Şirket Kuruluşu', 'M&A Süreçleri', 'Haksız Rekabet', 'Genel Kurul Yönetimi']
+      features: ['Şirket Kuruluşu', 'Birleşme & Devralma', 'Haksız Rekabet', 'Genel Kurul Yönetimi']
     },
     {
       id: 'ceza-hukuku',
