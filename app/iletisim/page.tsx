@@ -1,7 +1,34 @@
+'use client';
+
+import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, Linkedin, Instagram, Twitter } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: 'Kira ve Gayrimenkul Hukuku',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const whatsappNumber = "905330940792";
+    const text = `*Gül Partners - Bilgi Formu*\n\n👤 *Ad Soyad:* ${formData.name}\n📧 *E-Posta:* ${formData.email}\n📂 *Konu:* ${formData.subject}\n💬 *Mesaj:* ${formData.message}`;
+    
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
   return (
     <div className="bg-surface selection:bg-secondary-gold/30">
       {/* Hero Section */}
@@ -70,13 +97,13 @@ export default function Contact() {
                 </div>
                 <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Dijital Varlık</h3>
                 <div className="flex gap-4">
-                  <a href="https://www.linkedin.com/in/avbatuhanbulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                  <a href="https://www.linkedin.com/in/avbatuhanbulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="LinkedIn Profilesi">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="https://www.instagram.com/batuhan_bulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                  <a href="https://www.instagram.com/batuhan_bulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Instagram Profilesi">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="https://x.com/avbatuhanbulut" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm">
+                  <a href="https://x.com/avbatuhanbulut" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Twitter Profilesi">
                     <Twitter className="w-5 h-5" />
                   </a>
                 </div>
@@ -86,12 +113,16 @@ export default function Contact() {
             {/* Contact Form */}
             <div className="lg:col-span-8 bg-surface-low p-6 md:p-20 border border-gray-100 rounded-sm">
               <h2 className="font-serif text-3xl font-bold text-primary-navy mb-12">Detaylı Bilgi Formu</h2>
-              <form className="space-y-10">
+              <form className="space-y-10" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                   <div className="relative group">
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Ad Soyad</label>
                     <input 
                       type="text" 
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
                       className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
                       placeholder="Örn: Batuhan Bulut"
                     />
@@ -100,6 +131,10 @@ export default function Contact() {
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">E-Posta Adresi</label>
                     <input 
                       type="email" 
+                      name="email"
+                      required
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
                       placeholder="av.ferdigul@gmail.com"
                     />
@@ -107,17 +142,26 @@ export default function Contact() {
                 </div>
                 <div className="relative group">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Konu / Uzmanlık Alanı</label>
-                  <select className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg appearance-none cursor-pointer">
-                    <option>Kira ve Gayrimenkul Hukuku</option>
-                    <option>İş ve Sosyal Güvenlik Hukuku</option>
-                    <option>Ticaret ve Şirketler Hukuku</option>
-                    <option>Diğer</option>
+                  <select 
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg appearance-none cursor-pointer"
+                  >
+                    <option value="Kira ve Gayrimenkul Hukuku">Kira ve Gayrimenkul Hukuku</option>
+                    <option value="İş ve Sosyal Güvenlik Hukuku">İş ve Sosyal Güvenlik Hukuku</option>
+                    <option value="Ticaret ve Şirketler Hukuku">Ticaret ve Şirketler Hukuku</option>
+                    <option value="Diğer">Diğer</option>
                   </select>
                 </div>
                 <div className="relative group">
                   <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block transition-colors group-focus-within:text-secondary-gold">Mesajınız</label>
                   <textarea 
+                    name="message"
+                    required
                     rows={4} 
+                    value={formData.message}
+                    onChange={handleChange}
                     className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg resize-none"
                     placeholder="Hukuki durumunuzu kısaca özetleyin..."
                   ></textarea>

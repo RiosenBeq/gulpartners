@@ -223,9 +223,13 @@ export default function Expertise() {
                   </div>
                 </a>
               </div>
-              <button className="w-full mt-10 bg-secondary-gold text-white py-6 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-primary-navy transition-all duration-700 shadow-xl">
+              <a 
+                href="https://wa.me/905330940792?text=Merhaba,%20hızlı%20bir%20hukuki%20danışmanlık%20randevusu%20almak%20istiyorum."
+                target="_blank"
+                className="w-full mt-10 bg-secondary-gold text-white py-6 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-primary-navy transition-all duration-700 shadow-xl inline-block text-center"
+              >
                 Hızlı Randevu Alın
-              </button>
+              </a>
             </div>
 
             <div className="p-12 bg-primary-navy text-white relative overflow-hidden group">

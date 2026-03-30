@@ -1,3 +1,6 @@
+'use client';
+
+import React, { useState, use } from 'react';
 import { Shield, Scale, Landmark, Gavel, Briefcase, Building2, Heart, Award, HelpingHand, Map, ArrowLeft, Send } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -57,21 +60,36 @@ const allServices = [
   }
 ];
 
-export function generateStaticParams() {
-  return allServices.map((s) => ({
-    id: s.slug,
-  }));
-}
-
-export default async function ServiceDetail({ params }: { params: Promise<{ id: string }> }) {
-  const resolvedParams = await params;
+export default function ServiceDetail({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = use(params);
   const service = allServices.find((s) => s.slug === resolvedParams.id);
 
+  const [formData, setFormData] = useState({
+    name: '',
+    phone: '',
+    note: ''
+  });
+
   if (!service) {
-    // For services not explicitly detailed in this array, we show a generic sophisticated template
-    // Or we could call notFound()
     return notFound();
   }
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    const whatsappNumber = "905330940792";
+    const text = `*Gül Partners - Hizmet Talebi*\n\n🛡️ *Hizmet:* ${service.title}\n👤 *İsim:* ${formData.name}\n📞 *Telefon:* ${formData.phone}\n📝 *Not:* ${formData.note}`;
+    
+    const encodedText = encodeURIComponent(text);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedText}`;
+    
+    window.open(whatsappUrl, '_blank');
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
 
   return (
     <div className="bg-surface">
@@ -132,20 +150,47 @@ export default async function ServiceDetail({ params }: { params: Promise<{ id: 
             <div className="lg:col-span-4 space-y-10">
               <div className="bg-surface-low p-10 rounded-sm border border-gray-100 sticky top-32">
                 <h3 className="font-serif text-xl font-bold text-primary-navy mb-8">Danışmanlık Talebi</h3>
-                <form className="space-y-6">
+                <form className="space-y-6" onSubmit={handleSubmit}>
                   <div>
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">İsim</label>
-                    <input type="text" className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold" placeholder="Adınız" />
+                    <input 
+                      type="text" 
+                      name="name"
+                      required
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold" 
+                      placeholder="Adınız" 
+                    />
                   </div>
                   <div>
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Telefon</label>
-                    <input type="tel" className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold" placeholder="+90" />
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      required
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold" 
+                      placeholder="+90" 
+                    />
                   </div>
                   <div>
                     <label className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mb-2 block">Notunuz</label>
-                    <textarea className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold resize-none" rows={3} placeholder="Kısaca belirtin..."></textarea>
+                    <textarea 
+                      name="note"
+                      required
+                      value={formData.note}
+                      onChange={handleChange}
+                      className="w-full bg-white border border-gray-200 p-4 focus:outline-none focus:border-secondary-gold resize-none" 
+                      rows={3} 
+                      placeholder="Kısaca belirtin..."
+                    ></textarea>
                   </div>
-                  <button className="w-full bg-primary-navy text-white py-5 font-bold hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500 uppercase tracking-widest text-xs flex items-center justify-center gap-3">
+                  <button 
+                    type="submit"
+                    className="w-full bg-primary-navy text-white py-5 font-bold hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500 uppercase tracking-widest text-xs flex items-center justify-center gap-3"
+                  >
                     Bize Gönderin <Send className="w-4 h-4" />
                   </button>
                 </form>
