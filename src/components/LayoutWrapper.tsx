@@ -237,14 +237,28 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center">
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
             <div className="text-[10px] text-gray-500 font-bold tracking-[0.3em] uppercase">
               © 2026 GÜL PARTNERS. ADALETİN MİMARLARI.
             </div>
+            
+            {/* Nextgen Medya Credit */}
+            <a 
+              href="https://nextgenmedya.com.tr" 
+              target="_blank" 
+              className="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity group"
+            >
+              <div className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase">MADE BY</div>
+              <svg viewBox="0 0 100 100" className="h-5 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M20 80V20L50 50L80 20V80" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+              <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase group-hover:text-secondary-gold transition-colors">NEXTGEN MEDYA</div>
+            </a>
+
             <div className="flex gap-10">
-               <button onClick={() => openModal('privacy')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
-               <button onClick={() => openModal('kvkk')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
-               <button onClick={() => openModal('terms')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
+               <button onClick={() => openModal('privacy')} aria-label="Gizlilik Politikasını Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
+               <button onClick={() => openModal('kvkk')} aria-label="KVKK Aydınlatma Metnini Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
+               <button onClick={() => openModal('terms')} aria-label="Kullanım Şartlarını Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
             </div>
           </div>
         </div>
