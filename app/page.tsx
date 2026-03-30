@@ -1,222 +1,186 @@
-import { ArrowRight, ArrowUpRight, Building2, ChevronsDown, Handshake, Microscope, Scale, ShieldCheck, Landmark, Gavel, Users, Briefcase } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Home() {
-  const services = [
-    {
-      title: "Gayrimenkul ve Kira Hukuku",
-      slug: "gayrimenkul-ve-kira-hukuku",
-      desc: "Taşınmaz mülkiyetinden doğan tüm ihtilaflarda, kentsel dönüşüm süreçlerinde ve karmaşık kira uyuşmazlıklarında stratejik ve koruyucu çözümler sunuyoruz.",
-      icon: <Landmark className="w-8 h-8" />
-    },
-    {
-      title: "İş ve Sosyal Güvenlik Hukuku",
-      slug: "is-ve-sosyal-guvenlik-hukuku",
-      desc: "İşçi-işveren ilişkilerini modern düzeltecek düzenlemelerden, sendikal süreçlere ve sosyal güvenlik mevzuatına kadar geniş bir yelpazede danışmanlık veriyoruz.",
-      icon: <Briefcase className="w-8 h-8" />
-    },
-    {
-      title: "İcra ve İflas Hukuku",
-      slug: "icra-ve-iflas-hukuku",
-      desc: "Alacak tahsil süreçleri, konkordato ilanları ve iflas erteleme gibi hassas finansal yönetim gerektiren hukuki süreçleri titizlikle yönetiyoruz.",
-      icon: <Scale className="w-8 h-8" />
-    },
-    {
-      title: "Ticaret ve Şirketler Hukuku",
-      slug: "ticaret-ve-sirketler-hukuku",
-      desc: "Şirket kuruluşlarından birleşme ve devralmalara, kurumsal yönetimden hisse devirlerine kadar global standartlarda hukuki altyapı inşa ediyoruz.",
-      icon: <Building2 className="w-8 h-8" />
-    }
-  ];
-
   return (
-    <div className="bg-surface selection:bg-secondary-gold/30">
-      {/* Experimental Aesthetic Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020817]">
-        {/* Advanced Ambient Background */}
-        <div className="absolute inset-0 z-0">
-          {/* Moving Mesh Gradients */}
-          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary-gold/10 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[150px] animate-spin-slow"></div>
-          
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay"></div>
-          
-          <img
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
-            alt="Elite Law Atmosphere"
-            className="w-full h-full object-cover opacity-[0.12] mix-blend-luminosity scale-105"
+    <div className="bg-white selection:bg-secondary-gold/30 overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+        <div className="absolute inset-0 z-0 scale-105">
+          <img 
+            className="w-full h-full object-cover grayscale-[0.3] brightness-[0.4]" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuALZkTtvcOaPzGc309mB5IMZvS29xJrtplDTj4gDaa29Lb6IANeZvC335_f2j6pCtKoZ2tBODMJBUjSCFiL1b-6j1g1Qdy6fY0PcK7oCuxm2vaj1Qd0lsQfCbYOb_tX4VREfr2rvPQt8YPArtOMT5nAIOtqucdgBxOHw1hm_v6BUU7WRWUSoRFeSRfk4_ehljLBM0QIGbx3_9D2draTs69qSpYLsGM7qmlHwQr2a6RQNeaew434pDdwhk2MSJn9CvPA7BN0gExfdyQ" 
+            alt="Dramatic interior of a modern library"
           />
-          
-          {/* Sophisticated Vignette */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#020817] via-transparent to-[#020817]"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-transparent to-[#020817]"></div>
         </div>
-
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-20">
-          <div className="flex flex-col items-center text-center">
-            {/* Premium Glass Badge */}
-            <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-xl mb-12 transform -translate-y-4 opacity-0 animate-fade-in-up shadow-2xl" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-gold opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary-gold"></span>
-              </span>
-              <span className="text-secondary-gold text-[10px] font-bold tracking-[0.4em] uppercase">Mükemmeliyet & Sadakat</span>
-            </div>
-            
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[120px] text-white font-bold tracking-tight leading-[0.95] mb-14 max-w-6xl mx-auto">
-              Hukuku Bir <br />
-              <span className="relative inline-block mt-6">
-                <span className="relative z-10 italic font-light text-transparent bg-clip-text bg-gradient-to-br from-[#E2B93B] via-[#F3E2B1] to-[#C5A022] drop-shadow-sm">
-                  Sanata Dönüştürmek
-                </span>
-                {/* Elegant Underline Accent */}
-                <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[2px] bg-gradient-to-r from-transparent via-secondary-gold/50 to-transparent"></span>
-              </span>
+        <div className="relative z-10 max-w-7xl mx-auto px-8 w-full text-center md:text-left">
+          <div className="max-w-4xl">
+            <span className="inline-block text-secondary-gold font-sans tracking-[0.3em] uppercase text-xs mb-6 animate-fade-in font-bold">Gul Partners | Aurelian Juris</span>
+            <h1 className="font-serif text-5xl md:text-8xl text-white font-bold leading-[1.1] mb-8 tracking-tight">
+              Geleceğin Hukuk <br/><span className="italic font-light">Mimarları.</span>
             </h1>
-            
-            <p className="font-sans text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-20 leading-relaxed font-extralight transform -translate-y-2 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
-              Gül Partners, karmaşık hukuki engelleri <span className="text-white/90 font-medium">entelektüel bir derinlik</span> ve <span className="text-white/90 font-medium">stratejik öngörü</span> ile aşan yeni nesil bir hukuk mimarıdır.
+            <p className="text-xl md:text-2xl text-slate-300 font-light mb-12 max-w-2xl leading-relaxed">
+              Modern hukukta mükemmellik, stratejik derinlik ve sarsılmaz bir etik anlayışı ile şekillenir.
             </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 transform -translate-y-1 opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
-              <Link
-                href="/uzmanlik"
-                className="group relative px-12 py-6 bg-secondary-gold text-primary-navy font-bold rounded-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(197,160,34,0.3)] hover:-translate-y-1"
-              >
-                <div className="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 origin-left"></div>
-                <span className="relative flex items-center gap-4 text-sm tracking-widest uppercase">
-                  Uzmanlık Alanlarımız <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
-                </span>
+            <div className="flex flex-col md:flex-row gap-6">
+              <Link href="/iletisim" className="px-10 py-5 bg-secondary-gold text-primary-navy font-bold text-sm tracking-widest uppercase hover:bg-white transition-all duration-500 inline-block text-center shadow-2xl shadow-secondary-gold/20">
+                DOSYANIZI DANIŞIN
               </Link>
-              
-              <Link
-                href="/ekip"
-                className="group flex items-center gap-6 text-white/80 font-medium tracking-widest text-xs uppercase hover:text-white transition-all duration-300"
-              >
-                <span className="relative">
-                  Ekibimizi Keşfedin
-                  <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-secondary-gold transition-all duration-500 group-hover:w-full"></span>
-                </span>
-                <div className="flex items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:border-secondary-gold group-hover:bg-secondary-gold/5 transition-all duration-500">
-                   <Users className="w-4 h-4 group-hover:text-secondary-gold transition-colors" />
-                </div>
+              <Link href="/uzmanlik" className="px-10 py-5 border border-white/30 text-white font-medium text-sm tracking-widest uppercase hover:bg-white/10 backdrop-blur-sm transition-all duration-500 inline-block text-center">
+                UZMANLIKLARIMIZ
               </Link>
             </div>
           </div>
         </div>
-
-        {/* Minimalist Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-6 opacity-30 hover:opacity-100 transition-opacity duration-1000">
-          <div className="w-[1px] h-20 bg-gradient-to-b from-secondary-gold via-secondary-gold/20 to-transparent"></div>
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50 animate-bounce">
+          <span className="material-symbols-outlined text-4xl">keyboard_double_arrow_down</span>
         </div>
       </section>
 
-      {/* Expertise Concept - Enhanced Descriptions */}
-      <section className="py-40 bg-surface-lowest">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            <div className="lg:col-span-5 sticky top-32">
-              <span className="text-secondary-gold text-sm font-bold tracking-[0.3em] uppercase mb-8 block">
-                Disiplinli Yaklaşım
-              </span>
-              <h2 className="font-serif text-5xl md:text-6xl text-primary-navy font-bold tracking-tight leading-tight mb-10">
-                Süreci Yöneten <br />
-                <span className="italic font-light text-gray-400">Üstün Strateji</span>
-              </h2>
-              <p className="text-gray-600 text-lg leading-relaxed mb-12 max-w-md">
-                Gül Partners olarak hukuku sadece bir kurallar bütünü olarak değil, müvekkillerimizin iş dünyasındaki başarısını teminat altına alan bir kaldıraç olarak görüyoruz.
-              </p>
-              <Link
-                href="/uzmanlik"
-                className="inline-flex items-center gap-4 text-primary-navy font-bold group border-b-2 border-primary-navy/10 pb-2 hover:border-secondary-gold transition-all"
-              >
-                Tüm Detayları İncele <ArrowUpRight className="w-5 h-5 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
-              </Link>
+      {/* Services: Bento Grid Style */}
+      <section className="py-40 bg-white">
+        <div className="max-w-7xl mx-auto px-8">
+          <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+            <div className="max-w-2xl">
+              <h2 className="font-serif text-4xl md:text-6xl text-primary-navy font-bold mb-6 tracking-tight">Kurumsal Çözümler ve Stratejik Hukuk</h2>
+              <p className="text-gray-500 text-xl leading-relaxed font-light">Karmaşık hukuki süreçleri, vizyoner bir perspektifle yönetiyoruz. Global standartlarda yerel derinlik.</p>
             </div>
-            
-            <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-8 pt-12 lg:pt-0">
-              {services.map((s, i) => (
-                <div key={i} className="p-8 bg-white border border-gray-100 rounded-sm hover:shadow-[0_20px_50px_rgba(0,13,36,0.05)] transition-all duration-500 group">
-                  <div className="w-16 h-16 bg-surface-low flex items-center justify-center mb-8 group-hover:bg-primary-navy group-hover:text-white transition-colors duration-500">
-                    {s.icon}
-                  </div>
-                  <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">{s.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed mb-8">{s.desc}</p>
-                  <Link href={`/uzmanlik/${s.slug}`} className="text-[10px] font-bold tracking-widest text-primary-navy/40 uppercase group-hover:text-secondary-gold transition-colors">Yolu İncele &rarr;</Link>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision Statement - Ballandırarak Anlat */}
-      <section className="py-40 bg-primary-navy text-white relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/5 rounded-full -mr-96 -mt-96"></div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="relative">
-              <div className="aspect-[4/5] overflow-hidden rounded-sm">
-                <img
-                  src="https://images.unsplash.com/photo-1589829085413-56de8ae18c73?q=80&w=1200&auto=format&fit=crop"
-                  alt="Modern Legal Excellence"
-                  className="w-full h-full object-cover grayscale brightness-50"
-                />
-              </div>
-              <div className="absolute -bottom-10 -right-10 bg-secondary-gold p-12 hidden md:block">
-                <div className="font-serif text-6xl font-bold text-primary-navy mb-2">25+</div>
-                <div className="text-[10px] text-primary-navy/70 tracking-[0.2em] font-bold uppercase">Yıllık Güven Odaklı Deneyim</div>
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="font-serif text-4xl md:text-5xl font-bold leading-tight mb-8">
-                Hukuku Yeniden Tanımlayan <br />
-                <span className="text-secondary-gold">Vizyoner Bir Ortaklık</span>
-              </h2>
-              <div className="space-y-8 text-gray-400 leading-relaxed text-lg font-light">
-                <p>
-                  Bulut & Partners köklerinden ilham alarak şekillendirdiğimiz "önleyici hukuk" anlayışımız, müvekkillerimizi sadece kriz anlarında değil, her türlü risk oluşmadan önce koruma altına almamızı sağlar. 
-                </p>
-                <p>
-                  Bizim için her dosya, titizlikle işlenmesi gereken bir sanat eseri niteliğindedir. Şeffaflık, süreklilik ve yüksek etik değerler rehberliğinde, karmaşık ticari dinamikleri proaktif bir şekilde yönetiyoruz.
-                </p>
-                <p>
-                  Amacımız sadece hukuki zaferler kazanmak değil, müvekkillerimizin sürdürülebilir büyüme yolculuklarında en güvenilir yol arkadaşı olmaktır.
-                </p>
-              </div>
-              
-              <div className="mt-16 grid grid-cols-2 gap-12 border-t border-white/10 pt-16">
-                <div>
-                  <div className="font-serif text-4xl font-bold text-white mb-2">40+</div>
-                  <div className="text-[10px] text-secondary-gold tracking-[0.2em] font-bold uppercase italic">Uzman Avukat Kadrosu</div>
-                </div>
-                <div>
-                  <div className="font-serif text-4xl font-bold text-white mb-2">100%</div>
-                  <div className="text-[10px] text-secondary-gold tracking-[0.2em] font-bold uppercase italic">Sonuç Odaklı Çözümler</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-32 bg-white flex justify-center">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 w-full">
-          <div className="bg-surface-low p-12 md:p-24 rounded-sm flex flex-col md:flex-row justify-between items-center gap-12 group overflow-hidden relative">
-            <div className="absolute top-0 left-0 w-1 bg-secondary-gold h-0 group-hover:h-full transition-all duration-700"></div>
-            <div>
-              <h2 className="font-serif text-4xl font-bold text-primary-navy mb-4">Danışmanlığa mı İhtiyacınız Var?</h2>
-              <p className="text-gray-500 text-lg">Uzman ekibimizle şimdi iletişime geçin ve stratejik planlamanızı yapalım.</p>
-            </div>
-            <Link
-              href="/iletisim"
-              className="bg-primary-navy text-white px-12 py-5 font-bold hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500 whitespace-nowrap"
-            >
-              Hemen İletişime Geçin
+            <Link href="/uzmanlik" className="text-secondary-gold font-bold text-lg flex items-center gap-2 group border-b-2 border-secondary-gold/10 pb-1 hover:border-secondary-gold transition-all">
+              Tüm Hizmetler 
+              <span className="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
             </Link>
           </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+            {/* M&A */}
+            <div className="md:col-span-8 group relative overflow-hidden bg-white p-12 border border-slate-100 min-h-[440px] flex flex-col justify-between shadow-sm transition-all hover:shadow-2xl hover:shadow-primary-navy/5">
+              <div>
+                <span className="material-symbols-outlined text-secondary-gold text-6xl mb-10 transition-transform group-hover:scale-110 duration-500 block">handshake</span>
+                <h3 className="font-serif text-3xl font-bold text-primary-navy mb-4">Birleşme ve Devralmalar (M&A)</h3>
+                <p className="text-gray-500 max-w-md leading-relaxed font-light">Sınır ötesi operasyonlarda ve karmaşık ticari yapılandırmalarda stratejik rehberlik sağlıyoruz.</p>
+              </div>
+              <img 
+                className="absolute -right-20 bottom-0 opacity-10 group-hover:opacity-20 transition-opacity w-1/2 pointer-events-none grayscale" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqvKatVBzSnxWpqVUzMRtyztFc_D0UQFaqVCLiKqYrt0Z2Bq2VHdTtFo3n7T2BM8MxdQOVmK4-iif_qf6p5f7xlzNIjGwTB1TTiJq-tlj_GQhi6Njf1X4xZBMluFWmj0gAPXcvyHOUngeD-P8h4XDzzTVzBcXsiEo0JaW7Eb-GqMSlRlGsh39UbARbLEhP6AM6sEhTlMMF4XtLH_neytduULi7PBOXoOVzOU_tV-vEi2F6I6zSzYSCAmY8bzCk-z1NzGwj-LwCZy8" 
+                alt="Minimal office"
+              />
+            </div>
+
+            {/* Dava */}
+            <div className="md:col-span-4 group bg-primary-navy p-12 flex flex-col justify-between hover:bg-primary-navy/95 transition-all duration-500 rounded-sm">
+              <span className="material-symbols-outlined text-secondary-gold text-5xl mb-6">gavel</span>
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-white mb-4 italic">Uyuşmazlık Çözümü</h3>
+                <p className="text-slate-400 text-sm leading-relaxed font-light">Tahkim ve dava süreçlerinde sarsılmaz bir savunma ve sonuç odaklı temsil.</p>
+              </div>
+            </div>
+
+            {/* Gayrimenkul */}
+            <div className="md:col-span-4 group bg-surface-low p-12 flex flex-col justify-between hover:bg-surface-high transition-all duration-500 rounded-sm border border-gray-50">
+              <span className="material-symbols-outlined text-primary-navy text-5xl mb-6">domain</span>
+              <div>
+                <h3 className="font-serif text-2xl font-bold text-primary-navy mb-4">Gayrimenkul Hukuku</h3>
+                <p className="text-gray-500 text-sm leading-relaxed font-light">Büyük ölçekli projeler ve varlık yönetimi için hukuki altyapı tasarımı.</p>
+              </div>
+            </div>
+
+            {/* Tech */}
+            <div className="md:col-span-8 group relative overflow-hidden bg-secondary-gold p-12 flex flex-col justify-between rounded-sm shadow-xl shadow-secondary-gold/10">
+              <div className="relative z-10">
+                <span className="material-symbols-outlined text-primary-navy text-6xl mb-10 transition-transform group-hover:rotate-12 block">biotech</span>
+                <h3 className="font-serif text-3xl font-bold text-primary-navy mb-4">Geleceğin Teknolojileri</h3>
+                <p className="text-primary-navy/80 max-w-md leading-relaxed font-semibold">AI, Web3 ve veri güvenliği alanlarında hukuki inovasyon ve uyumluluk danışmanlığı.</p>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About/Vision */}
+      <section className="py-40 relative bg-white border-y border-gray-100 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
+          <div className="relative group">
+            <div className="aspect-[4/5] overflow-hidden group-hover:shadow-3xl transition-shadow duration-700">
+              <img 
+                className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9lwY_GEGSuEP-TedP_QPPicgtY-UIjJ1Z7pD3Q7rpz_xn4YaoQsGq_zFo9TMZUnFG1o3jg2ukyBiusnunkGuzNed1bPQ3B12gH91ZRyUMMX_rFgTqXrHFeOHkOtka--6gG64ahH2B8Gu5Zg7Yx_zVSKcJcJOJ6-wzP1962UizWlpZevoe64YuKCqVGE92axlJUmBF3JSto6w0z1K1rZH_51wBruuiEPtjVeUOtSm6ZYfxd9374O8Ni7eR2gN4xDGqp09eXVM6ik4" 
+                alt="Modern skyscraper reflecion"
+              />
+            </div>
+            <div className="absolute -bottom-16 -right-16 bg-primary-navy p-16 hidden md:block shadow-2xl shadow-primary-navy/30 translate-y-4 group-hover:translate-y-0 transition-transform duration-700">
+              <p className="text-secondary-gold font-serif text-7xl font-bold mb-2">25+</p>
+              <p className="text-white font-sans uppercase tracking-[0.4em] text-[10px] font-bold">Yıllık Bilge Tecrübe</p>
+            </div>
+          </div>
+          <div>
+            <span className="text-secondary-gold font-sans tracking-[0.4em] uppercase text-[10px] font-bold mb-8 block">Vizyoner Yaklaşım</span>
+            <h2 className="font-serif text-5xl md:text-6xl text-primary-navy font-bold mb-12 leading-tight tracking-tight">Zamana Karşı <br/><span className="italic font-light text-gray-400">Sarsılmaz Bilgelik.</span></h2>
+            <div className="space-y-8 text-gray-500 text-lg leading-relaxed font-light italic">
+              <p>Gul Partners olarak biz, hukuku sadece bir kurallar bütünü olarak değil, toplumun ve iş dünyasının temel taşı olarak görüyoruz. Vizyonumuz, müvekkillerimizin en karmaşık sorunlarını basit, etkili ve sürdürülebilir çözümlerle aşmalarını sağlamaktır.</p>
+              <p>Adalet arayışını modern teknoloji ve derin hukuki birikimle birleştirerek, Türkiye'nin ve bölgenin en saygın butik hukuk platformlarından biri olma yolunda ilerliyoruz.</p>
+            </div>
+            <Link href="/hakkimizda" className="mt-16 group flex items-center gap-4 text-primary-navy font-bold text-sm tracking-[0.2em] uppercase border-b-2 border-secondary-gold pb-3 hover:gap-8 transition-all duration-500">
+              HİKAYEMİZİ KEŞFEDİN
+              <span className="material-symbols-outlined text-secondary-gold text-lg">north_east</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* featured Team */}
+      <section className="py-40 bg-surface-low">
+        <div className="max-w-7xl mx-auto px-8 text-center mb-32">
+          <h2 className="font-serif text-5xl md:text-7xl text-primary-navy font-bold mb-8 tracking-tight">Öncü Zihinlerimiz</h2>
+          <p className="text-gray-400 text-xl font-light uppercase tracking-widest">Hukukun sınırlarını zorlayan disiplinler arası bir kadro.</p>
+        </div>
+        <div className="max-w-6xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-24">
+          {/* Partner 1 */}
+          <div className="group cursor-pointer">
+            <div className="aspect-[3/4] overflow-hidden mb-10 relative">
+              <img 
+                className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ5nOmxAgkcYBmRKyFYHdI2fJs-GrcT9XkNwYrQGzgkv9j8KYqiKVQXInhvqnPEEkFOQY4K8DatdeYy3ETMwf8nu3gd4ho2FnBExPR3U_tPWSo0wbwVV6TYPCINnIzZQ7QL4yKY8CFBT4Y7DOE5rVMkdN2PiJrVb2p6UQgw8pvHV9H92vmv8ur1u9Ayw4aUw28CL6louzOYgEqI2bduWG0WNBHkwU9BFAmUa9gE3dYlU1OQuRVPSUIj6LAYuR1CAg3IWsbnYKrUAc" 
+                alt="Portrait of Dr. Elias Gul"
+              />
+              <div className="absolute inset-0 bg-primary-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
+            </div>
+            <h3 className="font-serif text-4xl font-bold text-primary-navy mb-3">Dr. Elias Gul</h3>
+            <p className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-[10px] font-bold mb-6">KURUCU ORTAK / M&A BAŞKANI</p>
+            <p className="text-gray-500 leading-relaxed font-light">Uluslararası tahkim ve stratejik birleşmeler alanında 20 yılı aşkın tecrübe ile hukuki danışmanlık lideri.</p>
+          </div>
+          {/* Partner 2 */}
+          <div className="group cursor-pointer md:mt-32">
+            <div className="aspect-[3/4] overflow-hidden mb-10 relative">
+              <img 
+                className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBK_GBK-xU9QPPH-NcUVMqw_0A_stQpdeYazjhK7RM-zJRB0NOGeZjhwd44QlKjoKwMn30kKxmGAlDcqEWZMcF6dPjfZkItTbCvMal8Vc6_U-jdBq3X9cgdahTqKVzDo3Jm9wz2rfjk_Z4xjBM4J-B9yyGymfFEUYuTeQ6zYjgf7gTcvViBXJn_l5lZfO5m4-noVjDpclvwbgI82ixosWcgf5dvfpK084Wz40Sr-gT1tcuXxVUHQ7nGXhcCyOj5eF_Kko_dQ9sbdOM" 
+                alt="Portrait of Elena Thorne"
+              />
+              <div className="absolute inset-0 bg-primary-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
+            </div>
+            <h3 className="font-serif text-4xl font-bold text-primary-navy mb-3">Elena Thorne</h3>
+            <p className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-[10px] font-bold mb-6">YÖNETİCİ ORTAK / TEKNOLOJİ HUKUKU</p>
+            <p className="text-gray-500 leading-relaxed font-light">Dijital dönüşüm ve veri koruma stratejilerinde global ölçekte tanınan uzmanlık.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Immersive CTA Area */}
+      <section className="relative h-[700px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 scale-110">
+          <img 
+            className="w-full h-full object-cover" 
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl6qQ6R1YF8a1U8r6WB_rSpIeR2nfVAENy3P3CDj1kHc-yLTntOZ9K-LrGCmZ1_Ltwk_acIyM5G8HLWSfkWZhDohlJTPEhWRrLmEvqpxzB5d0xAgVndy2nslls6kLRtvbctNKg4hh2eolRaiARPf17d64YJtKKsLY6PqCrfpbZd9lI9jOwCJUZps1nU1yxb9xOzoUWLbS0aCGE9pkLGj9M1z30fbnlPYR-2G2ONNaKheYflP76TmvaWPZmP-rz3pW_-3JBjhNBxJk" 
+            alt="Corporate boardroom"
+          />
+          <div className="absolute inset-0 bg-primary-navy/85 backdrop-blur-[4px]"></div>
+        </div>
+        <div className="relative z-10 max-w-5xl mx-auto px-8 text-center group">
+          <h2 className="font-serif text-5xl md:text-8xl text-white font-bold mb-12 leading-tight tracking-tight">Dosyanızı Uzmanına <br/><span className="text-secondary-gold italic">Danışın.</span></h2>
+          <p className="text-slate-300 text-xl font-light mb-16 max-w-2xl mx-auto italic">Hukuki süreçlerinizde netlik ve güven için bizimle iletişime geçin.</p>
+          <Link href="/iletisim" className="bg-secondary-gold text-primary-navy px-16 py-8 font-bold text-sm tracking-[0.4em] uppercase hover:bg-white hover:text-primary-navy transition-all duration-700 shadow-3xl shadow-secondary-gold/20 inline-block group-hover:scale-105 transform">
+            HUKUKİ DANIŞMANLIK ALIN
+          </Link>
         </div>
       </section>
     </div>
