@@ -67,7 +67,7 @@ export default function Team() {
                 <span className="italic font-light text-gray-400">Mimarları.</span>
               </h1>
               <p className="text-xl text-gray-500 font-light max-w-2xl leading-relaxed mb-12 italic">
-                Gul Partners, küresel vizyonu ve yerel uzmanlığıyla karmaşık hukuki süreçleri stratejik birer avantaja dönüştürür. Ekibimiz, disiplin ve tutkuyla şekillenmiş bir tecrübe mirasını temsil eder.
+                Bulut & Partners, küresel vizyonu ve yerel uzmanlığıyla karmaşık hukuki süreçleri stratejik birer avantaja dönüştürür. Ekibimiz, disiplin ve tutkuyla şekillenmiş bir tecrübe mirasını temsil eder.
               </p>
             </div>
             <div className="w-full md:w-1/3 flex justify-end">

@@ -189,22 +189,22 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <ul className="space-y-4">
                 <li>
                   <Link href="/uzmanlik" className="text-gray-400 hover:text-secondary-gold text-sm transition-colors">
-                    Şirketler Hukuku
+                    Gayrimenkul Hukuku
                   </Link>
                 </li>
                 <li>
                   <Link href="/uzmanlik" className="text-gray-400 hover:text-secondary-gold text-sm transition-colors">
-                    Birleşme & Devralmalar
+                    İş ve Sosyal Güvenlik
                   </Link>
                 </li>
                 <li>
                   <Link href="/uzmanlik" className="text-gray-400 hover:text-secondary-gold text-sm transition-colors">
-                    Fikri Mülkiyet
+                    İcra ve İflas Hukuku
                   </Link>
                 </li>
                 <li>
                   <Link href="/uzmanlik" className="text-gray-400 hover:text-secondary-gold text-sm transition-colors">
-                    Uluslararası Tahkim
+                    Ticaret & Şirketler
                   </Link>
                 </li>
               </ul>
@@ -216,16 +216,16 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               </h4>
               <ul className="space-y-4">
                 <li className="text-gray-400 text-sm flex items-start gap-3">
-                  <span className="mt-0.5">Levent, Büyükdere Cd. No:195, 34394 Şişli/İstanbul</span>
+                  <span className="mt-0.5 whitespace-pre-line">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</span>
                 </li>
                 <li className="text-gray-400 text-sm">
-                  <a href="mailto:info@gulpartners.com" className="hover:text-secondary-gold transition-colors">
-                    info@gulpartners.com
+                  <a href="mailto:info@bulutpartners.com" className="hover:text-secondary-gold transition-colors">
+                    info@bulutpartners.com
                   </a>
                 </li>
                 <li className="text-gray-400 text-sm">
-                  <a href="tel:+902125550123" className="hover:text-secondary-gold transition-colors">
-                    +90 (212) 555 0123
+                  <a href="tel:+902122113345" className="hover:text-secondary-gold transition-colors">
+                    +90 (212) 211 3345
                   </a>
                 </li>
               </ul>
@@ -234,7 +234,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
           <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-xs">
-              &copy; {new Date().getFullYear()} Gul Partners. Tüm hakları saklıdır.
+              &copy; {new Date().getFullYear()} Bulut & Partners. Tüm hakları saklıdır.
             </p>
             <div className="flex gap-6">
               <Link href="#" className="text-gray-500 hover:text-white text-xs transition-colors">
