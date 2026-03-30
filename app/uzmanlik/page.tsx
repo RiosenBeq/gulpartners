@@ -8,7 +8,7 @@ export default function Expertise() {
       title: 'Kira ve Gayrimenkul Hukuku',
       subtitle: 'Kentsel Dönüşüm Danışmanlığı',
       description: 'Tapu iptali ve tescili, kat karşılığı inşaat sözleşmeleri ve kentsel dönüşüm süreçlerinde uçtan uca hukuki destek sağlıyoruz.',
-      image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000&auto=format&fit=crop',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
     {
@@ -16,63 +16,63 @@ export default function Expertise() {
       title: 'İş ve Sosyal Güvenlik Hukuku',
       subtitle: 'Kurumsal Uyum',
       description: 'İşçi-işveren ilişkilerinin düzenlenmesi, kıdem-ihbar tazminatları ve sendikal süreçlerin yönetiminde uzman kadromuzla yanınızdayız.',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2000&auto=format&fit=crop',
       features: ['İşe İade Davaları', 'Kıdem Tazminatı', 'Hizmet Tespiti', 'İş Kazaları']
     },
     {
       id: 'icra-iflas',
       title: 'İcra ve İflas Hukuku',
       description: 'Alacak tahsil süreçleri, konkordato ilanları ve şirketlerin finansal yapılandırma süreçlerini profesyonel bir titizlikle yönetiyoruz.',
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop',
       features: ['Alacak Tahsili', 'Konkordato', 'İflas Erteleme', 'Rehin Hukuku']
     },
     {
       id: 'ticaret-hukuku',
       title: 'Sözleşmeler ve Ticaret Hukuku',
       description: 'Yerli ve yabancı ortaklı şirketlerin kuruluş, birleşme, devralma ve günlük ticari operasyonlarının hukuki zeminini oluşturuyoruz.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop',
       features: ['Şirket Kuruluşu', 'M&A Süreçleri', 'Haksız Rekabet', 'Genel Kurul Yönetimi']
     },
     {
       id: 'ceza-hukuku',
       title: 'Ceza ve İnfaz Hukuku',
       description: 'Ekonomik ve bilişim suçları başta olmak üzere, soruşturma ve kovuşturma evrelerinde stratejik savunma çözümleri sunuyoruz.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
       features: ['Ağır Ceza', 'Bilişim Suçları', 'Ekonomik Suçlar', 'İnfaz Hukuku']
     },
     {
        id: 'fikri-mulkiyet',
        title: 'Marka ve Fikri Mülkiyet Hukuku',
        description: 'Marka, patent ve endüstriyel tasarım tescilleri ile bu hakların ihlali durumunda koruma süreçlerini yönetiyoruz.',
-       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000',
+       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop',
        features: ['Marka Tescili', 'Patent Hakları', 'Telif Hakları', 'Tescil İptali']
     },
     {
       id: 'tazminat',
       title: 'Tazminat ve Değer Kaybı',
       description: 'Trafik kazaları, sigorta hukuku ve iş kazaları sonrası oluşan maddi-manevi zararların ve araç değer kaybı süreçlerinin takibi.',
-      image: 'https://images.unsplash.com/photo-1453948588355-75e888c99a5d?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1453948588355-75e888c99a5d?q=80&w=2000&auto=format&fit=crop',
       features: ['Maddi Tazminat', 'Değer Kaybı', 'Destekten Yoksunluk', 'Maluliyet']
     },
     {
       id: 'aile-hukuku',
       title: 'Boşanma ve Miras Hukuku',
       description: 'Anlaşmalı ve çekişmeli boşanma, mal rejimi tasfiyesi, velayet ve miras paylaşımı konularında hassas bir süreç yönetimi.',
-      image: 'https://images.unsplash.com/photo-1533227268408-a774695d9ae9?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1533227268408-a774695d9ae9?q=80&w=2000&auto=format&fit=crop',
       features: ['Boşanma', 'Mal Paylaşımı', 'Vasiyetname', 'İzale-i Şuyu']
     },
     {
       id: 'arabuluculuk',
       title: 'Alternatif Uyuşmazlık Çözümleri',
       description: 'Arabuluculuk süreçlerinde profesyonel danışmanlık ve uyuşmazlıkların mahkemeye gitmeden hızlıca çözümlenmesi.',
-      image: 'https://images.unsplash.com/photo-1544650039-2287232258aa?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1544650039-2287232258aa?q=80&w=2000&auto=format&fit=crop',
       features: ['Arabuluculuk', 'Uzlaştırma', 'Protokol Hazırlama', 'Tahkim']
     },
     {
       id: 'idare-vergi',
       title: 'İmar, İdare ve Vergi Hukuku',
       description: 'İdari işlemlerin iptali, tam yargı davaları ve vergi cezalarına karşı hukuki koruma ve itiraz süreçleri.',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2000',
+      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2000&auto=format&fit=crop',
       features: ['İptal Davaları', 'Vergi İtirazları', 'İmar Davaları', 'Kamulaştırma']
     }
   ];

@@ -52,6 +52,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <img
                 src="/logo.png"
                 alt="Gul Partners Logo"
+                style={{ mixBlendMode: 'multiply' }}
                 className={cn(
                   "w-auto object-contain transition-all duration-700 scale-100 group-hover:scale-110",
                   isScrolled ? "h-24" : "h-36"
@@ -139,7 +140,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 <img
                   src="/logo.png"
                   alt="Bulut & Partners Logo"
-                  className="h-32 w-auto object-contain brightness-0 invert opacity-90"
+                  style={{ mixBlendMode: 'lighten', filter: 'brightness(0) invert(1)' }}
+                  className="h-32 w-auto object-contain opacity-90"
                 />
               </div>
               <p className="text-gray-400 text-lg leading-relaxed max-w-md font-light italic">
