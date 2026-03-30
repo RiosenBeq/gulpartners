@@ -30,7 +30,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-surface selection:bg-secondary-gold/30">
+    <div className="bg-surface selection:bg-secondary/20 min-h-screen">
       {/* Hero Section */}
       <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -56,7 +56,7 @@ export default function Contact() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 md:py-32 bg-white">
+      <section className="py-20 md:py-32 bg-surface">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
             
@@ -173,9 +173,9 @@ export default function Contact() {
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full md:w-auto px-16 py-6 bg-primary text-on-primary font-bold hover:bg-secondary transition-all duration-500 flex items-center justify-center gap-4 group uppercase text-[10px] tracking-[0.4em]"
+                  className="w-full md:w-auto px-16 py-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold hover:from-primary-container hover:to-primary transition-all duration-700 flex items-center justify-center gap-4 group uppercase text-[10px] tracking-[0.4em] shadow-xl hover:-translate-y-1 hover:shadow-2xl border border-outline-variant/30"
                 >
-                  Gönder <Send className="w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
+                  GÖNDER <Send className="w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                 </button>
               </form>
             </div>

@@ -44,7 +44,7 @@ export default function Team() {
   const otherTeam = teamMembers.filter(m => ![1, 2].includes(m.id));
 
   return (
-    <div className="bg-white selection:bg-secondary/20 antialiased overflow-x-hidden">
+    <div className="bg-surface selection:bg-secondary/20 antialiased overflow-x-hidden">
       {/* Editorial Header Section */}
       <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
@@ -70,7 +70,7 @@ export default function Team() {
       </section>
 
       {/* Leading Minds Split Layout */}
-      <section className="py-48 bg-white relative overflow-hidden">
+      <section className="py-48 bg-surface relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-40 items-center">
             {foundingPartners.map((member) => (
@@ -106,24 +106,24 @@ export default function Team() {
       <section className="py-48 bg-surface-low border-y border-outline-variant/20">
         <div className="max-w-7xl mx-auto px-12">
           <div className="mb-32 text-left max-w-2xl">
-            <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary-navy leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-gray-400">Takvim Yönetimi.</span></h2>
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-primary/40">Takvim Yönetimi.</span></h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-200 border border-gray-200 overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/10 border border-outline-variant/10 overflow-hidden shadow-2xl">
             {otherTeam.map((member) => (
-              <div key={member.id} className="group bg-white p-2 text-center transition-all duration-700 hover:bg-primary-navy">
-                <div className="aspect-square overflow-hidden mb-8 relative">
+              <div key={member.id} className="group bg-surface p-2 text-center transition-all duration-700 hover:bg-primary">
+                <div className="aspect-square overflow-hidden mb-8 relative bg-surface-low">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-105"
+                    className="w-full h-full object-cover grayscale transition-all duration-1000 transform group-hover:scale-105 group-hover:grayscale-0 mix-blend-multiply"
                   />
                 </div>
                 <div className="px-6 pb-12 h-24 flex flex-col justify-center">
-                   <h4 className="font-serif text-xl font-bold text-primary-navy transition-colors group-hover:text-white leading-tight">{member.name}</h4>
+                   <h4 className="font-serif text-xl font-bold text-primary transition-colors group-hover:text-on-primary leading-tight">{member.name}</h4>
                    <div className="mt-4 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
-                     <a href="#" className="text-secondary-gold hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
-                     <a href="mailto:av.ferdigul@gmail.com" className="text-secondary-gold hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
+                     <a href="#" className="text-secondary hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
+                     <a href="mailto:av.ferdigul@gmail.com" className="text-secondary hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
                    </div>
                 </div>
               </div>
@@ -133,12 +133,12 @@ export default function Team() {
       </section>
 
       {/* Contact Banner: Minimalist Architectural */}
-      <section className="py-48 bg-white border-t border-gray-100 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary-gold/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+      <section className="py-48 bg-surface border-t border-outline-variant/10 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 translate-x-1/2 -translate-y-1/2 blur-[100px]"></div>
         <div className="max-w-7xl mx-auto px-12 text-center group">
-          <h2 className="font-serif text-7xl font-bold text-primary-navy mb-16 tracking-tight leading-[0.9]">Hukuki Geleceğinizi <br/><span className="italic font-light text-gray-400">Bize Emanet Edin.</span></h2>
-          <Link href="/iletisim" className="relative bg-primary-navy text-white px-20 py-8 font-bold text-xs tracking-[0.4em] uppercase inline-block hover:bg-secondary-gold hover:text-primary-navy transition-all duration-700 shadow-2xl">
-            DANIŞMANLIK TALEP EDİN
+          <h2 className="font-serif text-5xl md:text-7xl font-bold text-primary mb-16 tracking-tight leading-[1]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
+          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
+            DANIŞMANLIK TALEP EDİN <ArrowUpRight className="w-5 h-5 transition-transform duration-500 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2" />
           </Link>
         </div>
       </section>

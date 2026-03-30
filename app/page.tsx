@@ -44,7 +44,7 @@ export default function Home() {
         <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
         <div className="relative z-20 max-w-[1700px] mx-auto px-6 lg:px-12 w-full pt-20">
           <div className="max-w-4xl">
-            <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 font-sans backdrop-blur-md rounded-sm">
+            <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 font-sans backdrop-blur-md">
               Prestij • Güven • Miras
             </span>
             <h1 className="font-serif text-6xl md:text-[5.5rem] text-primary tracking-tighter leading-[1.05] mb-10">
@@ -55,11 +55,11 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-8 items-center">
-              <Link href="/uzmanlik" className="w-full sm:w-auto text-center bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:from-primary-container hover:to-primary transition-all duration-700 rounded-sm shadow-md">
+              <Link href="/uzmanlik" className="w-full sm:w-auto text-center bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50">
                 UZMANLIK ALANLARI
               </Link>
               <Link href="/iletisim" className="w-full sm:w-auto text-center text-primary px-6 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:text-secondary transition-all relative group/link">
-                DANIŞMANLIK ALIN <ArrowUpRight className="w-4 h-4 inline-block ml-2 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                DANIŞMANLIK ALIN <ArrowUpRight className="w-4 h-4 inline-block ml-2 group-hover/link:translate-x-2 group-hover/link:-translate-y-2 transition-transform duration-500" />
                 <div className="absolute bottom-3 left-6 right-8 h-[1px] bg-primary/20 group-hover/link:bg-secondary transition-colors"></div>
               </Link>
             </div>
@@ -166,8 +166,8 @@ export default function Home() {
       <section className="py-48 bg-surface border-y border-outline-variant/10">
         <div className="max-w-7xl mx-auto px-12 text-center group">
           <h2 className="font-serif text-5xl md:text-7xl font-bold text-primary mb-16 tracking-tight leading-[1]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
-          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-block hover:from-primary-container hover:to-primary rounded-sm transition-all duration-700 shadow-sm">
-            DANIŞMANLIK TALEP EDİN
+          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
+            DANIŞMANLIK TALEP EDİN <ArrowUpRight className="w-5 h-5 transition-transform duration-500 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2" />
           </Link>
         </div>
       </section>

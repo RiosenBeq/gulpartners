@@ -4,7 +4,7 @@ export default function Expertise() {
   return (
     <main className="pt-24 bg-surface text-primary font-sans antialiased">
       {/* Hero Section: The Case Header */}
-      <section className="relative w-full h-[614px] flex items-center overflow-hidden bg-surface-low">
+      <section className="relative w-full h-[100vh] min-h-[800px] flex items-center overflow-hidden bg-surface-low">
         <div className="absolute inset-0 z-0 opacity-40 grayscale mix-blend-multiply">
           <img 
             alt="Legal Authority" 
@@ -12,15 +12,18 @@ export default function Expertise() {
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-n3dRpffSUqY-DLaPznAZQwQnhE-ZWExJnMsvfcyv4lXDIVcB7Yz64-FceD5yBKZEx7Eu6ayHefI2YTMkkPfUJgB6V-R7dwXoL3lmS5pnhGxsUucvARuIBGUEzHk05PYqnx4sEYXYxohd4n4c2t-z77z8w9HiNJbJpBtoSsbVqymX7hVX5WOgmZWtVh4K013xJDqK7bNGbzctaFYtNXean0hXumC08HhYFpc2mHm8DYmkm_IFdGYgvn0g64D0A20BrgDrCreuS3M"
           />
         </div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/80 to-transparent"></div>
-        <div className="relative z-20 max-w-screen-2xl mx-auto px-8 w-full">
-          <div className="max-w-3xl">
-            <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.2em] mb-6">Expertise & Practice</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-primary tracking-tighter leading-tight mb-8">
+        <div className="absolute inset-0 z-1 bg-secondary opacity-5 mix-blend-color"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
+        <div className="relative z-20 max-w-[1700px] mx-auto px-6 lg:px-12 w-full pt-20">
+          <div className="max-w-4xl">
+            <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 font-sans backdrop-blur-md">
+              Expertise & Practice
+            </span>
+            <h1 className="font-serif text-6xl md:text-[5.5rem] text-primary tracking-tighter leading-[1.05] mb-10">
               Stratejik Hukuki <br/><span className="text-secondary italic">Mükemmeliyet.</span>
             </h1>
-            <p className="font-sans text-lg text-primary/70 max-w-xl leading-relaxed">
-              Gül & Partners, karmaşık hukuki süreçlerde disiplinlerarası bir yaklaşımla, müvekkillerine kurumsal ve bireysel düzeyde butik danışmanlık hizmeti sunar.
+            <p className="font-sans text-xl text-primary/70 max-w-2xl leading-relaxed mb-16 font-light border-l border-secondary/30 pl-8">
+              Gül & Partners, karmaşık hukuki süreçlerde disiplinlerarası bir yaklaşımla, müvekkillerine kurumsal ve bireysel düzeyde elit danışmanlık hizmeti sunar.
             </p>
           </div>
         </div>
@@ -39,7 +42,7 @@ export default function Expertise() {
           </div>
 
           {/* Bento Item 1: Şirketler Hukuku (Large Focus) */}
-          <div className="md:col-span-8 group relative overflow-hidden bg-surface-low p-10 rounded-sm border-l-4 border-secondary transition-all hover:bg-surface">
+          <div className="md:col-span-8 group relative overflow-hidden bg-surface-low p-10 border-l-[6px] border-secondary transition-all duration-700 hover:bg-surface hover:shadow-2xl">
             <div className="flex flex-col md:flex-row gap-10">
               <div className="flex-1">
                 <span className="material-symbols-outlined text-4xl text-secondary mb-6">account_balance</span>
@@ -60,8 +63,8 @@ export default function Expertise() {
                   Detayları İncele <span className="material-symbols-outlined text-sm">arrow_forward</span>
                 </Link>
               </div>
-              <div className="w-full md:w-1/3 h-64 md:h-auto overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
-                <img className="w-full h-full object-cover" alt="Corporate Law" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAatluvpt5lkAhRQH0mTxIY4CeT9cKAewvNUjOSlp6sTeyGej1w-DG4gsSf7fjgsK9D1JC8mDSZl2p5NmC3U20RU37QZACkrFgD3bteLC_1VDd2cnxEDvM_pDzC-bIUgoGS97AyILGPcNhdDgek8nyPcdsLRAJ3oeov1suXoW4Uh2DCR0rLI2uNWvTFduV8Kn-Xmqwwe0xxCYcJH0_H4FkCjMRu_2tep4gKoIpOKBxep8XMYdCJNhWUAPreRj7OZn0lZ8BkuRmC6zo"/>
+              <div className="w-full md:w-1/3 h-64 md:h-auto overflow-hidden grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105">
+                <img className="w-full h-full object-cover mix-blend-multiply" alt="Corporate Law" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAatluvpt5lkAhRQH0mTxIY4CeT9cKAewvNUjOSlp6sTeyGej1w-DG4gsSf7fjgsK9D1JC8mDSZl2p5NmC3U20RU37QZACkrFgD3bteLC_1VDd2cnxEDvM_pDzC-bIUgoGS97AyILGPcNhdDgek8nyPcdsLRAJ3oeov1suXoW4Uh2DCR0rLI2uNWvTFduV8Kn-Xmqwwe0xxCYcJH0_H4FkCjMRu_2tep4gKoIpOKBxep8XMYdCJNhWUAPreRj7OZn0lZ8BkuRmC6zo"/>
               </div>
             </div>
           </div>
@@ -80,9 +83,9 @@ export default function Expertise() {
           </div>
 
           {/* Bento Item 3: Gayrimenkul (Visual card) */}
-          <div className="md:col-span-4 relative group h-[400px] overflow-hidden bg-zinc-900 border border-outline-variant/10">
-            <img className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-transform duration-1000" alt="Real Estate Law" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpxXTz6OWl2FeQkkLEDScCFuckIF3y715UzavucQslwIGQEfVClZ0u6e8Q_ybOVIu41RhGCSOvg2_92Bv7OS6a6uwvmKDwTpW-lcfQOCvioKPB-rKjRtkZJgdm_KmBFCWM274VgfZktHnd4owqwI9-d4u_z0drciJ97vZ6sNCgkbmaxokFAkG7jlxXAKcjKpgqpQbaYBpYjMgr5FTeVSb2XPysruCWbCtP7hFCVX172lW0RfPsQrY8OFKhVRPAzyknjGsl5u2jnrY"/>
-            <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/40 to-transparent"></div>
+          <div className="md:col-span-4 relative group h-[400px] overflow-hidden bg-primary border border-outline-variant/10">
+            <img className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale transition-all duration-[1.5s] group-hover:scale-110 group-hover:grayscale-0 mix-blend-luminosity" alt="Real Estate Law" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpxXTz6OWl2FeQkkLEDScCFuckIF3y715UzavucQslwIGQEfVClZ0u6e8Q_ybOVIu41RhGCSOvg2_92Bv7OS6a6uwvmKDwTpW-lcfQOCvioKPB-rKjRtkZJgdm_KmBFCWM274VgfZktHnd4owqwI9-d4u_z0drciJ97vZ6sNCgkbmaxokFAkG7jlxXAKcjKpgqpQbaYBpYjMgr5FTeVSb2XPysruCWbCtP7hFCVX172lW0RfPsQrY8OFKhVRPAzyknjGsl5u2jnrY"/>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1c] via-[#1a1c1c]/40 to-transparent"></div>
             <div className="absolute bottom-0 left-0 p-8">
               <h3 className="font-serif text-2xl text-white mb-2">Gayrimenkul Hukuku</h3>
               <p className="text-zinc-300 text-sm mb-4">Proje geliştirme ve mülkiyet yönetimi.</p>
@@ -118,11 +121,11 @@ export default function Expertise() {
       </section>
 
       {/* Information Architecture / Process Section */}
-      <section className="bg-surface-low py-24 px-8 overflow-hidden">
+      <section className="bg-surface-low py-24 px-8 overflow-hidden border-t border-outline-variant/10">
         <div className="max-w-screen-2xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-          <div className="relative">
+          <div className="relative overflow-hidden group">
             <div className="absolute -top-10 -left-10 w-64 h-64 bg-secondary/10 rounded-full blur-3xl"></div>
-            <img className="relative z-10 w-full rounded-sm shadow-2xl grayscale brightness-90" alt="Legal Process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInfF3asGOk9aDWgSlEyEX5KTBxDB2gWlg7MTmZj9MFYZTEU8OM2Mxkx1ma9XafFcISXyfETuMhfUvZpOn6v1pHfZETy3652ngPx5Zw6C9lQE3gN77F7UJxCv2I4c8eAbzgLk2UpyCRqUFGEny2Pjy9zHJDPKbPQ8nkZ8CVt7N0fo7gtjkBf80pMUgcMoJg_-L7TyooN8cz5tDbTiRxU8XjXnSyC6XvY25mYGNa3w7kOjODYwxSN7I7iVIaG5p8gzjeSsOUdUCdio"/>
+            <img className="relative z-10 w-full shadow-2xl grayscale brightness-90 transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-[1.03] mix-blend-multiply" alt="Legal Process" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCInfF3asGOk9aDWgSlEyEX5KTBxDB2gWlg7MTmZj9MFYZTEU8OM2Mxkx1ma9XafFcISXyfETuMhfUvZpOn6v1pHfZETy3652ngPx5Zw6C9lQE3gN77F7UJxCv2I4c8eAbzgLk2UpyCRqUFGEny2Pjy9zHJDPKbPQ8nkZ8CVt7N0fo7gtjkBf80pMUgcMoJg_-L7TyooN8cz5tDbTiRxU8XjXnSyC6XvY25mYGNa3w7kOjODYwxSN7I7iVIaG5p8gzjeSsOUdUCdio"/>
           </div>
           <div>
             <h2 className="font-serif text-4xl mb-8 leading-tight text-primary">Nasıl <span className="text-secondary italic">Çalışıyoruz?</span></h2>
@@ -155,14 +158,14 @@ export default function Expertise() {
 
       {/* CTA Section */}
       <section className="py-24 px-8">
-        <div className="max-w-screen-xl mx-auto bg-primary text-on-primary p-12 md:p-20 relative overflow-hidden text-center rounded-sm">
-          <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIGzRVmh4dFePWBousCq8ryZH6WQOi1Yne1vxFBgJqssmMnZd3yrYd_CFJfN-aLNlBeH7KmbGvzMXveqSvOwOzd5kvNXdIjrcAY0ui1BRQfSeQepWMVpEdyvJTIPZKISmViGvAvq-6RKjUVYF0L83nkLpYZfVjv86NxRPdJn-45RUlyR_FB-oGwTUk4xHYBfkSLspQEz-NjotAU2qpbiD0Bp-gp4zPmlQWUem0i11vZOGGTgQoD-BQ3krF9btwVRLb4BhNddWGyms')] opacity-5 mix-blend-overlay bg-cover bg-center"></div>
+        <div className="max-w-screen-xl mx-auto bg-primary text-on-primary p-12 md:p-24 relative overflow-hidden text-center group">
+          <div className="absolute inset-0 bg-[url('https://lh3.googleusercontent.com/aida-public/AB6AXuCIGzRVmh4dFePWBousCq8ryZH6WQOi1Yne1vxFBgJqssmMnZd3yrYd_CFJfN-aLNlBeH7KmbGvzMXveqSvOwOzd5kvNXdIjrcAY0ui1BRQfSeQepWMVpEdyvJTIPZKISmViGvAvq-6RKjUVYF0L83nkLpYZfVjv86NxRPdJn-45RUlyR_FB-oGwTUk4xHYBfkSLspQEz-NjotAU2qpbiD0Bp-gp4zPmlQWUem0i11vZOGGTgQoD-BQ3krF9btwVRLb4BhNddWGyms')] opacity-5 mix-blend-overlay bg-cover bg-center grayscale transition-all duration-[2s] group-hover:grayscale-0 group-hover:scale-105 group-hover:opacity-20"></div>
           <div className="relative z-10 max-w-2xl mx-auto">
-            <h2 className="font-serif text-3xl md:text-5xl mb-8">Hukuki Güvenliğinizi Profesyonellere Emanet Edin.</h2>
-            <p className="text-on-primary/70 mb-10 text-lg font-light">Özel durumunuzu görüşmek ve uzman kadromuzdan danışmanlık almak için bizimle iletişime geçin.</p>
+            <h2 className="font-serif text-4xl md:text-5xl mb-8 leading-tight">Hukuki Güvenliğinizi Profesyonellere Emanet Edin.</h2>
+            <p className="text-on-primary/70 mb-14 text-lg font-light">Özel durumunuzu görüşmek ve uzman kadromuzdan danışmanlık almak için bizimle iletişime geçin.</p>
             <Link href="/iletisim">
-              <button className="bg-secondary hover:bg-secondary/90 text-on-primary px-10 py-4 rounded-sm font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:-translate-y-1 inline-block">
-                Randevu Alın
+              <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 inline-flex items-center gap-3 w-full sm:w-auto justify-center">
+                RANDEVU ALIN <span className="material-symbols-outlined text-sm transition-transform duration-500 group-hover:translate-x-1">north_east</span>
               </button>
             </Link>
           </div>
