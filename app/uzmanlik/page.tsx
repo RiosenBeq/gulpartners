@@ -1,164 +1,187 @@
-import { Shield, Scale, Landmark, Gavel, Briefcase, Building2, Heart, Award, HelpingHand, Map, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
+import { Linkedin, Mail } from 'lucide-react';
 
 export default function Expertise() {
-  const allServices = [
-    {
-      title: "Kira ve Gayrimenkul Hukuku",
-      slug: "gayrimenkul-ve-kira-hukuku",
-      icon: <Landmark className="w-10 h-10" />,
-      short: "Taşınmaz uyuşmazlıkları ve kentsel dönüşüm süreçlerinde stratejik yönetim.",
-      description: "Taşınmaz mülkiyetinden doğan her türlü davanın takibi, kira sözleşmelerinin hazırlanması, tahliye süreçleri ve kentsel dönüşüm alanında derinlemesine danışmanlık sağlıyoruz. Mülkiyet haklarınızın korunması ve uyuşmazlıkların en hızlı şekilde çözüme kavuşturulması temel önceliğimizdir."
-    },
-    {
-      title: "İş ve Sosyal Güvenlik Hukuku",
-      slug: "is-ve-sosyal-guvenlik-hukuku",
-      icon: <Briefcase className="w-10 h-10" />,
-      short: "İşçi-işveren ilişkilerinde proaktif ve koruyucu çözümler.",
-      description: "İşe alım süreçlerinden iş akdi feshine, toplu iş sözleşmelerinden sendikal haklara kadar geniş bir yelpazede hizmet veriyoruz. İş hukuku risklerinin minimize edilmesi ve çalışma hayatının yasal mevzuata tam uyumlu hale getirilmesi için uzman ekibimizle yanınızdayız."
-    },
-    {
-      title: "İcra ve İflas Hukuku",
-      slug: "icra-ve-iflas-hukuku",
-      icon: <Scale className="w-10 h-10" />,
-      short: "Alacak tahsilatı ve finansal yeniden yapılandırma süreçlerinde titiz yönetim.",
-      description: "Alacakların tahsili, icra takipleri, konkordato süreçleri ve iflas erteleme gibi hassas konularda müvekkillerimizin haklarını savunuyoruz. Finansal darboğazlarda stratejik çıkış yolları ve varlık yönetimi konularında profesyonel destek sunuyoruz."
-    },
-    {
-      title: "Ticaret ve Şirketler Hukuku",
-      slug: "ticaret-ve-sirketler-hukuku",
-      icon: <Building2 className="w-10 h-10" />,
-      short: "Kurumsal başarının hukuki temelini inşa ediyoruz.",
-      description: "Şirket kuruluşları, birleşme ve devralmalar (M&A), ana sözleşme revizyonları ve kurumsal yönetim danışmanlığı alanlarında küresel standartlarda hizmet veriyoruz. Ticari riskleri proaktif bir yaklaşımla yöneterek projelerinizin hukuki güvenliğini sağlıyoruz."
-    },
-    {
-      title: "Ceza ve İnfaz Hukuku",
-      slug: "ceza-ve-infaz-hukuku",
-      icon: <Gavel className="w-10 h-10" />,
-      short: "Ceza yargılamasının her aşamasında etkili savunma stratejileri.",
-      description: "Soruşturma aşamasından infaz sürecine kadar, temel hak ve özgürlüklerin korunması bilinciyle hareket ediyoruz. Ekonomik suçlar, bilişim suçları ve diğer ceza hukuku alanlarında müvekkillerimizi titizlikle temsil ediyor, adil bir yargılama süreci için çalışıyoruz."
-    },
-    {
-      title: "Marka ve Fikri Mülkiyet Hukuku",
-      slug: "marka-ve-fikri-mulkiyet-hukuku",
-      icon: <Award className="w-10 h-10" />,
-      short: "Yaratıcı değerlerinizin hukuki zırhı oluyoruz.",
-      description: "Marka, patent, faydalı model ve endüstriyel tasarım tescilleri ile bu hakların korunması uyuşmazlıklarında uzmanız. Telif hakları ve lisanslama süreçlerinde inovasyonun hukuki güvenliğini sağlayarak marka değerinizi koruyoruz."
-    },
-    {
-      title: "Tazminat Hukuku",
-      slug: "tazminat-hukuku",
-      icon: <Shield className="w-10 h-10" />,
-      short: "Maddi ve manevi zararların tazmini süreçlerinde adalet odaklı rehberlik.",
-      description: "Trafik kazaları, iş kazaları, malpraktis (doktor hatası) ve değer kaybı süreçleri başta olmak üzere, uğranılan her türlü zararın tazmini için hukuki mücadele veriyoruz. Hak kayıplarının önlenmesi ve gerçek zararın karşılanması için süreçleri uçtan uca takip ediyoruz."
-    },
-    {
-      title: "Boşanma ve Miras Hukuku",
-      slug: "bosanma-ve-miras-hukuku",
-      icon: <Heart className="w-10 h-10" />,
-      short: "Aile uyuşmazlıklarında hassas ve çözüm odaklı yaklaşım.",
-      description: "Anlaşmalı ve çekişmeli boşanma, velayet, nafaka ve mal rejimi tasfiyesi uyuşmazlıklarında insani ve hukuki boyutları dengeleyen bir hizmet sunuyoruz. Miras paylaşımı, vasiyetname hazırlama ve tereke yönetimi konularında geleceğinizi güvence altına alıyoruz."
-    },
-    {
-      title: "Alternatif Uyuşmazlık Çözümleri",
-      slug: "alternatif-uyusmazlik-cozumleri",
-      icon: <HelpingHand className="w-10 h-10" />,
-      short: "Arabuluculuk ile hızlı, gizli ve etkili çözümler.",
-      description: "Dava yoluna gitmeden uyuşmazlıkların çözümünde uzman arabulucularımızla hizmet veriyoruz. Zaman ve maliyet avantajı sağlayan, gizlilik esasına dayalı bu yöntemlerle, tarafların ortak menfaatlerini gözeterek sürdürülebilir anlaşmalar inşa ediyoruz."
-    },
-    {
-      title: "İmar, İdare ve Vergi Hukuku",
-      slug: "imar-idare-ve-vergi-hukuku",
-      icon: <Map className="w-10 h-10" />,
-      short: "Kamu ile olan hukuki süreçlerde tam denetim ve savunma.",
-      description: "İdari işlemlerin iptali, tam yargı davaları, imar planı değişikliklerine itiraz ve vergi uyuşmazlıkları alanlarında kamu otoriteleri karşısında müvekkil haklarını savunuyoruz. Bürokrasi ve mevzuat karmaşasında güvenilir bir rehberlik sunuyoruz."
-    }
-  ];
-
   return (
-    <div className="bg-surface">
+    <div className="bg-white">
       {/* Hero Section */}
-      <section className="relative pt-48 pb-32 bg-primary-navy overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-1/2 left-1/2 w-[1200px] h-[1200px] bg-secondary-gold/20 rounded-full -translate-x-1/2 -translate-y-1/2 blur-[100px]"></div>
-          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000')] bg-cover opacity-10"></div>
+      <header className="pt-48 pb-24 px-8 max-w-7xl mx-auto">
+        <div className="max-w-4xl">
+          <span className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-xs font-semibold mb-6 block">Küratörlüğünde Hukuki Mükemmellik</span>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[1.1] text-primary-navy tracking-tight mb-8">
+            Karmaşık Hukuk Süreçlerinde Mimari Hassasiyet.
+          </h1>
+          <p className="text-gray-500 text-xl leading-relaxed max-w-2xl font-light">
+            Her vaka bir yapı, her strateji bir temeldir. Gul Partners, hukuki zorlukları birer mimari disiplinle ele alarak kalıcı ve güvenli çözümler inşa eder.
+          </p>
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <span className="text-secondary-gold text-sm font-bold tracking-[0.4em] uppercase mb-10 block">Hukuki Portföyümüz</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tight mb-12">
-              Bütünsel <span className="italic font-light text-secondary-gold">Uzmanlık</span>
-            </h1>
-            <p className="text-gray-400 text-xl max-w-2xl mx-auto font-light leading-relaxed">
-              Disiplinlerarası bir yaklaşımla, hukukun her alanında derinlemesine tecrübe ve stratejik vizyon sunuyoruz.
-            </p>
-        </div>
-      </section>
+      </header>
 
-      {/* Main Services Grid */}
-      <section className="py-40 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-24">
-            {allServices.map((service, i) => (
-              <div key={i} className="group relative">
-                <div className="flex flex-col md:flex-row gap-8 items-start">
-                  <div className="w-20 h-20 flex-shrink-0 bg-surface flex items-center justify-center text-primary-navy group-hover:bg-primary-navy group-hover:text-white transition-all duration-500 rounded-sm">
-                    {service.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4 group-hover:text-secondary-gold transition-colors">{service.title}</h2>
-                    <p className="text-gray-400 font-bold text-[10px] uppercase tracking-widest mb-6">{service.short}</p>
-                    <p className="text-gray-600 leading-relaxed mb-8 font-light italic">
-                      {service.description}
-                    </p>
-                    <Link 
-                      href={`/uzmanlik/${service.slug}`} 
-                      className="inline-flex items-center gap-2 text-xs font-bold text-primary-navy group-hover:gap-4 transition-all"
-                    >
-                      DETAYLI BİLGİ <ArrowRight className="w-4 h-4 text-secondary-gold" />
-                    </Link>
+      <main className="max-w-7xl mx-auto px-8 pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+          {/* Expertise Content */}
+          <div className="lg:col-span-8 space-y-32">
+            
+            {/* Şirketler Hukuku */}
+            <section className="group">
+              <div className="mb-12 overflow-hidden aspect-[21/9] bg-surface-low rounded-sm">
+                <img 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000" 
+                  alt="Modern architectural boardroom"
+                />
+              </div>
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/3">
+                  <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4">Şirketler Hukuku</h2>
+                  <span className="text-secondary-gold text-sm font-sans tracking-widest uppercase font-bold">Kurumsal Çözümler</span>
+                </div>
+                <div className="md:w-2/3">
+                  <p className="text-gray-600 mb-8 leading-relaxed font-light">Küresel pazarda stratejik hamleler yaparken, kurumsal yapınızın hukuki güvenliğini en üst düzeyde sağlıyoruz. Birleşme ve devralmalardan genel kurul yönetimine kadar her aşamada titizlikle yanınızdayız.</p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <li className="flex items-center gap-3 text-sm font-medium text-primary-navy">
+                      <span className="material-symbols-outlined text-secondary-gold text-xl">check_circle</span>
+                      Birleşme ve Devralmalar (M&A)
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-medium text-primary-navy">
+                      <span className="material-symbols-outlined text-secondary-gold text-xl">check_circle</span>
+                      Kurumsal Yönetişim
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-medium text-primary-navy">
+                      <span className="material-symbols-outlined text-secondary-gold text-xl">check_circle</span>
+                      Stratejik Ortaklıklar
+                    </li>
+                    <li className="flex items-center gap-3 text-sm font-medium text-primary-navy">
+                      <span className="material-symbols-outlined text-secondary-gold text-xl">check_circle</span>
+                      Uyum ve Regülasyon
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            {/* Dava ve Uyuşmazlık Çözümü */}
+            <section className="group">
+              <div className="mb-12 overflow-hidden aspect-[21/9] bg-surface-low rounded-sm">
+                <img 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000" 
+                  alt="Scales of justice artistic representation"
+                />
+              </div>
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/3">
+                  <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4">Dava ve Uyuşmazlık Çözümü</h2>
+                  <span className="text-secondary-gold text-sm font-sans tracking-widest uppercase font-bold">Savunma ve Tahkim</span>
+                </div>
+                <div className="md:w-2/3">
+                  <p className="text-gray-600 mb-6 leading-relaxed font-light">Karmaşık uyuşmazlıkların çözümünde sadece savunma yapmıyor, davanın her aşamasını bir satranç ustası hassasiyetiyle planlıyoruz. Ulusal ve uluslararası tahkim süreçlerinde sarsılmaz bir temsil sağlıyoruz.</p>
+                  <Link href="/iletisim" className="inline-flex items-center gap-2 text-primary-navy font-bold border-b-2 border-secondary-gold pb-1 hover:text-secondary-gold transition-colors text-sm uppercase tracking-wider">
+                    Detaylı Süreç Analizi <span className="material-symbols-outlined text-lg">arrow_forward</span>
+                  </Link>
+                </div>
+              </div>
+            </section>
+
+            {/* Gayrimenkul Hukuku */}
+            <section className="group">
+              <div className="mb-12 overflow-hidden aspect-[21/9] bg-surface-low rounded-sm">
+                <img 
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                  src="https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000" 
+                  alt="Modern skyscrapers glass facade"
+                />
+              </div>
+              <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                <div className="md:w-1/3">
+                  <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4">Gayrimenkul Hukuku</h2>
+                  <span className="text-secondary-gold text-sm font-sans tracking-widest uppercase font-bold">Mülkiyet ve Geliştirme</span>
+                </div>
+                <div className="md:w-2/3">
+                  <p className="text-gray-600 mb-6 leading-relaxed font-light">Büyük ölçekli gayrimenkul projelerinin hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.</p>
+                  <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100">
+                    <div>
+                      <span className="block text-3xl font-serif font-bold text-primary-navy">500+</span>
+                      <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">Başarılı Proje Teslimi</span>
+                    </div>
+                    <div>
+                      <span className="block text-3xl font-serif font-bold text-primary-navy">15+</span>
+                      <span className="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-bold">Yıllık Derin Tecrübe</span>
+                    </div>
                   </div>
                 </div>
-                {/* Visual Accent */}
-                <div className="absolute -left-8 top-0 w-1 h-0 bg-secondary-gold group-hover:h-full transition-all duration-700 hidden lg:block"></div>
               </div>
-            ))}
+            </section>
+
+            {/* Fikri Mülkiyet */}
+            <section className="bg-primary-navy p-12 text-white rounded-sm overflow-hidden relative">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-secondary-gold opacity-5 blur-[100px] -mr-32 -mt-32"></div>
+              <div className="flex flex-col md:flex-row gap-12 items-center relative z-10">
+                <div className="flex-1">
+                  <span className="material-symbols-outlined text-secondary-gold text-5xl mb-6">lightbulb</span>
+                  <h2 className="font-serif text-3xl font-bold mb-6">Fikri Mülkiyet</h2>
+                  <p className="text-gray-400 leading-relaxed mb-8 font-light italic">İnovasyonunuzun ve markanızın değeri, onu ne kadar iyi koruduğunuzla ölçülür. Patent, marka ve telif hakları yönetiminde yaratıcı zekayı hukukla zırhlıyoruz.</p>
+                  <button className="border border-secondary-gold text-secondary-gold px-8 py-3 font-bold text-xs uppercase tracking-widest hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500">
+                    Marka Tescil Danışmanlığı
+                  </button>
+                </div>
+                <div className="flex-1 w-full aspect-square bg-white/5 overflow-hidden rounded-sm">
+                  <img 
+                    className="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale" 
+                    src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000" 
+                    alt="Creative concepts sketching"
+                  />
+                </div>
+              </div>
+            </section>
           </div>
-        </div>
-      </section>
 
-      {/* Philosophy Section */}
-      <section className="py-40 bg-surface-low border-y border-gray-100">
-        <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
-          <QuoteIcon className="w-16 h-16 text-secondary-gold/20 mx-auto mb-12" />
-          <h2 className="font-serif text-3xl md:text-4xl text-primary-navy font-bold italic leading-relaxed mb-12">
-            "Hukuk sadece bir kurallar bütünü değil, toplumsal güvenin ve bireysel özgürlüklerin en güçlü kalesidir."
-          </h2>
-          <div className="w-20 h-1 bg-secondary-gold mx-auto"></div>
-        </div>
-      </section>
+          {/* Sidebar */}
+          <aside className="lg:col-span-4 sticky top-32 space-y-8">
+            <div className="bg-surface-low p-10 border border-gray-100 rounded-sm shadow-2xl shadow-primary-navy/5">
+              <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Acil hukuki destek mi gerekiyor?</h3>
+              <p className="text-sm text-gray-500 mb-10 leading-relaxed font-light">Kritik durumlarda zaman en büyük varlıktır. Uzman ekibimizle anında iletişime geçin.</p>
+              <div className="space-y-4">
+                <a className="flex items-center gap-4 bg-white p-5 group transition-all hover:bg-primary-navy hover:text-white border border-gray-50" href="tel:+902120000000">
+                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white transition-colors duration-500">
+                    <span className="material-symbols-outlined">call</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-widest font-bold opacity-60">7/24 Telefon</span>
+                    <span className="font-bold text-sm">+90 (212) 000 00 00</span>
+                  </div>
+                </a>
+                <a className="flex items-center gap-4 bg-white p-5 group transition-all hover:bg-primary-navy hover:text-white border border-gray-50" href="mailto:info@gulpartners.com">
+                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white transition-colors duration-500">
+                    <span className="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-widest font-bold opacity-60">E-Posta Hattı</span>
+                    <span className="font-bold text-sm">info@gulpartners.com</span>
+                  </div>
+                </a>
+              </div>
+              <button className="w-full mt-10 bg-secondary-gold text-primary-navy py-5 font-bold text-xs uppercase tracking-widest hover:bg-primary-navy hover:text-white transition-all duration-500 rounded-sm shadow-lg shadow-secondary-gold/20">
+                Hızlı Randevu Alın
+              </button>
+            </div>
 
-      {/* Contact Section */}
-      <section className="py-32 bg-white">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-          <h3 className="font-serif text-4xl text-primary-navy font-bold mb-8">Henüz Cevabınızı Bulamadınız mı?</h3>
-          <p className="text-gray-500 text-lg mb-12 max-w-xl mx-auto">Uzman ekibimiz, özel hukuki durumlarınızı dinlemek ve size en uygun stratejiyi çizmek için hazır.</p>
-          <Link
-            href="/iletisim"
-            className="bg-primary-navy text-white px-16 py-6 font-bold hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500"
-          >
-            Soru Sorun & Randevu Alın
-          </Link>
+            <div className="p-10 bg-surface-low/50 rounded-sm border border-gray-50">
+              <h4 className="text-[10px] uppercase tracking-[0.2em] font-bold text-secondary-gold mb-6">Yayınlarımız</h4>
+              <div className="space-y-8">
+                <a className="block group" href="#">
+                  <h5 className="font-serif text-lg font-bold text-primary-navy group-hover:text-secondary-gold transition-colors leading-tight mb-2">2024 Yılı Vergi Mevzuatı Değişiklikleri Rehberi</h5>
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider">5 Dakika Okuma • Hukuk Bülteni</span>
+                </a>
+                <a className="block group" href="#">
+                  <h5 className="font-serif text-lg font-bold text-primary-navy group-hover:text-secondary-gold transition-colors leading-tight mb-2">Yapay Zeka ve Fikri Mülkiyet Hakları</h5>
+                  <span className="text-[10px] text-gray-400 uppercase font-bold tracking-wider">8 Dakika Okuma • Makale</span>
+                </a>
+              </div>
+            </div>
+          </aside>
         </div>
-      </section>
+      </main>
     </div>
-  );
-}
-
-function QuoteIcon({ className }: { className?: string }) {
-  return (
-    <svg className={className} fill="currentColor" viewBox="0 0 24 24">
-      <path d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017C19.5693 16 20.017 15.5523 20.017 15V9C20.017 8.44772 19.5693 8 19.017 8H15.017C14.4647 8 14.017 8.44772 14.017 9V12C14.017 12.5523 13.5693 13 13.017 13H11.017V21H14.017ZM5.017 21L5.017 18C5.017 16.8954 5.91243 16 7.017 16H10.017C10.5693 16 11.017 15.5523 11.017 15V9C11.017 8.44772 10.5693 8 10.017 8H6.017C5.46472 8 5.017 8.44772 5.017 9V12C5.017 12.5523 4.56928 13 4.017 13H2.017V21H5.017Z" />
-    </svg>
   );
 }
