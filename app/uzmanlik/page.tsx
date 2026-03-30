@@ -24,7 +24,7 @@ export default function Expertise() {
       title: 'Şirketler Hukuku',
       subtitle: 'Kurumsal Çözümler',
       description: 'Küresel pazarda stratejik hamleler yaparken, kurumsal yapınızın hukuki güvenliğini en üst düzeyde sağlıyoruz. Birleşme ve devralmalardan genel kurul yönetimine kadar her aşamada titizlikle yanınızdayız.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop',
       features: ['Birleşme ve Devralmalar (M&A)', 'Kurumsal Yönetişim', 'Stratejik Ortaklıklar', 'Uyum ve Regülasyon']
     },
     {
@@ -32,7 +32,7 @@ export default function Expertise() {
       title: 'Dava ve Uyuşmazlık Çözümü',
       subtitle: 'Savunma ve Tahkim',
       description: 'Karmaşık uyuşmazlıkların çözümünde sadece savunma yapmıyor, davanın her aşamasını bir satranç ustası hassasiyetiyle planlıyoruz. Ulusal ve uluslararası tahkim süreçlerinde sarsılmaz bir temsil sağlıyoruz.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
       features: ['Ağır Ceza', 'Bilişim Suçları', 'Tahkim', 'İnfaz Hukuku']
     },
     {
@@ -40,7 +40,7 @@ export default function Expertise() {
       title: 'Gayrimenkul Hukuku',
       subtitle: 'Mülkiyet ve Geliştirme',
       description: 'Büyük ölçekli gayrimenkul davalarının ve uyuşmazlıklarının hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2000&auto=format&fit=crop',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
     {
@@ -48,7 +48,7 @@ export default function Expertise() {
       title: 'İş ve Sosyal Güvenlik Hukuku',
       subtitle: 'Kurumsal Uyum Stratejileri',
       description: 'İşçi-işveren ilişkilerinin düzenlenmesi, kıdem-ihbar tazminatları ve sendikal süreçlerin yönetiminde uzman kadromuzla yanınızdayız.',
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2000&auto=format&fit=crop',
       features: ['İşe İade Davaları', 'Kıdem Tazminatı', 'Hizmet Tespiti', 'İş Kazaları']
     },
     {
@@ -56,7 +56,7 @@ export default function Expertise() {
       title: 'İcra ve İflas Hukuku',
       subtitle: 'Alacak & Risk Yönetimi',
       description: 'Alacak tahsil süreçleri, konkordato ilanları ve şirketlerin finansal yapılandırma süreçlerini profesyonel bir titizlikle yönetiyoruz.',
-      image: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2000&auto=format&fit=crop',
       features: ['Alacak Tahsili', 'Konkordato', 'İflas Erteleme', 'Rehin Hukuku']
     },
     {
@@ -73,7 +73,7 @@ export default function Expertise() {
       title: 'Tazminat ve Değer Kaybı',
       subtitle: 'Adil Hak Kazanımı',
       description: 'Trafik kazaları, sigorta hukuku ve iş kazaları sonrası oluşan maddi-manevi zararların ve araç değer kaybı süreçlerinin takibi.',
-      image: 'https://images.unsplash.com/photo-1453948588355-75e888c99a5d?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1591189863430-ab87e120f312?q=80&w=2000&auto=format&fit=crop',
       features: ['Maddi Tazminat', 'Değer Kaybı', 'Destekten Yoksunluk', 'Maluliyet']
     },
     {
@@ -81,7 +81,7 @@ export default function Expertise() {
       title: 'Boşanma ve Miras Hukuku',
       subtitle: 'Hassas Süreç Yönetimi',
       description: 'Anlaşmalı ve çekişmeli boşanma, mal rejimi tasfiyesi, velayet ve miras paylaşımı konularında hassas bir süreç yönetimi.',
-      image: 'https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=2000&auto=format&fit=crop',
       features: ['Boşanma', 'Mal Paylaşımı', 'Vasiyetname', 'İzale-i Şuyu']
     },
     {
@@ -89,7 +89,7 @@ export default function Expertise() {
       title: 'Alternatif Uyuşmazlık Çözümleri',
       subtitle: 'Moderne Çözüm Metotları',
       description: 'Arabuluculuk süreçlerinde profesyonel danışmanlık ve uyuşmazlıkların mahkemeye gitmeden hızlıca çözümlenmesi.',
-      image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2000&auto=format&fit=crop',
       features: ['Arabuluculuk', 'Uzlaştırma', 'Protokol Hazırlama', 'Tahkim']
     },
     {
@@ -97,7 +97,7 @@ export default function Expertise() {
       title: 'İmar, İdare ve Vergi Hukuku',
       subtitle: 'Kamu İlişkilerinde Denge',
       description: 'İdari işlemlerin iptali, tam yargı davaları ve vergi cezalarına karşı hukuki koruma ve itiraz süreçleri.',
-      image: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2000&auto=format&fit=crop',
       features: ['İptal Davaları', 'Vergi İtirazları', 'İmar Davaları', 'Kamulaştırma']
     }
   ];
