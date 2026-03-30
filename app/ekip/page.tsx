@@ -1,4 +1,4 @@
-import { Mail, Share2, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Team() {
@@ -50,91 +50,125 @@ export default function Team() {
     },
   ];
 
+  // Founding partners to highlight
+  const foundingPartners = teamMembers.filter(m => [1, 2].includes(m.id));
+  const otherTeam = teamMembers.filter(m => ![1, 2].includes(m.id));
+
   return (
-    <div className="bg-surface selection:bg-secondary-gold/30">
-      {/* Hero Section - Team */}
-      <section className="relative pt-48 pb-32 bg-primary-navy overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 right-0 w-[1000px] h-[1000px] bg-secondary-gold/5 rounded-full -mr-500 -mt-500 animate-spin-slow"></div>
-        </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-10">
-              <span className="text-secondary-gold text-[10px] font-bold tracking-[0.3em] uppercase">Yetkin Kadro</span>
+    <div className="bg-white selection:bg-secondary-gold/30 antialiased overflow-x-hidden">
+      {/* Hero Section */}
+      <section className="relative pt-40 pb-24 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="flex flex-col md:flex-row items-end gap-16">
+            <div className="w-full md:w-2/3">
+              <span className="inline-block text-secondary-gold font-sans tracking-[0.4em] uppercase text-[10px] font-bold mb-8 animate-fade-in">Yetkin Kadro</span>
+              <h1 className="font-serif text-5xl md:text-8xl text-primary-navy font-bold leading-[1.05] tracking-tighter mb-10">
+                Hukuki Mükemmelliğin <br />
+                <span className="italic font-light text-gray-400">Mimarları.</span>
+              </h1>
+              <p className="text-xl text-gray-500 font-light max-w-2xl leading-relaxed mb-12 italic">
+                Gul Partners, küresel vizyonu ve yerel uzmanlığıyla karmaşık hukuki süreçleri stratejik birer avantaja dönüştürür. Ekibimiz, disiplin ve tutkuyla şekillenmiş bir tecrübe mirasını temsil eder.
+              </p>
             </div>
-            <h1 className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tight leading-[1.1] mb-10">
-              Hukuki Güvenin <br />
-              <span className="italic font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary-gold to-yellow-100">Somut Yüzleri</span>
-            </h1>
-            <p className="font-sans text-xl text-gray-400 leading-relaxed max-w-2xl font-light">
-              Her biri kendi alanında akademik derinliğe ve sektörel tecrübeye sahip profesyonellerimizle, müvekkillerimizin en karmaşık sorunlarına disiplinlerarası çözümler üretiyoruz.
-            </p>
+            <div className="w-full md:w-1/3 flex justify-end">
+               <div className="p-8 border border-slate-100 bg-surface-low rounded-sm shadow-sm">
+                  <p className="text-primary-navy font-serif text-5xl font-bold mb-2">25+</p>
+                  <p className="text-gray-400 font-sans uppercase tracking-[0.2em] text-[10px] font-bold">Yıllık Güven Odaklı Deneyim</p>
+               </div>
+            </div>
           </div>
         </div>
+        <div className="absolute top-0 right-0 w-1/3 h-full bg-surface-low -z-10 translate-x-1/2 rounded-full blur-[120px] opacity-50"></div>
       </section>
 
-      {/* Unified Team Grid */}
-      <section className="py-40 bg-surface-lowest">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-24 flex items-end justify-between border-b border-gray-100 pb-12">
-            <div>
-              <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Yetkin Kadro</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-primary-navy font-bold tracking-tight">Ekibimiz</h2>
-            </div>
+      {/* Highlights: Founding Partners */}
+      <section className="py-24 bg-surface-low relative overflow-hidden">
+        <div className="absolute inset-0 z-0">
+           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/5 rounded-full -mr-96 -mt-96 animate-pulse"></div>
+        </div>
+        <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="mb-20 flex items-center justify-between">
+            <h2 className="font-serif text-4xl font-bold text-primary-navy tracking-tight">Kurucu Ortaklarımız</h2>
+            <div className="h-px flex-grow mx-12 bg-gray-200 hidden md:block"></div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 xl:gap-8">
-            {teamMembers.map((member) => (
-              <div key={member.id} className="group flex flex-col items-center text-center">
-                <div className="aspect-[3/4] w-full overflow-hidden rounded-sm mb-8 relative bg-surface-low shadow-lg shadow-primary-navy/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 lg:gap-24">
+            {foundingPartners.map((partner) => (
+              <div key={partner.id} className="group flex flex-col md:flex-row gap-10 items-start">
+                <div className="w-full md:w-1/2 aspect-[3/4] overflow-hidden relative shadow-2xl shadow-primary-navy/10 transform transition-transform duration-700 group-hover:scale-[1.02]">
                   <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
+                    src={partner.image}
+                    alt={partner.name}
+                    className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
-                    <div className="flex gap-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                      <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all">
-                        <Linkedin className="w-5 h-5" />
-                      </a>
-                      <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all">
-                        <Mail className="w-5 h-5" />
-                      </a>
-                    </div>
+                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                  <div className="absolute bottom-6 left-6 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0 duration-500">
+                    <a href="#" className="w-10 h-10 bg-white/90 backdrop-blur text-primary-navy rounded-full flex items-center justify-center hover:bg-secondary-gold hover:text-white transition-all shadow-lg">
+                      <Linkedin className="w-4 h-4" />
+                    </a>
                   </div>
                 </div>
-                <h3 className="font-serif text-xl font-bold text-primary-navy mb-2 group-hover:text-secondary-gold transition-colors duration-300">
-                  {member.name}
-                </h3>
-                <p className="text-secondary-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
-                  {member.role}
-                </p>
-                {"expertise" in member && (
-                  <p className="text-gray-500 text-xs leading-relaxed font-light line-clamp-2 px-4 italic">
-                    {member.expertise}
+                <div className="w-full md:w-1/2 pt-4">
+                  <h3 className="font-serif text-4xl font-bold text-primary-navy mb-3 leading-tight">{partner.name}</h3>
+                  <p className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-[10px] font-bold mb-6">{partner.role}</p>
+                  <p className="text-gray-500 text-lg leading-relaxed font-light italic mb-8 border-l-2 border-secondary-gold/20 pl-6">
+                    {partner.expertise}
                   </p>
-                )}
+                  <a href="#" className="group/link inline-flex items-center gap-3 text-primary-navy font-bold text-xs tracking-widest uppercase pb-1 border-b border-secondary-gold hover:gap-6 transition-all duration-500">
+                    PROFİLİ İNCELE <ArrowRight className="w-4 h-4 text-secondary-gold" />
+                  </a>
+                </div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Join the Team CTA */}
-      <section className="py-32 bg-primary-navy overflow-hidden relative">
-        <div className="absolute top-1/2 left-0 w-full h-px bg-white/5"></div>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="font-serif text-4xl font-bold text-white mb-8">Ekibimizin Bir Parçası Olun</h2>
-            <p className="text-gray-400 text-lg mb-12 font-light">Vizyoner yaklaşımımızla fark yaratmak isteyen yetenekli hukukçuları arıyoruz.</p>
-            <Link
-              href="/iletisim"
-              className="inline-flex items-center gap-3 bg-secondary-gold text-primary-navy px-12 py-5 font-bold hover:bg-white transition-all duration-500"
-            >
-              Kariyer Olanakları <ArrowRight className="w-5 h-5" />
-            </Link>
-          </div>
+      {/* Team: Grid Layout */}
+      <section className="py-24 max-w-7xl mx-auto px-8">
+        <div className="mb-20">
+          <h2 className="font-serif text-4xl font-bold text-primary-navy mb-4 tracking-tight">Uzman Kadromuz</h2>
+          <p className="text-gray-400 text-xs uppercase tracking-[0.4em] font-bold">Geleceğin Hukuk Liderleri</p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+          {otherTeam.map((member) => (
+            <div key={member.id} className="group cursor-pointer">
+              <div className="aspect-square overflow-hidden bg-surface-low mb-8 relative shadow-lg shadow-primary-navy/5 group-hover:shadow-2xl transition-shadow duration-500">
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-primary-navy/10 group-hover:bg-transparent transition-colors duration-700"></div>
+              </div>
+              <h4 className="font-serif text-xl font-bold text-primary-navy mb-1 group-hover:text-secondary-gold transition-colors">{member.name}</h4>
+              <p className="text-gray-400 font-sans uppercase tracking-widest text-[9px] font-bold">{member.role}</p>
+              <div className="mt-6 flex gap-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                <a href="#" className="text-gray-400 hover:text-secondary-gold transition-colors"><Linkedin className="w-4 h-4" /></a>
+                <a href="mailto:info@gulpartners.com" className="text-gray-400 hover:text-secondary-gold transition-colors"><Mail className="w-4 h-4" /></a>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Immersive CTA Area */}
+      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
+        <div className="absolute inset-0 scale-105">
+           <img 
+            className="w-full h-full object-cover grayscale brightness-50" 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
+            alt="Elite boardroom"
+          />
+          <div className="absolute inset-0 bg-primary-navy/80 backdrop-blur-[2px]"></div>
+        </div>
+        <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
+          <h2 className="font-serif text-5xl md:text-7xl text-white font-bold mb-10 leading-tight">Hukuki Gücünüzü <br/><span className="text-secondary-gold italic font-light">Bizimle Şekillendirin.</span></h2>
+          <p className="text-slate-300 text-xl font-light mb-16 max-w-2xl mx-auto">Uzman kadromuzla prestijli bir hukuki desteğin farkını yaşayın.</p>
+          <Link href="/iletisim" className="bg-secondary-gold text-primary-navy px-14 py-6 font-bold text-sm tracking-[0.3em] uppercase hover:bg-white transition-all duration-500 shadow-2xl shadow-secondary-gold/20 inline-block">
+            UZMANLARIMIZLA İLETİŞİME GEÇİN
+          </Link>
         </div>
       </section>
     </div>
