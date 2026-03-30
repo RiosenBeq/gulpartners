@@ -48,7 +48,7 @@ export default function Expertise() {
       title: 'İş ve Sosyal Güvenlik Hukuku',
       subtitle: 'Kurumsal Uyum Stratejileri',
       description: 'İşçi-işveren ilişkilerinin düzenlenmesi, kıdem-ihbar tazminatları ve sendikal süreçlerin yönetiminde uzman kadromuzla yanınızdayız.',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2600&auto=format&fit=crop',
       features: ['İşe İade Davaları', 'Kıdem Tazminatı', 'Hizmet Tespiti', 'İş Kazaları']
     },
     {
