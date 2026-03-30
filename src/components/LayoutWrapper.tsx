@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { ArrowUpRight, Menu, X, Cookie } from 'lucide-react';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { cn } from '../lib/utils';
 
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
@@ -11,17 +11,37 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [cookieAccepted, setCookieAccepted] = useState(true);
   const pathname = usePathname();
+  const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
+  const navRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
     setMobileMenuOpen(false);
+    // Update indicator position
+    const updateIndicator = () => {
+      if (!navRef.current) return;
+      const activeLink = navRef.current.querySelector(`a[href="${pathname}"]`) as HTMLElement;
+      if (activeLink) {
+        setIndicatorStyle({
+          left: activeLink.offsetLeft,
+          width: activeLink.offsetWidth,
+          opacity: 1
+        });
+      } else {
+        setIndicatorStyle(prev => ({ ...prev, opacity: 0 }));
+      }
+    };
+
+    updateIndicator();
+    window.addEventListener('resize', updateIndicator);
+    return () => window.removeEventListener('resize', updateIndicator);
   }, [pathname]);
 
   const navLinks = [
@@ -32,35 +52,45 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   ];
 
   return (
-    <div className="min-h-screen flex flex-col font-sans bg-surface-lowest text-gray-900 selection:bg-secondary-gold/30">
+    <div className="min-h-screen flex flex-col font-sans bg-surface-lowest text-gray-900 selection:bg-secondary-gold/30 antialiased">
       <nav
         className={cn(
-          'fixed w-full z-50 transition-all duration-700 px-8 py-6',
-          isScrolled ? 'top-0 py-3' : 'top-2'
+          'fixed w-full z-50 transition-all duration-1000 ease-in-out',
+          isScrolled ? 'top-0 py-2' : 'top-4 py-4 px-8'
         )}
       >
         <div 
           className={cn(
-            "max-w-[1400px] mx-auto px-10 transition-all duration-700 rounded-2xl border border-transparent",
+            "max-w-[1440px] mx-auto transition-all duration-1000 ease-in-out px-10 relative overflow-hidden",
             isScrolled 
-              ? "bg-white/10 backdrop-blur-3xl border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.1)]" 
-              : "bg-transparent"
+              ? "bg-white/80 backdrop-blur-3xl border-b border-gray-100 py-2 shadow-[0_10px_40px_rgba(0,0,0,0.04)]" 
+              : "bg-transparent rounded-2xl"
           )}
         >
-          <div className="flex justify-between items-center h-28 transition-all duration-700">
+          <div className="flex justify-between items-center h-24 transition-all duration-700">
             <Link href="/" className="flex-shrink-0 flex items-center group relative z-10">
               <img
                 src="/logo.png"
                 alt="Gul Partners Logo"
                 style={{ mixBlendMode: 'multiply' }}
                 className={cn(
-                  "w-auto object-contain transition-all duration-700 scale-100 group-hover:scale-110",
-                  isScrolled ? "h-24" : "h-36"
+                  "w-auto object-contain transition-all duration-1000 ease-in-out scale-100 group-hover:scale-105",
+                  isScrolled ? "h-20" : "h-32"
                 )}
               />
             </Link>
 
-            <div className="hidden md:flex items-center space-x-14">
+            <div className="hidden md:flex items-center space-x-12 relative" ref={navRef}>
+              {/* Sliding Indicator */}
+              <div 
+                className="absolute -bottom-1 h-[2px] bg-secondary-gold transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                style={{ 
+                  left: `${indicatorStyle.left}px`, 
+                  width: `${indicatorStyle.width}px`,
+                  opacity: indicatorStyle.opacity 
+                }}
+              />
+
               {navLinks.map((link) => {
                 const isActive = pathname === link.path;
                 return (
@@ -68,27 +98,23 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                     key={link.path}
                     href={link.path}
                     className={cn(
-                      'relative text-[11px] font-bold tracking-[0.3em] uppercase transition-all duration-500 group/nav',
+                      'relative text-[10px] font-bold tracking-[0.4em] uppercase transition-all duration-500 py-2',
                       isActive
                         ? 'text-primary-navy'
-                        : isScrolled ? 'text-gray-600 hover:text-primary-navy' : 'text-primary-navy/70 hover:text-primary-navy'
+                        : 'text-gray-400 hover:text-primary-navy'
                     )}
                   >
                     {link.name}
-                    <span className={cn(
-                      "absolute -bottom-2 left-0 h-[2px] bg-secondary-gold transition-all duration-500 ease-in-out shadow-sm",
-                      isActive ? "w-full" : "w-0 group-hover/nav:w-full"
-                    )}></span>
                   </Link>
                 );
               })}
               
               <Link
                 href="/iletisim"
-                className="relative group/cta overflow-hidden bg-primary-navy text-white px-10 py-5 rounded-sm text-[10px] font-bold tracking-[0.3em] uppercase transition-all duration-500 hover:shadow-2xl hover:bg-secondary-gold hover:text-primary-navy"
+                className="relative group/cta bg-primary-navy text-white px-10 py-5 rounded-sm text-[9px] font-bold tracking-[0.4em] uppercase transition-all duration-500 hover:bg-secondary-gold hover:text-primary-navy shadow-lg hover:shadow-secondary-gold/20"
               >
                 <span className="relative z-10 flex items-center gap-3">
-                  DANIŞMANLIK <ArrowUpRight className="w-4 h-4 transition-transform group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1" />
+                  İletişim <ArrowUpRight className="w-4 h-4" />
                 </span>
               </Link>
             </div>
@@ -106,99 +132,109 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         </div>
 
         {/* Mobile Menu Overlay */}
-        {mobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-0 bg-white z-40 pt-32 px-10 animate-fade-in">
-             <div className="space-y-8">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.path}
-                    href={link.path}
-                    className="block text-3xl font-serif font-bold text-primary-navy hover:text-secondary-gold transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                ))}
-                <div className="pt-12">
-                   <Link href="/iletisim" className="bg-primary-navy text-white w-full py-6 flex items-center justify-center font-bold tracking-[0.3em] uppercase text-xs">
-                     DANIŞMANLIK ALIN
-                   </Link>
-                </div>
-             </div>
-          </div>
-        )}
+        <div className={cn(
+          "md:hidden fixed inset-0 bg-white z-40 transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] p-12 flex flex-col justify-center",
+          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        )}>
+           <div className="space-y-10">
+              {navLinks.map((link, idx) => (
+                <Link
+                  key={link.path}
+                  href={link.path}
+                  className={cn(
+                    "block text-4xl font-serif font-bold text-primary-navy hover:text-secondary-gold transition-all duration-500 delay-[idx*50ms]",
+                    mobileMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              ))}
+              <div className="pt-12">
+                 <Link href="/iletisim" className="bg-primary-navy text-white w-full py-8 flex items-center justify-center font-bold tracking-[0.4em] uppercase text-xs">
+                   DANIŞMANLIK ALIN
+                 </Link>
+              </div>
+           </div>
+           <button 
+             onClick={() => setMobileMenuOpen(false)}
+             className="absolute top-10 right-10 text-primary-navy p-4"
+           >
+             <X className="w-10 h-10" />
+           </button>
+        </div>
       </nav>
 
       <main className="flex-grow">
         {children}
       </main>
 
-      <footer className="bg-primary-navy text-white pt-32 pb-16">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-20 mb-24">
+      <footer className="bg-primary-navy text-white pt-40 pb-20 overflow-hidden relative">
+        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-[120px]"></div>
+        <div className="max-w-7xl mx-auto px-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-24 mb-32">
             <div className="md:col-span-5">
-              <div className="flex items-center mb-10">
+              <div className="flex items-center mb-12">
                 <img
                   src="/logo.png"
                   alt="Bulut & Partners Logo"
                   style={{ mixBlendMode: 'lighten', filter: 'brightness(0) invert(1)' }}
-                  className="h-32 w-auto object-contain opacity-90"
+                  className="h-32 w-auto object-contain opacity-80"
                 />
               </div>
-              <p className="text-gray-400 text-lg leading-relaxed max-w-md font-light italic">
-                Karmaşık hukuki süreçleri stratejik birer avantaja dönüştüren, disiplin mirası ile temellenmiş yeni nesil hukuk bürosu.
+              <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md">
+                Karmaşık hukuki süreçleri stratejik birer avantaja dönüştüren, vizyoner ve sonuç odaklı hukuk mimarları.
               </p>
             </div>
 
             <div className="md:col-span-3">
-              <h4 className="font-serif text-xl font-bold mb-10 text-white tracking-tight">Kategoriler</h4>
+              <h4 className="font-serif text-2xl font-bold mb-12 text-white tracking-tight">Navigasyon</h4>
               <ul className="space-y-6">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path} className="text-gray-400 hover:text-secondary-gold transition-colors text-sm uppercase tracking-widest font-bold">{link.name}</Link>
+                    <Link href={link.path} className="text-gray-400 hover:text-secondary-gold transition-colors text-xs uppercase tracking-[0.3em] font-bold">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="md:col-span-4">
-              <h4 className="font-serif text-xl font-bold mb-10 text-white tracking-tight">Merkez Ofis</h4>
-              <ul className="space-y-8">
-                <li className="text-gray-400 text-sm leading-relaxed font-light">
-                  <span className="block text-white font-bold mb-2 uppercase tracking-widest text-[10px]">Adres</span>
+              <h4 className="font-serif text-2xl font-bold mb-12 text-white tracking-tight">Merkez Ofis</h4>
+              <div className="space-y-10">
+                <div className="text-gray-400 text-sm leading-relaxed">
+                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.2em] text-[10px]">İstanbul</span>
                   Esentepe, Kore Şehitleri Cd. No:30/10, <br/> 34394 Şişli/İstanbul
-                </li>
-                <li className="text-gray-400 text-sm leading-relaxed font-light">
-                  <span className="block text-white font-bold mb-2 uppercase tracking-widest text-[10px]">Bize Ulaşın</span>
-                  <a href="mailto:info@bulutpartners.com" className="block hover:text-white transition-colors mb-2">info@bulutpartners.com</a>
-                  <a href="tel:+902122113345" className="block text-2xl font-serif text-white hover:text-secondary-gold transition-colors">+90 (212) 211 3345</a>
-                </li>
-              </ul>
+                </div>
+                <div className="text-gray-400 text-sm leading-relaxed">
+                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.2em] text-[10px]">İletişim Hattı</span>
+                  <a href="tel:+902122113345" className="text-3xl font-serif text-white hover:text-secondary-gold transition-colors block mb-2">+90 (212) 211 3345</a>
+                  <a href="mailto:info@bulutpartners.com" className="hover:text-white transition-colors block italic">info@bulutpartners.com</a>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between items-center gap-8">
-            <p className="text-gray-500 text-[10px] uppercase font-bold tracking-[0.2em]">
-              &copy; {new Date().getFullYear()} Bulut & Partners. Tüm hakları saklıdır.
+          <div className="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center gap-10">
+            <p className="text-gray-500 text-[10px] uppercase font-bold tracking-[0.3em]">
+              &copy; {new Date().getFullYear()} Bulut & Partners. All Rights Reserved.
             </p>
-            <div className="flex gap-10 mt-4 md:mt-0">
-               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.2em] transition-colors">KVKK Aydınlatma</Link>
-               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.2em] transition-colors">Çerez Politikası</Link>
+            <div className="flex gap-12">
+               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.3em] transition-colors">Privacy</Link>
+               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.3em] transition-colors">Legal</Link>
             </div>
           </div>
         </div>
       </footer>
 
       {!cookieAccepted && (
-        <div className="fixed bottom-8 left-8 right-8 md:left-auto md:w-[400px] bg-white border border-slate-100 p-8 shadow-2xl z-50 animate-slide-up rounded-sm">
-           <div className="flex items-start gap-6 mb-8">
-              <Cookie className="w-8 h-8 text-secondary-gold shrink-0" />
-              <p className="text-sm text-gray-600 leading-relaxed font-light">
-                Deneyiminizi iyileştirmek için çerezleri kullanıyoruz. <Link href="#" className="text-primary-navy font-bold underline">Politika Detayları</Link>
+        <div className="fixed bottom-10 right-10 left-10 md:left-auto md:w-[450px] bg-white p-10 shadow-[0_50px_100px_rgba(0,0,0,0.1)] z-50 rounded-sm border border-gray-100">
+           <div className="flex items-start gap-8 mb-10">
+              <Cookie className="w-10 h-10 text-secondary-gold shrink-0" />
+              <p className="text-sm text-gray-500 leading-relaxed italic">
+                Platform deneyiminizi optimize etmek için seçkin çerezler kullanıyoruz. <Link href="#" className="text-primary-navy font-bold underline decoration-secondary-gold">Detaylar</Link>
               </p>
            </div>
            <div className="flex gap-4">
-              <button onClick={() => setCookieAccepted(true)} className="flex-1 bg-primary-navy text-white py-4 text-xs font-bold uppercase tracking-widest hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500">Kabul Et</button>
-              <button onClick={() => setCookieAccepted(true)} className="flex-1 border border-slate-100 py-4 text-xs font-bold uppercase tracking-widest hover:bg-slate-50 transition-all duration-500">Reddet</button>
+              <button onClick={() => setCookieAccepted(true)} className="flex-1 bg-primary-navy text-white py-5 text-xs font-bold uppercase tracking-[0.3em] hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500">Kabul Et</button>
            </div>
         </div>
       )}

@@ -11,33 +11,55 @@
   --color-surface-lowest: #ffffff;
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
 .editorial-shadow {
-  box-shadow: 0 20px 40px -10px rgba(0, 13, 36, 0.05);
+  box-shadow: 0 30px 60px -12px rgba(0, 13, 36, 0.12), 0 18px 36px -18px rgba(0, 0, 0, 0.15);
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
-@utility animate-fade-in-up {
-  animation: fade-in-up 0.8s ease-out;
+/* Premium Reveal Animations */
+@utility reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1.2s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-@utility animate-spin-slow {
-  animation: spin 15s linear infinite;
+@utility reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@utility mask-reveal {
+  clip-path: inset(0 0 100% 0);
+  transition: clip-path 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@utility mask-reveal-visible {
+  clip-path: inset(0 0 0 0);
+}
+
+@utility animate-fade-in {
+  animation: fade-in 1.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@utility animate-text-reveal {
+  background: linear-gradient(to right, #000D24 50%, #C5A022 50%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 1s ease-out;
 }
 
 @keyframes fade-in {
@@ -45,6 +67,17 @@
   to { opacity: 1; }
 }
 
-.animate-fade-in {
-  animation: fade-in 1s ease-in-out;
+/* Custom Scrollbar for Premium Feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9fb;
+}
+::-webkit-scrollbar-thumb {
+  background: #000D24;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A022;
 }
