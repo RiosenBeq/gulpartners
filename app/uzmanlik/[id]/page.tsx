@@ -63,8 +63,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function ServiceDetail({ params }: { params: { id: string } }) {
-  const service = allServices.find((s) => s.slug === params.id);
+export default async function ServiceDetail({ params }: { params: Promise<{ id: string }> }) {
+  const resolvedParams = await params;
+  const service = allServices.find((s) => s.slug === resolvedParams.id);
 
   if (!service) {
     // For services not explicitly detailed in this array, we show a generic sophisticated template

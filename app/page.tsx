@@ -32,65 +32,82 @@ export default function Home() {
   return (
     <div className="bg-surface selection:bg-secondary-gold/30">
       {/* Experimental Aesthetic Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-primary-navy">
-        {/* Animated Background Elements */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020817]">
+        {/* Advanced Ambient Background */}
         <div className="absolute inset-0 z-0">
-          <div className="absolute -top-20 -left-20 w-96 h-96 bg-secondary-gold/10 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute top-1/2 -right-40 w-[600px] h-[600px] bg-primary-navy/50 rounded-full border border-secondary-gold/5 animate-spin-slow"></div>
+          {/* Moving Mesh Gradients */}
+          <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-secondary-gold/10 rounded-full blur-[120px] animate-pulse"></div>
+          <div className="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-blue-900/20 rounded-full blur-[150px] animate-spin-slow"></div>
+          
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-[0.03] mix-blend-overlay"></div>
+          
           <img
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop"
             alt="Elite Law Atmosphere"
-            className="w-full h-full object-cover opacity-20 mix-blend-overlay scale-110"
+            className="w-full h-full object-cover opacity-[0.12] mix-blend-luminosity scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-primary-navy via-primary-navy/90 to-surface-lowest"></div>
+          
+          {/* Sophisticated Vignette */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#020817] via-transparent to-[#020817]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#020817] via-transparent to-[#020817]"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-20">
           <div className="flex flex-col items-center text-center">
-            <div className="inline-flex items-center gap-3 py-2 px-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-10 transform -translate-y-4 opacity-0 animate-fade-in-up" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
-              <span className="w-2 h-2 rounded-full bg-secondary-gold animate-ping"></span>
-              <span className="text-secondary-gold text-[10px] font-bold tracking-[0.3em] uppercase">Hukuki Mimari & Strateji</span>
+            {/* Premium Glass Badge */}
+            <div className="inline-flex items-center gap-3 py-2 px-6 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-xl mb-12 transform -translate-y-4 opacity-0 animate-fade-in-up shadow-2xl" style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}>
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-gold opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary-gold"></span>
+              </span>
+              <span className="text-secondary-gold text-[10px] font-bold tracking-[0.4em] uppercase">Mükemmeliyet & Sadakat</span>
             </div>
             
-            <h1 className="font-serif text-6xl md:text-8xl lg:text-[110px] text-white font-bold tracking-tight leading-[1] mb-12 max-w-6xl mx-auto">
+            <h1 className="font-serif text-6xl md:text-8xl lg:text-[120px] text-white font-bold tracking-tight leading-[0.95] mb-14 max-w-6xl mx-auto">
               Hukuku Bir <br />
-              <span className="relative inline-block mt-4">
-                <span className="relative z-10 italic font-light text-transparent bg-clip-text bg-gradient-to-r from-secondary-gold via-yellow-200 to-secondary-gold tracking-tight px-4">
+              <span className="relative inline-block mt-6">
+                <span className="relative z-10 italic font-light text-transparent bg-clip-text bg-gradient-to-br from-[#E2B93B] via-[#F3E2B1] to-[#C5A022] drop-shadow-sm">
                   Sanata Dönüştürmek
                 </span>
-                <span className="absolute bottom-4 left-0 w-full h-[1px] bg-secondary-gold/30"></span>
+                {/* Elegant Underline Accent */}
+                <span className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-32 h-[2px] bg-gradient-to-r from-transparent via-secondary-gold/50 to-transparent"></span>
               </span>
             </h1>
             
-            <p className="font-sans text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-16 leading-relaxed font-light transform -translate-y-2 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
-              Gül Partners, karmaşık hukuki engelleri aşmak için <span className="text-white">hassas bir mimarlık</span> ve <span className="text-white">stratejik bir vizyon</span> ile hareket eden, sonuç odaklı modern bir hukuk bürosudur.
+            <p className="font-sans text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-20 leading-relaxed font-extralight transform -translate-y-2 opacity-0 animate-fade-in-up" style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}>
+              Gül Partners, karmaşık hukuki engelleri <span className="text-white/90 font-medium">entelektüel bir derinlik</span> ve <span className="text-white/90 font-medium">stratejik öngörü</span> ile aşan yeni nesil bir hukuk mimarıdır.
             </p>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 transform -translate-y-1 opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-10 transform -translate-y-1 opacity-0 animate-fade-in-up" style={{ animationDelay: '600ms', animationFillMode: 'forwards' }}>
               <Link
                 href="/uzmanlik"
-                className="group relative px-10 py-5 bg-secondary-gold text-primary-navy font-bold rounded-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_40px_rgba(197,160,34,0.35)]"
+                className="group relative px-12 py-6 bg-secondary-gold text-primary-navy font-bold rounded-sm overflow-hidden transition-all duration-500 hover:shadow-[0_0_60px_rgba(197,160,34,0.3)] hover:-translate-y-1"
               >
-                <div className="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 origin-left"></div>
-                <span className="relative flex items-center gap-3">
-                  Uzmanlık Alanlarımız <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <div className="absolute inset-0 w-full h-full bg-white transform -translate-x-full group-hover:translate-x-0 transition-transform duration-700 origin-left"></div>
+                <span className="relative flex items-center gap-4 text-sm tracking-widest uppercase">
+                  Uzmanlık Alanlarımız <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-500" />
                 </span>
               </Link>
+              
               <Link
                 href="/ekip"
-                className="group flex items-center gap-4 text-white font-medium tracking-wide hover:text-secondary-gold transition-colors duration-300"
+                className="group flex items-center gap-6 text-white/80 font-medium tracking-widest text-xs uppercase hover:text-white transition-all duration-300"
               >
-                <span>Ekibimizi Keşfedin</span>
-                <div className="w-12 h-[1px] bg-gray-600 group-hover:w-16 group-hover:bg-secondary-gold transition-all duration-500"></div>
+                <span className="relative">
+                  Ekibimizi Keşfedin
+                  <span className="absolute -bottom-2 left-0 w-0 h-[1px] bg-secondary-gold transition-all duration-500 group-hover:w-full"></span>
+                </span>
+                <div className="flex items-center justify-center w-12 h-12 rounded-full border border-white/10 group-hover:border-secondary-gold group-hover:bg-secondary-gold/5 transition-all duration-500">
+                   <Users className="w-4 h-4 group-hover:text-secondary-gold transition-colors" />
+                </div>
               </Link>
             </div>
           </div>
         </div>
 
-        {/* Dynamic Scroll Indicator */}
-        <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-4 opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-          <span className="text-[10px] text-gray-400 uppercase tracking-[0.5em] rotate-90 mb-4 origin-left">Kaydır</span>
-          <div className="w-[1px] h-16 bg-gradient-to-b from-secondary-gold to-transparent"></div>
+        {/* Minimalist Scroll Indicator */}
+        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-6 opacity-30 hover:opacity-100 transition-opacity duration-1000">
+          <div className="w-[1px] h-20 bg-gradient-to-b from-secondary-gold via-secondary-gold/20 to-transparent"></div>
         </div>
       </section>
 
