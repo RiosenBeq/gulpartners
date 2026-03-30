@@ -79,7 +79,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           <div className="flex justify-between items-center h-28 transition-all duration-700">
             <Link href="/" className="flex-shrink-0 flex items-center group relative z-10 py-4">
               <img
-                src="/seffaf.png"
+                src="/logo-gul.png"
                 alt="Gül Partners Logo"
                 className={cn(
                   "w-auto object-contain transition-all duration-700 ease-out",
@@ -152,7 +152,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
         )}>
            <div className="flex justify-between items-center mb-20">
-              <img src="/seffaf.png" alt="Logo" className="h-20 w-auto object-contain" />
+              <img src="/logo-gul.png" alt="Logo" className="h-20 w-auto object-contain" />
               <button 
                 onClick={() => setMobileMenuOpen(false)}
                 className="text-primary-navy p-2 hover:bg-gray-100 rounded-full transition-colors"
@@ -212,7 +212,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             <div className="lg:col-span-5 flex flex-col items-start">
               <div className="mb-14 group">
                 <img
-                  src="/seffaf.png"
+                  src="/logo-gul.png"
                   alt="Gül Partners Logo"
                   className="h-44 w-auto object-contain brightness-0 invert transition-all duration-700 group-hover:scale-105"
                 />
