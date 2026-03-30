@@ -4,11 +4,19 @@
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --color-primary-navy: #000D24;
-  --color-secondary-gold: #C5A022;
-  --color-surface: #f9f9fb;
-  --color-surface-low: #f3f3f5;
-  --color-surface-lowest: #ffffff;
+  
+  /* Digital Archivist Color Palette */
+  --color-primary: #5F5E5E;
+  --color-secondary: #735D00;
+  --color-surface: #FAFAFA;
+  --color-surface-low: #F2F4F4;
+  --color-on-surface-variant: #5A6061;
+  --color-on-primary: #FAF7F6;
+  --color-outline-variant: rgba(173, 179, 180, 0.1);
+  
+  /* Legacy Colors mapping for gradual transition if needed */
+  --color-primary-navy: #5F5E5E;
+  --color-secondary-gold: #735D00;
 }
 
 @layer base {
@@ -16,6 +24,23 @@
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
   }
+  body {
+    @apply bg-surface text-primary font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@utility display-lg {
+  font-size: 3.5rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@utility spacing-editorial {
+  padding-top: 5.5rem;
+  padding-bottom: 5.5rem;
 }
 
 .editorial-shadow {

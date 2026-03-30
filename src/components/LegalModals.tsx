@@ -92,36 +92,34 @@ export default function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
     <div className="fixed inset-0 z-[200] flex items-center justify-center p-6 md:p-12">
       {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-primary-navy/80 backdrop-blur-xl animate-fade-in" 
+        className="absolute inset-0 bg-primary/80 backdrop-blur-xl animate-fade-in" 
         onClick={onClose}
       />
       
       {/* Modal Container */}
-      <div className="relative w-full max-w-4xl bg-white shadow-[0_50px_100px_rgba(0,0,0,0.4)] rounded-sm overflow-hidden flex flex-col max-h-[85vh] animate-fade-in scale-up">
+      <div className="relative w-full max-w-4xl max-h-[85vh] bg-surface shadow-[0_50px_100px_rgba(0,0,0,0.1)] flex flex-col animate-fade-in scale-up">
         {/* Header */}
-        <div className="p-10 border-b border-gray-100 flex justify-between items-center bg-gray-50/50">
-          <div className="flex items-center gap-6">
-            <div className="p-4 bg-white shadow-sm border border-gray-100">
-              {content.icon}
+        <div className="p-8 md:p-12 border-b border-outline-variant/10 flex justify-between items-start bg-surface-low">
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-0.5 bg-secondary"></div>
+              <span className="text-secondary font-sans tracking-[0.3em] text-[10px] font-bold uppercase">HUKUKİ BİLGİLENDİRME</span>
             </div>
-            <div>
-              <h2 className="font-serif text-3xl font-bold text-primary-navy tracking-tight">{content.title}</h2>
-              <span className="text-[10px] text-gray-400 font-bold tracking-[0.4em] uppercase">GÜL PARTNERS • HUKUKUN PARTNERLERİ</span>
-            </div>
+            <h2 className="font-serif text-4xl font-bold text-primary">{content.title}</h2>
           </div>
           <button 
             onClick={onClose}
-            className="p-4 hover:bg-gray-100 rounded-full transition-colors text-primary-navy"
+            className="text-primary/40 hover:text-primary transition-all p-2 hover:bg-primary/5"
           >
             <X className="w-8 h-8" />
           </button>
         </div>
 
         {/* Content Area */}
-        <div className="flex-grow overflow-y-auto p-12 md:p-20 scrollbar-thin scrollbar-thumb-primary-navy">
-          <div className="prose prose-slate max-w-none">
+        <div className="flex-grow overflow-y-auto p-8 md:p-12 text-primary/80">
+          <div className="prose prose-slate max-w-none prose-p:text-primary/70 prose-headings:text-primary">
             {content.text.split('\n').map((line, i) => (
-              <p key={i} className="text-gray-600 text-lg leading-relaxed mb-6 font-light">
+              <p key={i} className="text-primary/70 text-lg leading-relaxed mb-6 font-light">
                 {line.trim()}
               </p>
             ))}

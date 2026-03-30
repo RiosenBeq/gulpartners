@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Noto_Serif } from "next/font/google";
 import "@/src/index.css";
+import { cn } from "@/src/lib/utils";
 import LayoutWrapper from "@/src/components/LayoutWrapper";
 
 const inter = Inter({
@@ -117,16 +118,15 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="tr" className="scroll-smooth">
+    <html lang="tr" className={cn("scroll-smooth", inter.variable, notoSerif.variable)}>
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="antialiased">
+      <body className="antialiased bg-surface text-primary selection:bg-secondary/20 selection:text-secondary">
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

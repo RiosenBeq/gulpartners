@@ -44,25 +44,26 @@ export default function Team() {
   const otherTeam = teamMembers.filter(m => ![1, 2].includes(m.id));
 
   return (
-    <div className="bg-white selection:bg-secondary-gold/20 antialiased overflow-x-hidden">
+    <div className="bg-white selection:bg-secondary/20 antialiased overflow-x-hidden">
       {/* Editorial Header Section */}
-      <section className="relative pt-64 pb-32 bg-primary-navy overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20 filter grayscale">
-           <img 
-            className="w-full h-full object-cover" 
+      <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/5 translate-x-1/3 -translate-y-1/3 blur-[120px]"></div>
+          <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
-            alt="Law Library Background" 
+            alt="Background" 
+            className="w-full h-full object-cover grayscale mix-blend-multiply opacity-10"
           />
         </div>
-        <div className="max-w-7xl mx-auto px-12 relative z-10">
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="inline-block text-secondary-gold font-sans tracking-[0.5em] text-[10px] font-bold mb-10 uppercase animate-fade-in">Disiplin & Vizyon</span>
-            <h1 className="font-serif text-5xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 italic">
-              Zihnin <br />
-              <span className="text-gray-400 not-italic text-4xl md:text-[9rem]">Hukuki Gücü.</span>
+            <span className="text-secondary font-sans uppercase tracking-[0.5em] text-xs font-bold mb-10 block animate-fade-in opacity-80">GÜL PARTNERS EKİBİMİZ</span>
+            <h1 className="font-serif display-lg mb-14 italic reveal-up text-primary">
+              Nitelikli <br/> <span className="not-italic text-primary/40">Hukuki Güç.</span>
             </h1>
-            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
-              Gül & Partners ekibi, her biri alanında derinleşmiş, stratejik analitik kabiliyete sahip hukuk profesyonellerinden oluşur.
+            <p className="text-2xl text-primary/60 font-light max-w-2xl leading-relaxed italic border-l border-secondary/30 pl-10 reveal-up">
+              Prestijli bir hukuk kütüphanesinin sessiz otoritesini ve modern hukukun dinamizmini harmanlayan hukuk profesyonellerinden oluşan ekibimizle tanışın.
             </p>
           </div>
         </div>
@@ -72,21 +73,28 @@ export default function Team() {
       <section className="py-48 bg-white relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-40 items-center">
-            {foundingPartners.map((partner) => (
-              <div key={partner.id} className="group reveal-up opacity-100 translate-y-0">
-                <div className="aspect-[3/4] overflow-hidden relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] mb-16">
-                  <img
-                    src={partner.image}
-                    alt={partner.name}
-                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
+            {foundingPartners.map((member) => (
+              <div key={member.id} className="group reveal-up">
+                <div className="relative aspect-[3/4] overflow-hidden bg-surface-low mb-10 transition-all duration-700">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
                   />
-                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-1000"></div>
+                  <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
-                <div className="flex justify-between items-end gap-12 border-b border-gray-100 pb-12 transition-all group-hover:border-secondary-gold">
-                  <h3 className="font-serif text-5xl font-bold text-primary-navy group-hover:text-secondary-gold transition-colors">{partner.name}</h3>
-                  <Link href="/iletisim" className="text-primary-navy group/link flex items-center gap-4 text-xs font-bold tracking-widest uppercase mb-4">
-                    STRATEJİ <ArrowUpRight className="w-5 h-5 text-secondary-gold transition-all group-hover/link:translate-x-2" />
-                  </Link>
+                <div className="space-y-4">
+                  <div>
+                     <h3 className="font-serif text-4xl font-bold text-primary group-hover:text-secondary transition-colors">{member.name}</h3>
+                  </div>
+                  <div className="flex gap-4 pt-6">
+                     <a href="#" className="p-3 bg-surface border border-outline-variant/10 text-primary hover:bg-secondary hover:text-on-primary transition-all">
+                        <Linkedin className="w-4 h-4" />
+                     </a>
+                     <a href="#" className="p-3 bg-surface border border-outline-variant/10 text-primary hover:bg-secondary hover:text-on-primary transition-all">
+                        <Mail className="w-4 h-4" />
+                     </a>
+                  </div>
                 </div>
               </div>
             ))}
@@ -95,10 +103,9 @@ export default function Team() {
       </section>
 
       {/* Grid: Architectural Excellence */}
-      <section className="py-48 bg-surface-low border-y border-gray-100">
+      <section className="py-48 bg-surface-low border-y border-outline-variant/20">
         <div className="max-w-7xl mx-auto px-12">
           <div className="mb-32 text-left max-w-2xl">
-            <span className="text-secondary-gold text-[10px] font-sans tracking-[0.4em] uppercase font-bold mb-6 block">Kolektif Uzmanlık</span>
             <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary-navy leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-gray-400">Takvim Yönetimi.</span></h2>
           </div>
           

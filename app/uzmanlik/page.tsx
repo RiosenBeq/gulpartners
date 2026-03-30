@@ -105,23 +105,23 @@ export default function Expertise() {
   return (
     <div className="bg-white antialiased selection:bg-secondary-gold/20 scroll-smooth">
       {/* Hero Section: Architectural Header */}
-      <section className="relative pt-48 pb-32 bg-primary-navy overflow-hidden">
+      <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-[120px]"></div>
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/5 rounded-full translate-x-1/3 -translate-y-1/3 blur-[120px]"></div>
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
             alt="Background" 
-            className="w-full h-full object-cover grayscale mix-blend-overlay opacity-20"
+            className="w-full h-full object-cover grayscale mix-blend-multiply opacity-10"
           />
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-xs font-bold mb-8 block animate-fade-in">LİDERLİĞİNDE HUKUKİ MÜKEMMELLİK</span>
-            <h1 className="font-serif text-5xl md:text-[8rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic reveal-up">
-              Karmaşık <br/> <span className="not-italic text-4xl md:text-[8rem] text-gray-400">Hukuki Hassasiyet.</span>
+            <span className="text-secondary font-sans uppercase tracking-[0.5em] text-xs font-bold mb-10 block animate-fade-in opacity-80">LİDERLİĞİNDE HUKUKİ MÜKEMMELLİK</span>
+            <h1 className="font-serif display-lg mb-14 italic reveal-up text-primary">
+              Karmaşık <br/> <span className="not-italic text-primary/40">Hukuki Hassasiyet.</span>
             </h1>
-            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10 reveal-up">
+            <p className="text-2xl text-primary/60 font-light max-w-2xl leading-relaxed italic border-l border-secondary/30 pl-10 reveal-up">
               Her vaka bir strateji, her çözüm bir temeldir. Gül Partners, hukuki zorlukları profesyonel bir disiplinle ele alarak kalıcı ve güvenli sonuçlar tesis eder.
             </p>
           </div>
@@ -136,19 +136,19 @@ export default function Expertise() {
             {allServices.map((service, index) => (
               service.special ? (
                 /* Special Highlighted Section ( Intellectual Property ) */
-                <section key={service.id} id={service.id} className="bg-primary-navy p-6 md:p-12 text-white reveal-up scroll-mt-32">
+                <section key={service.id} id={service.id} className="bg-surface-low p-6 md:p-12 text-primary reveal-up scroll-mt-32 border border-outline-variant/10">
                   <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
                     <div className="flex-1">
-                      <span className="material-symbols-outlined text-secondary-gold text-5xl mb-6">lightbulb</span>
+                      <span className="material-symbols-outlined text-secondary text-5xl mb-6">lightbulb</span>
                       <h2 className="font-serif text-3xl font-bold mb-6">{service.title}</h2>
-                      <p className="text-slate-400 leading-relaxed mb-8 italic">{service.description}</p>
-                      <button className="border border-secondary-gold text-secondary-gold px-8 py-3 font-semibold hover:bg-secondary-gold hover:text-primary-navy transition-all uppercase text-[10px] tracking-widest font-sans">
+                      <p className="text-primary/60 leading-relaxed mb-8 italic">{service.description}</p>
+                      <button className="border border-secondary text-secondary px-8 py-3 font-semibold hover:bg-secondary hover:text-on-primary transition-all uppercase text-[10px] tracking-widest font-sans">
                         Marka Tescil Danışmanlığı
                       </button>
                     </div>
-                    <div className="flex-1 w-full aspect-square bg-slate-900 overflow-hidden">
+                    <div className="flex-1 w-full aspect-square bg-surface overflow-hidden">
                       <img 
-                        className="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale transition-all duration-[2s] hover:grayscale-0 hover:opacity-100" 
+                        className="w-full h-full object-cover opacity-60 mix-blend-multiply grayscale transition-all duration-[2s] hover:grayscale-0 hover:opacity-100" 
                         src={service.image} 
                         alt={service.title}
                       />
@@ -158,44 +158,43 @@ export default function Expertise() {
               ) : (
                 /* Regular Modern Section */
                 <section key={service.id} id={service.id} className="group reveal-up scroll-mt-32">
-                  <div className="mb-12 overflow-hidden aspect-[21/9] bg-gray-50 relative shadow-2xl transition-all duration-700">
+                  <div className="mb-12 overflow-hidden aspect-[21/9] bg-surface-low relative transition-all duration-700">
                     <img 
-                      className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 grayscale group-hover:grayscale-0" 
+                      className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100" 
                       src={service.image} 
                       alt={service.title}
                     />
-                    <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-1000"></div>
                   </div>
                   <div className="flex flex-col md:flex-row gap-8 md:gap-16">
                     <div className="md:w-1/3">
-                      <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4 group-hover:text-secondary-gold transition-colors">{service.title}</h2>
-                      <span className="text-secondary-gold text-[10px] font-sans tracking-widest uppercase font-bold">{service.subtitle}</span>
+                      <h2 className="font-serif text-3xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">{service.title}</h2>
+                      <span className="text-secondary text-[10px] font-sans tracking-widest uppercase font-bold">{service.subtitle}</span>
                     </div>
                     <div className="md:w-2/3">
                       <p className="text-gray-500 mb-8 leading-relaxed italic font-light">{service.description}</p>
                       {service.id === 'gayrimenkul' ? (
-                        <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100">
+                        <div className="grid grid-cols-2 gap-8 py-8 border-t border-outline-variant/10">
                           <div>
-                            <span className="block text-3xl font-serif font-bold text-primary-navy">500+</span>
-                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Başarılı Dava Sonucu</span>
+                            <span className="block text-3xl font-serif font-bold text-primary">500+</span>
+                            <span className="text-[10px] text-primary/40 uppercase tracking-widest font-bold">Başarılı Dava Sonucu</span>
                           </div>
                           <div>
-                            <span className="block text-3xl font-serif font-bold text-primary-navy">15+</span>
-                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Yıllık Derin Tecrübe</span>
+                            <span className="block text-3xl font-serif font-bold text-primary">15+</span>
+                            <span className="text-[10px] text-primary/40 uppercase tracking-widest font-bold">Yıllık Derin Tecrübe</span>
                           </div>
                         </div>
                       ) : (
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         {service.features.map(feature => (
-                          <li key={feature} className="flex items-center gap-3 text-[11px] font-bold text-primary-navy uppercase tracking-wider opacity-80">
-                             <CheckCircle2 className="w-5 h-5 text-secondary-gold" />
+                          <li key={feature} className="flex items-center gap-3 text-[11px] font-bold text-primary uppercase tracking-wider opacity-60">
+                             <CheckCircle2 className="w-5 h-5 text-secondary" />
                              {feature}
                           </li>
                         ))}
                       </ul>
                       )}
                       {(service.id === 'ceza-hukuku') && (
-                        <Link href="/iletisim" className="inline-flex items-center gap-3 text-primary-navy font-bold border-b-2 border-secondary-gold pb-1 hover:text-secondary-gold transition-colors mt-8 text-xs tracking-widest uppercase">
+                        <Link href="/iletisim" className="inline-flex items-center gap-3 text-primary font-bold border-b-2 border-secondary pb-1 hover:text-secondary transition-colors mt-8 text-xs tracking-widest uppercase">
                           Detaylı Süreç Analizi <ArrowUpRight className="w-4 h-4" />
                         </Link>
                       )}
@@ -208,15 +207,15 @@ export default function Expertise() {
 
           {/* Luxury Redesigned Sidebar */}
           <aside className="hidden lg:block lg:col-span-4 sticky top-40 space-y-12 h-fit pb-12">
-            <div className="bg-gray-50 p-12 border border-gray-100 shadow-sm relative overflow-hidden group">
-              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+            <div className="bg-surface-low p-12 border border-outline-variant/10 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
               
-              <h3 className="font-serif text-xl font-bold mb-6 text-primary-navy">Acil hukuki destek mi gerekiyor?</h3>
-              <p className="text-sm text-gray-500 mb-10 leading-relaxed font-light italic">Kritik durumlarda zaman en büyük varlıktır. Uzman ekibimizle anında iletişime geçin.</p>
+              <h3 className="font-serif text-xl font-bold mb-6 text-primary">Acil hukuki destek mi gerekiyor?</h3>
+              <p className="text-sm text-primary/60 mb-10 leading-relaxed font-light italic">Kritik durumlarda zaman en büyük varlıktır. Uzman ekibimizle anında iletişime geçin.</p>
               
               <div className="space-y-6">
-                <a className="flex items-center gap-6 bg-white p-6 shadow-sm border border-gray-50 group transition-all hover:bg-primary-navy hover:text-white" href="tel:+902122113345">
-                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white">
+                <a className="flex items-center gap-6 bg-surface p-6 border border-outline-variant/10 group transition-all hover:bg-primary hover:text-on-primary" href="tel:+902122113345">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-on-primary/10 group-hover:text-on-primary">
                     <span className="material-symbols-outlined">call</span>
                   </div>
                   <div>
@@ -224,8 +223,8 @@ export default function Expertise() {
                     <span className="font-bold font-serif text-base">+90 (212) 211 3345</span>
                   </div>
                 </a>
-                <a className="flex items-center gap-6 bg-white p-6 shadow-sm border border-gray-50 group transition-all hover:bg-primary-navy hover:text-white" href="mailto:av.ferdigul@gmail.com">
-                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white">
+                <a className="flex items-center gap-6 bg-surface p-6 border border-outline-variant/10 group transition-all hover:bg-primary hover:text-on-primary" href="mailto:av.ferdigul@gmail.com">
+                  <div className="w-12 h-12 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-on-primary/10 group-hover:text-on-primary">
                     <span className="material-symbols-outlined">mail</span>
                   </div>
                   <div>
@@ -237,29 +236,29 @@ export default function Expertise() {
               <a 
                 href="https://wa.me/905330940792?text=Merhaba,%20hızlı%20bir%20hukuki%20danışmanlık%20randevusu%20almak%20istiyorum."
                 target="_blank"
-                className="w-full mt-10 bg-secondary-gold text-white py-6 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-primary-navy transition-all duration-700 shadow-xl inline-block text-center"
+                className="w-full mt-10 bg-primary text-on-primary py-6 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-secondary transition-all duration-700 inline-block text-center shadow-sm"
               >
                 Hızlı Randevu Alın
               </a>
             </div>
 
-            <div className="p-12 bg-primary-navy text-white relative overflow-hidden group">
-              <div className="absolute right-0 bottom-0 opacity-10 blur-3xl w-48 h-48 bg-secondary-gold rounded-full"></div>
-              <h4 className="text-[10px] uppercase tracking-widest font-bold text-secondary-gold mb-10 pb-4 border-b border-white/5">Yayınlarımız</h4>
+            <div className="p-12 bg-primary text-on-primary relative overflow-hidden group">
+              <div className="absolute right-0 bottom-0 opacity-10 blur-3xl w-48 h-48 bg-secondary rounded-full"></div>
+              <h4 className="text-[10px] uppercase tracking-widest font-bold text-secondary mb-10 pb-4 border-b border-on-primary/5">Yayınlarımız</h4>
               <div className="space-y-10">
                 <a className="block group/item" href="#">
-                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary-gold transition-colors leading-tight mb-3">2024 Yılı Vergi Mevzuatı Değişiklikleri Rehberi</h5>
-                  <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest block">5 Dakika Okuma • Hukuk Bülteni</span>
+                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary transition-colors leading-tight mb-3">2024 Yılı Vergi Mevzuatı Değişiklikleri Rehberi</h5>
+                  <span className="text-[10px] text-on-primary/40 uppercase font-bold tracking-widest block">5 Dakika Okuma • Hukuk Bülteni</span>
                 </a>
                 <a className="block group/item" href="#">
-                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary-gold transition-colors leading-tight mb-3">Yapay Zeka ve Fikri Mülkiyet Hakları</h5>
-                  <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest block">8 Dakika Okuma • Makale</span>
+                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary transition-colors leading-tight mb-3">Yapay Zeka ve Fikri Mülkiyet Hakları</h5>
+                  <span className="text-[10px] text-on-primary/40 uppercase font-bold tracking-widest block">8 Dakika Okuma • Makale</span>
                 </a>
               </div>
             </div>
             
-            <div className="p-12 border-l-2 border-secondary-gold/30 italic">
-               <p className="text-gray-400 text-sm font-light leading-relaxed">
+            <div className="p-12 border-l-2 border-secondary/30 italic">
+               <p className="text-primary/40 text-sm font-light leading-relaxed">
                   "Hukuk sadece bir kurallar bütünü değil; her detayında sarsılmaz bir güvenin inşa edildiği bir temel taştır."
                </p>
             </div>

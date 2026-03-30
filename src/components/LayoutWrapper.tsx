@@ -11,8 +11,8 @@ import CookieConsent from './CookieConsent';
 const Logo = ({ className, color = "currentColor", size = "h-12" }: { className?: string, color?: string, size?: string }) => (
   <div className={cn("flex items-center gap-3", className)}>
     <svg viewBox="0 0 100 100" className={cn(size, "w-auto")} fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 5L93.3 30V70L50 95L6.7 70V30L50 5Z" stroke={color} strokeWidth="2" />
-      <text x="50" y="58" textAnchor="middle" fill={color} className="font-serif font-bold text-[32px]">G&P</text>
+      <path d="M50 5L93.3 30V70L50 95L6.7 70V30L50 5Z" stroke={color} strokeWidth="1.5" />
+      <text x="50" y="58" textAnchor="middle" fill={color} className="font-serif font-bold text-[32px] tracking-tight">G&P</text>
     </svg>
   </div>
 );
@@ -95,13 +95,13 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           className={cn(
             "max-w-[1700px] mx-auto transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
             isScrolled 
-              ? "bg-white/98 backdrop-blur-3xl border-b border-gray-100 py-3 px-6 lg:px-12 shadow-[0_15px_40px_rgba(0,0,0,0.08)]" 
-              : "bg-primary-navy/20 backdrop-blur-lg rounded-2xl border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.2)] px-6 lg:px-12"
+              ? "bg-surface/98 backdrop-blur-3xl py-3 px-6 lg:px-12 shadow-[0_20px_50px_rgba(95,94,94,0.05)]" 
+              : "bg-surface-low/60 backdrop-blur-lg border-b border-outline-variant/10 px-6 lg:px-12"
           )}
         >
           <div className="flex justify-between items-center h-20 lg:h-28 transition-all duration-700">
             <Link href="/" className="flex-shrink-0 flex items-center group relative z-10 py-4">
-              <Logo color={isScrolled ? "#000D24" : "#C5A022"} size={isScrolled ? "h-14 lg:h-20" : "h-16 lg:h-28"} className="transition-all duration-700" />
+              <Logo color={isScrolled ? "#5F5E5E" : "#735D00"} size={isScrolled ? "h-14 lg:h-20" : "h-16 lg:h-28"} className="transition-all duration-700" />
             </Link>
 
             {/* Desktop Navigation */}
@@ -123,9 +123,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                     href={link.path}
                     className={cn(
                       'relative text-[11px] font-bold tracking-[0.45em] uppercase transition-all duration-500 py-3',
-                      isActive
-                        ? (isScrolled ? 'text-primary-navy' : 'text-white')
-                        : (isScrolled ? 'text-gray-400 hover:text-primary-navy' : 'text-gray-300 hover:text-white')
+                      isActive ? 'text-secondary' : 'text-primary/60 hover:text-primary'
                     )}
                   >
                     {link.name}
@@ -136,8 +134,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <Link
                 href="/iletisim"
                 className={cn(
-                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 rounded-sm text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-xl overflow-hidden",
-                   isScrolled ? "bg-primary-navy text-white hover:bg-secondary-gold hover:text-primary-navy" : "bg-white text-primary-navy hover:bg-secondary-gold hover:text-white"
+                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden",
+                   "bg-primary text-on-primary hover:bg-secondary"
                 )}
               >
                 İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block" />
@@ -156,7 +154,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
       {/* FIXED BOTTOM NAVIGATION (MOBILE ONLY) */}
       <div className="md:hidden fixed bottom-0 left-0 w-full z-[150] px-4 pb-6 animate-fade-in">
-          <div className="bg-primary-navy/95 backdrop-blur-2xl border border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.3)] rounded-3xl flex justify-around items-center p-4">
+          <div className="bg-surface/95 backdrop-blur-2xl border border-outline-variant/10 shadow-[0_-10px_40px_rgba(0,0,0,0.05)] flex justify-around items-center p-4">
               {navLinks.map((link) => {
                   const isActive = pathname === link.path;
                   return (
@@ -164,8 +162,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                         key={link.path} 
                         href={link.path}
                         className={cn(
-                            "flex flex-col items-center gap-2 transition-all duration-300 px-4 py-2 rounded-2xl",
-                            isActive ? "text-secondary-gold bg-white/5" : "text-gray-400 hover:text-white"
+                            "flex flex-col items-center gap-2 transition-all duration-300 px-4 py-2",
+                            isActive ? "text-secondary" : "text-primary/40 hover:text-primary"
                         )}
                       >
                           <link.icon className={cn("w-6 h-6", isActive ? "stroke-[2.5px]" : "stroke-[1.5px]")} />
@@ -176,9 +174,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           </div>
       </div>
 
-      <footer className="bg-primary-navy text-white pt-56 pb-12 overflow-hidden relative border-t border-white/5 md:pb-12 pb-32">
-        <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-[0.03]">
-          <span className="text-[25vw] font-serif font-bold text-white leading-none whitespace-nowrap tracking-tighter">
+      <footer className="bg-surface-low text-primary pt-56 pb-12 overflow-hidden relative border-t border-outline-variant/10 md:pb-12 pb-32">
+        <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-5">
+          <span className="text-[25vw] font-serif font-bold text-primary leading-none whitespace-nowrap tracking-tighter">
             GÜL PARTNERS
           </span>
         </div>
@@ -187,15 +185,15 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 mb-32">
             <div className="lg:col-span-5 flex flex-col items-start text-center md:text-left items-center md:items-start">
               <div className="mb-14">
-                <Logo color="#C5A022" size="h-44" />
+                <Logo color="#735D00" size="h-44" />
               </div>
-              <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary-gold/30 md:pl-10">
+              <p className="text-primary/60 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary/30 md:pl-10">
                 Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir gücü olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
-              <div className="flex gap-6 items-center pt-10 border-t border-white/10 w-full mb-12 justify-center md:justify-start">
-                 <a href="#" aria-label="LinkedIn profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
-                 <a href="#" aria-label="Instagram profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Instagram className="w-5 h-5" /></a>
-                 <a href="#" aria-label="Twitter profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Twitter className="w-5 h-5" /></a>
+              <div className="flex gap-6 items-center pt-10 border-t border-outline-variant/10 w-full mb-12 justify-center md:justify-start">
+                 <a href="#" aria-label="LinkedIn profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
+                 <a href="#" aria-label="Instagram profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Instagram className="w-5 h-5" /></a>
+                 <a href="#" aria-label="Twitter profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
 
@@ -219,26 +217,26 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="lg:col-span-3 text-center md:text-left">
-               <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">İLETİŞİM</h4>
+               <h4 className="font-serif text-xs font-bold mb-12 text-primary/30 uppercase tracking-[0.5em] py-2 border-b border-outline-variant/10 inline-block">İLETİŞİM</h4>
                <div className="space-y-10">
                   <div className="flex gap-6 justify-center md:justify-start">
-                     <MapPin className="w-6 h-6 text-secondary-gold flex-shrink-0" />
-                     <p className="text-gray-400 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
+                     <MapPin className="w-6 h-6 text-secondary flex-shrink-0" />
+                     <p className="text-primary/60 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
                   </div>
                   <div className="flex gap-6 justify-center md:justify-start">
-                     <Phone className="w-6 h-6 text-secondary-gold flex-shrink-0" />
-                     <a href="tel:+902122113345" className="text-gray-400 text-sm hover:text-white transition-colors">+90 (212) 211 3345</a>
+                     <Phone className="w-6 h-6 text-secondary flex-shrink-0" />
+                     <a href="tel:+902122113345" className="text-primary/60 text-sm hover:text-secondary transition-colors">+90 (212) 211 3345</a>
                   </div>
                   <div className="flex gap-6 justify-center md:justify-start">
-                     <Mail className="w-6 h-6 text-secondary-gold flex-shrink-0" />
-                     <a href="mailto:av.ferdigul@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors italic">av.ferdigul@gmail.com</a>
+                     <Mail className="w-6 h-6 text-secondary flex-shrink-0" />
+                     <a href="mailto:av.ferdigul@gmail.com" className="text-primary/60 text-sm hover:text-secondary transition-colors italic">av.ferdigul@gmail.com</a>
                   </div>
                </div>
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
-            <div className="text-[10px] text-gray-500 font-bold tracking-[0.3em] uppercase">
+          <div className="pt-12 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
+            <div className="text-[10px] text-primary/40 font-bold tracking-[0.3em] uppercase">
               © 2026 GÜL PARTNERS. ADALETİN TEMSİLCİLERİ.
             </div>
             
