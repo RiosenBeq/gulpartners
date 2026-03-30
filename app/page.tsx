@@ -55,7 +55,7 @@ export default function Home() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-8 items-center">
-              <Link href="/uzmanlik" className="w-full sm:w-auto text-center bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50">
+              <Link href="/uzmanlik" className="w-full sm:w-auto text-center bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:from-secondary hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50">
                 UZMANLIK ALANLARI
               </Link>
               <Link href="/iletisim" className="w-full sm:w-auto text-center text-primary px-6 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:text-secondary transition-all relative group/link">
@@ -147,13 +147,13 @@ export default function Home() {
               <Link
                 key={service.id}
                 href={`/uzmanlik#${service.id}`}
-                className="group bg-surface p-16 hover:bg-primary transition-all duration-700"
+                className="group bg-surface p-16 hover:bg-surface-highest transition-all duration-700 hover:-translate-y-2 hover:shadow-2xl border-t-2 border-transparent hover:border-secondary"
               >
-                <div className="mb-12 text-secondary">
+                <div className="mb-12 text-secondary group-hover:scale-110 transition-transform duration-500 origin-left">
                   <service.icon className="w-12 h-12 stroke-[1px]" />
                 </div>
-                <h3 className="font-serif text-3xl font-bold text-primary mb-8 group-hover:text-on-primary transition-colors tracking-tight">{service.title}</h3>
-                <p className="text-primary/60 group-hover:text-on-primary/70 font-light leading-relaxed mb-12">
+                <h3 className="font-serif text-3xl font-bold text-primary mb-8 tracking-tight">{service.title}</h3>
+                <p className="text-primary/70 font-light leading-relaxed mb-12">
                   {service.desc}
                 </p>
                 <div className="w-12 h-px bg-secondary group-hover:w-full transition-all duration-700"></div>
@@ -166,7 +166,7 @@ export default function Home() {
       <section className="py-48 bg-surface border-y border-outline-variant/10">
         <div className="max-w-7xl mx-auto px-12 text-center group">
           <h2 className="font-serif text-5xl md:text-7xl font-bold text-primary mb-16 tracking-tight leading-[1]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
-          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
+          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-secondary hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
             DANIŞMANLIK TALEP EDİN <ArrowUpRight className="w-5 h-5 transition-transform duration-500 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2" />
           </Link>
         </div>

@@ -165,7 +165,7 @@ export default function Expertise() {
             <h2 className="font-serif text-4xl md:text-5xl mb-8 leading-tight">Hukuki Güvenliğinizi Profesyonellere Emanet Edin.</h2>
             <p className="text-on-primary/70 mb-14 text-lg font-light">Özel durumunuzu görüşmek ve uzman kadromuzdan danışmanlık almak için bizimle iletişime geçin.</p>
             <Link href="/iletisim">
-              <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 inline-flex items-center gap-3 w-full sm:w-auto justify-center">
+              <button className="bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-14 py-5 font-bold uppercase tracking-[0.4em] text-[10px] transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 hover:from-secondary hover:to-primary inline-flex items-center gap-3 w-full sm:w-auto justify-center">
                 RANDEVU ALIN <span className="material-symbols-outlined text-sm transition-transform duration-500 group-hover:translate-x-1">north_east</span>
               </button>
             </Link>

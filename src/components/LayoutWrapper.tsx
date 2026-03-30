@@ -133,8 +133,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <Link
                 href="/iletisim"
                  className={cn(
-                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden rounded-sm",
-                   "bg-gradient-to-r from-primary to-primary-container text-on-primary hover:from-primary-container hover:to-primary"
+                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden",
+                   "bg-gradient-to-r from-primary to-primary-container text-on-primary hover:from-secondary hover:to-primary border border-outline-variant/30 hover:border-secondary/50 hover:shadow-xl hover:-translate-y-0.5"
                 )}
               >
                 İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1" />

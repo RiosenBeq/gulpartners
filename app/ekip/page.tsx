@@ -102,6 +102,25 @@ export default function Team() {
         </div>
       </section>
 
+      {/* Visual Separator: Law Library / Legal Heritage */}
+      <section className="relative h-[70vh] min-h-[500px] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1568667236549-aba560c2c548?q=80&w=2600&auto=format&fit=crop"
+          alt="Legal Heritage"
+          className="absolute inset-0 w-full h-full object-cover object-center scale-110"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-surface/90 via-surface/50 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-surface/60 via-transparent to-transparent"></div>
+        <div className="relative z-10 h-full flex items-center">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full">
+            <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Ortak Değerlerimiz</span>
+            <h2 className="font-serif text-5xl md:text-6xl text-primary leading-tight max-w-2xl">
+              Hukukun <span className="italic text-secondary">Ruhu,</span><br/>Etiğin Temeli.
+            </h2>
+          </div>
+        </div>
+      </section>
+
       {/* Grid: Architectural Excellence */}
       <section className="py-48 bg-surface-low border-y border-outline-variant/20">
         <div className="max-w-7xl mx-auto px-12">
@@ -111,7 +130,7 @@ export default function Team() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-outline-variant/10 border border-outline-variant/10 overflow-hidden shadow-2xl">
             {otherTeam.map((member) => (
-              <div key={member.id} className="group bg-surface p-2 text-center transition-all duration-700 hover:bg-primary">
+              <div key={member.id} className="group bg-surface p-2 text-center transition-all duration-700 hover:bg-surface-highest hover:shadow-xl border-t-2 border-transparent hover:border-secondary">
                 <div className="aspect-square overflow-hidden mb-8 relative bg-surface-low">
                   <img
                     src={member.image}
@@ -120,14 +139,32 @@ export default function Team() {
                   />
                 </div>
                 <div className="px-6 pb-12 h-24 flex flex-col justify-center">
-                   <h4 className="font-serif text-xl font-bold text-primary transition-colors group-hover:text-on-primary leading-tight">{member.name}</h4>
+                   <h4 className="font-serif text-xl font-bold text-primary group-hover:text-secondary transition-colors leading-tight">{member.name}</h4>
                    <div className="mt-4 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
-                     <a href="#" className="text-secondary hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
-                     <a href="mailto:av.ferdigul@gmail.com" className="text-secondary hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
+                     <a href="#" className="text-secondary hover:text-primary transition-colors"><Linkedin className="w-4 h-4" /></a>
+                     <a href="mailto:av.ferdigul@gmail.com" className="text-secondary hover:text-primary transition-colors"><Mail className="w-4 h-4" /></a>
                    </div>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Separator: Values & Culture */}
+      <section className="relative h-[60vh] min-h-[420px] overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=2600&auto=format&fit=crop"
+          alt="Legal Work Culture"
+          className="absolute inset-0 w-full h-full object-cover object-center"
+        />
+        <div className="absolute inset-0 bg-gradient-to-l from-surface/95 via-surface/60 to-transparent"></div>
+        <div className="relative z-10 h-full flex items-center justify-end">
+          <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full text-right">
+            <span className="text-secondary text-[10px] font-bold uppercase tracking-[0.5em] mb-6 block">Çalışma Kültürümüz</span>
+            <h2 className="font-serif text-5xl md:text-6xl text-primary leading-tight max-w-2xl ml-auto">
+              Mükemmelliği  <br/><span className="italic text-secondary">Birlikte</span> İnşa Ediyoruz.
+            </h2>
           </div>
         </div>
       </section>
@@ -137,7 +174,7 @@ export default function Team() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-secondary/10 translate-x-1/2 -translate-y-1/2 blur-[100px]"></div>
         <div className="max-w-7xl mx-auto px-12 text-center group">
           <h2 className="font-serif text-5xl md:text-7xl font-bold text-primary mb-16 tracking-tight leading-[1]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
-          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-primary-container hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
+          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary border border-outline-variant/30 px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-flex items-center gap-3 hover:from-secondary hover:to-primary transition-all duration-700 shadow-xl hover:-translate-y-1 hover:shadow-2xl hover:border-secondary/50 group/btn">
             DANIŞMANLIK TALEP EDİN <ArrowUpRight className="w-5 h-5 transition-transform duration-500 group-hover/btn:translate-x-2 group-hover/btn:-translate-y-2" />
           </Link>
         </div>

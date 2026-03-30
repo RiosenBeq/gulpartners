@@ -30,29 +30,29 @@ export default function Contact() {
   };
 
   return (
-    <div className="bg-surface selection:bg-secondary/20 min-h-screen">
-      {/* Hero Section */}
-      <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute bottom-0 right-0 w-[800px] h-[800px] bg-secondary/5 rounded-full translate-x-1/3 translate-y-1/3 blur-[120px]"></div>
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
-            alt="Background" 
-            className="w-full h-full object-cover mix-blend-multiply opacity-20"
+    <div className="bg-surface selection:bg-secondary/20 min-h-screen overflow-x-hidden">
+      {/* Hero Section: Full Cinematic */}
+      <section className="relative w-full h-[80vh] min-h-[600px] flex items-end overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2600&auto=format&fit=crop"
+            alt="Gül Partners İletişim"
+            className="w-full h-full object-cover object-center"
           />
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left">
-          <div className="max-w-3xl">
-            <span className="text-secondary text-sm font-bold tracking-[0.4em] uppercase mb-10 block font-sans opacity-80">İLETİŞİM KURUN</span>
-            <h1 className="font-serif display-lg mb-14 italic reveal-up text-primary">
-              Zihinsel <br/> <span className="not-italic text-primary/40">İletişim.</span>
-            </h1>
-            <p className="text-2xl text-primary/60 font-light max-w-2xl leading-relaxed italic border-l border-secondary/30 pl-10 reveal-up">
-              Gül Partners hukuk profesyonelleri, taleplerinizi 24 saat içinde stratejik bir ön incelemeye tabi tutar.
-            </p>
-          </div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent mix-blend-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/60 to-surface/10"></div>
+        <div className="relative z-20 w-full max-w-7xl mx-auto px-6 lg:px-12 pb-20">
+          <span className="text-secondary text-[10px] font-bold tracking-[0.5em] uppercase mb-8 block font-sans">İLETİŞİM KURUN</span>
+          <h1 className="font-serif text-6xl md:text-[5.5rem] text-primary tracking-tighter leading-[1.05] mb-10">
+            Bir Adım <span className="italic text-secondary">Bizimle</span><br/>
+            <span className="text-primary/40 not-italic">Başlasın.</span>
+          </h1>
+          <p className="text-xl text-primary/70 max-w-2xl leading-relaxed font-light border-l border-secondary/40 pl-8">
+            Gül Partners hukuk profesyonelleri, taleplerinizi 24 saat içinde stratejik bir ön incelemeye tabi tutar.
+          </p>
         </div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-surface to-transparent"></div>
       </section>
 
       {/* Main Contact Section */}
@@ -173,7 +173,7 @@ export default function Contact() {
                 </div>
                 <button 
                   type="submit" 
-                  className="w-full md:w-auto px-16 py-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold hover:from-primary-container hover:to-primary transition-all duration-700 flex items-center justify-center gap-4 group uppercase text-[10px] tracking-[0.4em] shadow-xl hover:-translate-y-1 hover:shadow-2xl border border-outline-variant/30"
+                  className="w-full md:w-auto px-16 py-6 bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold hover:from-secondary hover:to-primary transition-all duration-700 flex items-center justify-center gap-4 group uppercase text-[10px] tracking-[0.4em] shadow-xl hover:-translate-y-1 hover:shadow-2xl border border-outline-variant/30"
                 >
                   GÖNDER <Send className="w-5 h-5 group-hover:translate-x-2 group-hover:-translate-y-2 transition-transform" />
                 </button>
