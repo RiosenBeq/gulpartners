@@ -93,10 +93,10 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       <nav className="fixed top-0 left-0 w-full z-[100] p-4 lg:p-10 transition-all duration-700">
         <div 
           className={cn(
-            "max-w-[1700px] mx-auto transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
+            "max-w-[1700px] mx-auto transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)] rounded-b-xl lg:rounded-b-3xl border-b border-outline-variant/30",
             isScrolled 
-              ? "bg-surface/98 backdrop-blur-3xl py-3 px-6 lg:px-12 shadow-[0_20px_50px_rgba(95,94,94,0.05)]" 
-              : "bg-surface-low/60 backdrop-blur-lg border-b border-outline-variant/10 px-6 lg:px-12"
+              ? "bg-surface/80 backdrop-blur-[20px] py-3 px-6 lg:px-12 editorial-shadow" 
+              : "bg-surface/40 backdrop-blur-[20px] py-5 px-6 lg:px-12"
           )}
         >
           <div className="flex justify-between items-center h-20 lg:h-28 transition-all duration-700">
@@ -107,7 +107,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-14 relative" ref={navRef}>
               <div 
-                className="absolute bottom-0 h-[2px] bg-accent-burgundy transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                className="absolute bottom-0 h-[2px] bg-secondary transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
                 style={{ 
                   left: `${indicatorStyle.left}px`, 
                   width: `${indicatorStyle.width}px`,
@@ -132,9 +132,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               })}
               <Link
                 href="/iletisim"
-                className={cn(
-                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden",
-                   "bg-accent-burgundy text-on-primary hover:bg-primary"
+                 className={cn(
+                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden rounded-sm",
+                   "bg-gradient-to-r from-primary to-primary-container text-on-primary hover:from-primary-container hover:to-primary"
                 )}
               >
                 İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1" />
@@ -173,8 +173,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           </div>
       </div>
 
-      <footer className="bg-accent-navy text-on-primary pt-56 pb-12 overflow-hidden relative md:pb-12 pb-32">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-accent-burgundy to-secondary opacity-30"></div>
+      <footer className="bg-primary text-on-primary pt-56 pb-12 overflow-hidden relative md:pb-12 pb-32">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-primary-container to-secondary opacity-30"></div>
         <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-5">
           <span className="text-[25vw] font-serif font-bold text-on-primary leading-none whitespace-nowrap tracking-tighter">
             GÜL PARTNERS

@@ -32,36 +32,40 @@ export default function Home() {
   return (
     <div className="bg-white selection:bg-secondary-gold/20 overflow-x-hidden">
       
-      <section className="relative pt-48 pb-32 bg-surface overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-10">
-          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary/5 rounded-full translate-x-1/3 -translate-y-1/3 blur-[120px]"></div>
+      <section className="relative w-full h-[100vh] min-h-[800px] flex items-center overflow-hidden bg-surface-low">
+        <div className="absolute inset-0 z-0 opacity-40 grayscale mix-blend-multiply">
           <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
             alt="Gul Partners Background" 
-            className="w-full h-full object-cover grayscale opacity-10 mix-blend-multiply"
+            className="w-full h-full object-cover" 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop"
           />
         </div>
-        
-        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="max-w-4xl text-left">
-            <span className="text-secondary font-sans uppercase tracking-[0.5em] text-xs font-bold mb-10 block animate-fade-in opacity-80">PRESTİJ • GÜVEN • MİRAS</span>
-            <h1 className="font-serif animate-fade-in mb-14 italic display-lg text-primary">
-              Hukukun <br/> <span className="not-italic text-primary/40">Stratejik Partnerleri.</span>
+        <div className="absolute inset-0 z-1 bg-secondary opacity-5 mix-blend-color"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
+        <div className="relative z-20 max-w-[1700px] mx-auto px-6 lg:px-12 w-full pt-20">
+          <div className="max-w-4xl">
+            <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 font-sans backdrop-blur-md rounded-sm">
+              Prestij • Güven • Miras
+            </span>
+            <h1 className="font-serif text-6xl md:text-[5.5rem] text-primary tracking-tighter leading-[1.05] mb-10">
+              Hukukun <br/><span className="text-secondary italic">Stratejik Partnerleri.</span>
             </h1>
-            <p className="text-2xl text-primary/60 font-light max-w-2xl leading-relaxed italic border-l border-secondary/30 pl-10 animate-fade-in">
-              Karmaşık hukuki süreçlerde disiplinle inşa edilmiş, stratejik ve sonuç odaklı çözümler sunan yeni nesil bir hukuk kütüphanesi otoritesi.
+            <p className="font-sans text-xl text-primary/70 max-w-2xl leading-relaxed mb-16 font-light border-l border-secondary/30 pl-8">
+              Karmaşık hukuki süreçlerde disiplinle inşa edilmiş, stratejik ve sonuç odaklı çözümler sunan yeni nesil hukuk kütüphanesi otoritesi.
             </p>
             
-            <div className="flex flex-wrap gap-8 mt-20 animate-fade-in">
-              <Link href="/uzmanlik" className="bg-primary text-on-primary px-12 py-5 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-secondary transition-all duration-700 shadow-sm">
+            <div className="flex flex-col sm:flex-row gap-8 items-center">
+              <Link href="/uzmanlik" className="w-full sm:w-auto text-center bg-gradient-to-r from-primary to-primary-container text-on-primary px-12 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:from-primary-container hover:to-primary transition-all duration-700 rounded-sm shadow-md">
                 UZMANLIK ALANLARI
               </Link>
-              <Link href="/iletisim" className="border-b border-primary text-primary px-2 py-5 font-bold tracking-[0.4em] uppercase text-[10px] hover:text-secondary hover:border-secondary transition-all">
-                DANIŞMANLIK ALIN
+              <Link href="/iletisim" className="w-full sm:w-auto text-center text-primary px-6 py-5 font-bold tracking-[0.3em] uppercase text-[10px] hover:text-secondary transition-all relative group/link">
+                DANIŞMANLIK ALIN <ArrowUpRight className="w-4 h-4 inline-block ml-2 group-hover/link:translate-x-1 group-hover/link:-translate-y-1 transition-transform" />
+                <div className="absolute bottom-3 left-6 right-8 h-[1px] bg-primary/20 group-hover/link:bg-secondary transition-colors"></div>
               </Link>
             </div>
           </div>
         </div>
+        <div className="absolute bottom-0 right-0 w-1/3 h-1 opacity-30 bg-gradient-to-r from-surface-low via-primary/20 to-surface-low"></div>
       </section>
 
       <section className="bg-surface-low spacing-editorial border-y border-outline-variant/10">
@@ -159,10 +163,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="spacing-editorial bg-surface">
+      <section className="py-48 bg-surface border-y border-outline-variant/10">
         <div className="max-w-7xl mx-auto px-12 text-center group">
-          <h2 className="font-serif text-7xl font-bold text-primary mb-16 tracking-tight leading-[0.9]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
-          <Link href="/iletisim" className="relative bg-primary text-on-primary px-20 py-8 font-bold text-xs tracking-[0.4em] uppercase inline-block hover:bg-secondary transition-all duration-700 shadow-sm">
+          <h2 className="font-serif text-5xl md:text-7xl font-bold text-primary mb-16 tracking-tight leading-[1]">Hukuki Geleceğinizi <br/><span className="italic font-light text-primary/40">Bize Emanet Edin.</span></h2>
+          <Link href="/iletisim" className="relative bg-gradient-to-r from-primary to-primary-container text-on-primary px-20 py-8 font-bold text-[10px] tracking-[0.4em] uppercase inline-block hover:from-primary-container hover:to-primary rounded-sm transition-all duration-700 shadow-sm">
             DANIŞMANLIK TALEP EDİN
           </Link>
         </div>

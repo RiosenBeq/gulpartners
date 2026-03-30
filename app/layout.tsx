@@ -1,15 +1,15 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Noto_Serif } from "next/font/google";
+import { Manrope, Newsreader } from "next/font/google";
 import "@/src/index.css";
 import { cn } from "@/src/lib/utils";
 import LayoutWrapper from "@/src/components/LayoutWrapper";
 
-const inter = Inter({
+const manrope = Manrope({
   subsets: ["latin"],
   variable: "--font-sans",
 });
 
-const notoSerif = Noto_Serif({
+const newsreader = Newsreader({
   subsets: ["latin"],
   variable: "--font-serif",
 });
@@ -118,7 +118,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="tr" className={cn("scroll-smooth", inter.variable, notoSerif.variable)}>
+    <html lang="tr" className={cn("scroll-smooth", manrope.variable, newsreader.variable)}>
       <head>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet" />
         <script

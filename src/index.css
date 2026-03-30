@@ -1,24 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
   --font-serif: 'Noto Serif', ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
   
-  /* Digital Archivist Color Palette */
-  --color-primary: #2D2D2D;
-  --color-secondary: #C5A022;
-  --color-accent-navy: #001F3F;
-  --color-accent-burgundy: #5D1010;
+  /* Digital Archivist Color Palette - Editorial Authority */
+  --color-primary: #5d5c5b;
+  --color-primary-container: #757474;
+  --color-secondary: #745b22;
   --color-surface: #FAFAFA;
-  --color-surface-low: #F5F5F5;
-  --color-on-surface-variant: #2D2D2D;
+  --color-surface-low: #F3F3F3;
+  --color-surface-highest: #E8E8E8;
+  --color-on-background: #1a1c1c;
+  --color-on-surface-variant: #1a1c1c;
   --color-on-primary: #FAFAFA;
-  --color-outline-variant: rgba(173, 179, 180, 0.1);
+  --color-outline-variant: rgba(173, 179, 180, 0.2);
   
-  /* Legacy Colors mapping for gradual transition if needed */
-  --color-primary-navy: #2D2D2D;
-  --color-secondary-gold: #C5A022;
+  /* Legacy mapping overrides pointing to new hierarchy */
+  --color-accent-navy: #5d5c5b;
+  --color-accent-burgundy: #757474;
+  --color-primary-navy: #5d5c5b;
+  --color-secondary-gold: #745b22;
 }
 
 @layer base {
@@ -50,7 +52,7 @@
 }
 
 .glass-nav {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(250, 250, 250, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -102,9 +104,9 @@
   background: #f9f9fb;
 }
 ::-webkit-scrollbar-thumb {
-  background: #000D24;
+  background: #5d5c5b;
   border-radius: 10px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C5A022;
+  background: #745b22;
 }
