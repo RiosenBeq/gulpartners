@@ -105,17 +105,28 @@ export default function Expertise() {
   return (
     <div className="bg-white antialiased selection:bg-secondary-gold/20 scroll-smooth">
       {/* Hero Section: Architectural Header */}
-      <header className="pt-40 pb-24 px-8 max-w-7xl mx-auto reveal-up">
-        <div className="max-w-4xl">
-          <span className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-xs font-semibold mb-6 block">KÜRATÖRLÜĞÜNDE HUKUKİ MÜKEMMELLİK</span>
-          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[1.1] text-primary-navy tracking-tight mb-8">
-            Karmaşık Hukuk Süreçlerinde Mimari Hassasiyet.
-          </h1>
-          <p className="text-gray-500 text-xl leading-relaxed max-w-2xl font-light italic border-l border-secondary-gold/20 pl-8">
-            Her vaka bir yapı, her strateji bir temeldir. Gül Partners, hukuki zorlukları birer mimari disiplinle ele alarak kalıcı ve güvenli çözümler inşa eder.
-          </p>
+      <section className="relative pt-48 pb-32 bg-primary-navy overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-10">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-[120px]"></div>
+          <img 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
+            alt="Background" 
+            className="w-full h-full object-cover grayscale mix-blend-overlay opacity-20"
+          />
         </div>
-      </header>
+        
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="max-w-4xl">
+            <span className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-xs font-bold mb-8 block animate-fade-in">KÜRATÖRLÜĞÜNDE HUKUKİ MÜKEMMELLİK</span>
+            <h1 className="font-serif text-5xl md:text-[8rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic reveal-up">
+              Karmaşık <br/> <span className="not-italic text-4xl md:text-[8rem] text-gray-400">Mimari Hassasiyet.</span>
+            </h1>
+            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10 reveal-up">
+              Her vaka bir yapı, her strateji bir temeldir. Gül Partners, hukuki zorlukları birer mimari disiplinle ele alarak kalıcı ve güvenli çözümler inşa eder.
+            </p>
+          </div>
+        </div>
+      </section>
 
       <main className="max-w-7xl mx-auto px-6 md:px-8 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { ShieldCheck, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { cn } from "@/src/lib/utils";
 
 interface CookieConsentProps {
@@ -16,7 +16,7 @@ export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
     if (!consent) {
       const timer = setTimeout(() => {
         setIsVisible(true);
-      }, 1500); // Slight delay for premium feel
+      }, 2000);
       return () => clearTimeout(timer);
     }
   }, []);
@@ -30,43 +30,33 @@ export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
 
   return (
     <div className={cn(
-      "fixed bottom-24 md:bottom-12 left-1/2 -translate-x-1/2 z-[200] w-[95%] max-w-2xl",
-      "animate-in fade-in slide-in-from-bottom-10 duration-1000 ease-out"
+      "fixed bottom-28 md:bottom-10 right-4 md:right-10 z-[200] w-[calc(100%-2rem)] max-w-[340px]",
+      "animate-in fade-in slide-in-from-right-10 duration-1000 ease-out"
     )}>
-      <div className="bg-primary-navy/90 backdrop-blur-2xl border border-white/10 p-6 md:p-8 rounded-3xl shadow-[0_50px_100px_rgba(0,0,0,0.5)] flex flex-col md:flex-row items-center gap-6 md:gap-10">
-        <div className="flex-shrink-0 w-16 h-16 bg-white/5 rounded-full flex items-center justify-center text-secondary-gold border border-white/5">
-          <ShieldCheck className="w-8 h-8" />
-        </div>
-        
-        <div className="flex-grow text-center md:text-left">
-          <h4 className="text-white font-serif text-lg font-bold mb-2 tracking-tight">Gizliliğiniz Bizim İçin Önemli</h4>
-          <p className="text-gray-400 text-sm font-light leading-relaxed">
-            Deneyiminizi iyileştirmek için çerezleri kullanıyoruz. Web sitemizi kullanarak çerez politikamızı kabul etmiş olursunuz.
+      <div className="bg-primary-navy/80 backdrop-blur-3xl border border-white/5 p-6 rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.4)] relative group">
+        <div className="flex flex-col gap-5">
+          <div className="flex justify-between items-start">
+             <div className="text-secondary-gold text-[10px] font-bold tracking-[0.3em] uppercase">Çerez Bildirimi</div>
+             <button 
+                onClick={() => setIsVisible(false)}
+                className="text-gray-500 hover:text-white transition-colors p-1"
+                aria-label="Kapat"
+              >
+                <X className="w-4 h-4" />
+              </button>
+          </div>
+          
+          <p className="text-gray-300 text-[11px] font-light leading-relaxed">
+            Hizmet kalitemizi artırmak adına çerezleri kullanmaktayız. <button onClick={onOpenPrivacy} className="text-white underline hover:text-secondary-gold transition-colors">Politikamız için tıklayın.</button>
           </p>
-        </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 flex-shrink-0 w-full md:w-auto">
-          <button 
-            onClick={onOpenPrivacy}
-            className="text-[10px] text-gray-500 hover:text-white uppercase tracking-[0.2em] font-bold transition-colors py-2"
-          >
-            Detaylı Bilgi
-          </button>
           <button 
             onClick={handleAccept}
-            className="bg-secondary-gold text-primary-navy px-10 py-4 rounded-xl text-[10px] font-bold tracking-[0.3em] uppercase hover:bg-white transition-all duration-500 shadow-xl"
+            className="w-full bg-secondary-gold text-primary-navy py-3 rounded-lg text-[9px] font-bold tracking-[0.4em] uppercase hover:bg-white transition-all duration-700 shadow-lg"
           >
-            Kabul Et
+            KABUL EDİYORUM
           </button>
         </div>
-        
-        <button 
-          onClick={() => setIsVisible(false)}
-          className="absolute top-4 right-4 text-gray-600 hover:text-white p-2 transition-colors"
-          aria-label="Kapat"
-        >
-          <X className="w-4 h-4" />
-        </button>
       </div>
     </div>
   );

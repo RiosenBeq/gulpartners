@@ -5,13 +5,13 @@ export default function Team() {
   const teamMembers = [
     {
       id: 1,
-      name: 'Av. LL.M. Batuhan Bulut',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg',
+      name: 'Av. Ferdi Gül',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg',
     },
     {
       id: 2,
-      name: 'Av. Ferdi Gül',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg',
+      name: 'Av. LL.M. Batuhan Bulut',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg',
     },
     {
       id: 3,

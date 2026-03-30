@@ -97,13 +97,13 @@ export default function Contact() {
                 </div>
                 <h3 className="font-serif text-xl font-bold text-primary-navy mb-4">Dijital Varlık</h3>
                 <div className="flex gap-4">
-                  <a href="https://www.linkedin.com/in/avbatuhanbulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="LinkedIn Profilesi">
+                  <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="LinkedIn Profilesi">
                     <Linkedin className="w-5 h-5" />
                   </a>
-                  <a href="https://www.instagram.com/batuhan_bulut/" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Instagram Profilesi">
+                  <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Instagram Profilesi">
                     <Instagram className="w-5 h-5" />
                   </a>
-                  <a href="https://x.com/avbatuhanbulut" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Twitter Profilesi">
+                  <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-primary-navy hover:bg-secondary-gold hover:text-white transition-all shadow-sm" aria-label="Twitter Profilesi">
                     <Twitter className="w-5 h-5" />
                   </a>
                 </div>
@@ -124,7 +124,7 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleChange}
                       className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
-                      placeholder="Örn: Batuhan Bulut"
+                      placeholder="Örn: Ferdi Gül"
                     />
                   </div>
                   <div className="relative group">

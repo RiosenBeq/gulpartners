@@ -249,8 +249,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               className="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity group"
             >
               <div className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase">MADE BY</div>
-              <svg viewBox="0 0 100 100" className="h-5 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M20 80V20L50 50L80 20V80" stroke="currentColor" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
+              <svg viewBox="0 0 100 100" className="h-6 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                 <path d="M25 75V25C25 25 25 15 35 15H65M75 25V75C75 75 75 85 65 85H35" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
+                 <path d="M45 40H60V60H45V40Z" fill="currentColor" />
               </svg>
               <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase group-hover:text-secondary-gold transition-colors">NEXTGEN MEDYA</div>
             </a>
