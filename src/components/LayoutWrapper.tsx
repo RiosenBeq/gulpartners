@@ -5,19 +5,24 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight, Linkedin, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react';
 import { cn } from "@/src/lib/utils";
+import LegalModal from './LegalModals';
 
 const Logo = ({ className, color = "currentColor", size = "h-12" }: { className?: string, color?: string, size?: string }) => (
   <div className={cn("flex items-center gap-3", className)}>
-    <svg viewBox="0 0 100 100" className={cn(size, "w-auto")} fill="none" xmlns="0.2.0">
+    <svg viewBox="0 0 100 100" className={cn(size, "w-auto")} fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M50 5L93.3 30V70L50 95L6.7 70V30L50 5Z" stroke={color} strokeWidth="2" />
       <text x="50" y="58" textAnchor="middle" fill={color} className="font-serif font-bold text-[32px]">G&P</text>
     </svg>
   </div>
 );
 
+type ModalType = 'privacy' | 'kvkk' | 'terms' | null;
+
 export default function LayoutWrapper({ children }: { children: React.ReactNode }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [legalModal, setLegalModal] = useState<{ isOpen: boolean, type: ModalType }>({ isOpen: false, type: null });
+  
   const pathname = usePathname();
   const navRef = useRef<HTMLDivElement>(null);
   const [indicatorStyle, setIndicatorStyle] = useState({ left: 0, width: 0, opacity: 0 });
@@ -27,29 +32,36 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       setIsScrolled(window.scrollY > 50);
     };
 
-    // Intersection Observer for reveal animations
+    // More robust Intersection Observer
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('reveal-visible');
         }
       });
-    }, { threshold: 0.15 });
+    }, { 
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px' // Trigger slightly before entering
+    });
 
     const observeElements = () => {
-      document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
+      const elements = document.querySelectorAll('.reveal-up:not(.reveal-visible)');
+      elements.forEach(el => revealObserver.observe(el));
     };
 
     window.addEventListener('scroll', handleScroll);
+    
+    // Initial and mutation-based observation
     observeElements();
     
-    // Re-observe when pathname changes
-    const timeout = setTimeout(observeElements, 500);
+    // MutationObserver to watch for dynamic DOM changes (Next.js page content)
+    const mutationObserver = new MutationObserver(observeElements);
+    mutationObserver.observe(document.body, { childList: true, subtree: true });
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
       revealObserver.disconnect();
-      clearTimeout(timeout);
+      mutationObserver.disconnect();
     };
   }, [pathname]);
 
@@ -74,6 +86,10 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       }
     }
   }, [pathname, isScrolled]);
+
+  const openModal = (type: ModalType) => {
+    setLegalModal({ isOpen: true, type });
+  };
 
   return (
     <div className="flex flex-col min-h-screen">
@@ -171,7 +187,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       </main>
 
       <footer className="bg-primary-navy text-white pt-56 pb-12 overflow-hidden relative border-t border-white/5">
-        {/* Monumental Watermark */}
         <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-[0.03]">
           <span className="text-[25vw] font-serif font-bold text-white leading-none whitespace-nowrap tracking-tighter">
             GÜL PARTNERS
@@ -191,11 +206,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Instagram className="w-5 h-5" /></a>
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Twitter className="w-5 h-5" /></a>
-              </div>
-              <div className="flex gap-8 items-center">
-                 <Link href="/iletisim" className="text-secondary-gold text-[10px] font-bold tracking-[0.6em] uppercase hover:text-white transition-all transform hover:translate-x-2">YOL TARİFİ ALIN</Link>
-                 <div className="w-12 h-px bg-white/10"></div>
-                 <Link href="/uzmanlik" className="text-gray-500 text-[10px] font-bold tracking-[0.6em] uppercase hover:text-white transition-all transform hover:translate-x-2">KEŞFEDİN</Link>
               </div>
             </div>
 
@@ -244,13 +254,19 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               © 2026 GÜL PARTNERS. ADALETİN MİMARLARI.
             </div>
             <div className="flex gap-10">
-               <Link href="#" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold">GİZLİLİK</Link>
-               <Link href="#" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold">KVKK</Link>
-               <Link href="#" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold">ÇEREZLER</Link>
+               <button onClick={() => openModal('privacy')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
+               <button onClick={() => openModal('kvkk')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
+               <button onClick={() => openModal('terms')} className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
             </div>
           </div>
         </div>
       </footer>
+
+      <LegalModal 
+        isOpen={legalModal.isOpen} 
+        type={legalModal.type} 
+        onClose={() => setLegalModal({ isOpen: false, type: null })} 
+      />
     </div>
   );
 }
