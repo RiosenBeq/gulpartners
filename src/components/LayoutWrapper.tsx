@@ -48,20 +48,12 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           )}
         >
           <div className="flex justify-between items-center h-24">
-            <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
+            <Link href="/" className="flex-shrink-0 flex items-center group">
               <img
                 src="/logo.png"
                 alt="Gul Partners Logo"
-                className="h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
+                className="h-20 w-auto object-contain transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="flex flex-col">
-                <span className="font-serif text-xl font-bold text-primary-navy tracking-tight leading-none">
-                  GUL
-                </span>
-                <span className="font-sans text-xs tracking-[0.2em] text-gray-500 uppercase mt-1">
-                  Partners
-                </span>
-              </div>
             </Link>
 
             <div className="hidden md:flex items-center space-x-12">
@@ -149,15 +141,12 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-16">
             <div className="col-span-1 lg:col-span-1">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="flex flex-col">
-                  <span className="font-serif text-2xl font-bold text-white tracking-tight leading-none">
-                    GUL
-                  </span>
-                  <span className="font-sans text-xs tracking-[0.2em] text-gray-400 uppercase mt-1">
-                    Partners
-                  </span>
-                </div>
+              <div className="flex items-center mb-6">
+                <img
+                  src="/logo.png"
+                  alt="Gul Partners Logo"
+                  className="h-24 w-auto object-contain brightness-0 invert"
+                />
               </div>
               <p className="text-gray-400 text-sm leading-relaxed mb-6">
                 Karmaşık hukuki süreçlerde mimari hassasiyetle inşa edilmiş,
