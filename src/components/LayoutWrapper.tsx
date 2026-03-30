@@ -173,96 +173,145 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           </div>
       </div>
 
-      <footer className="bg-primary text-on-primary pt-56 pb-12 overflow-hidden relative md:pb-12 pb-32">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-primary-container to-secondary opacity-30"></div>
-        <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-5">
-          <span className="text-[25vw] font-serif font-bold text-on-primary leading-none whitespace-nowrap tracking-tighter">
-            GÜL PARTNERS
+      <footer className="relative bg-[#1a1c1c] text-on-primary overflow-hidden">
+        {/* Background image layer */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop"
+            alt="Footer background"
+            className="w-full h-full object-cover opacity-10"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1c1c] via-[#1a1c1c]/90 to-[#1a1c1c]/70"></div>
+        </div>
+
+        {/* Brass top line */}
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-secondary to-transparent opacity-60 z-10"></div>
+
+        {/* Large watermark */}
+        <div className="absolute top-0 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-80 opacity-[0.03] z-0">
+          <span className="text-[22vw] font-serif font-bold text-on-primary leading-none whitespace-nowrap tracking-tighter translate-y-8">
+            GÜL & PARTNERS
           </span>
         </div>
 
-        <div className="max-w-[1500px] mx-auto px-12 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 mb-32">
-            <div className="lg:col-span-5 flex flex-col items-start text-center md:text-left items-center md:items-start">
-              <div className="mb-14">
-                <Logo color="#C5A022" size="h-44" />
+        <div className="relative z-10 max-w-[1500px] mx-auto px-6 lg:px-12">
+
+          {/* Top CTA band */}
+          <div className="py-20 border-b border-on-primary/10 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div>
+              <p className="text-on-primary/40 text-[10px] font-bold tracking-[0.5em] uppercase mb-3">Gül & Partners Hukuk Bürosu</p>
+              <h2 className="font-serif text-4xl md:text-5xl text-on-primary leading-tight">Hukuki Gücünüzü<br/><span className="italic text-secondary">Aktive Edin.</span></h2>
+            </div>
+            <Link
+              href="/iletisim"
+              className="flex-shrink-0 inline-flex items-center gap-3 px-12 py-5 bg-secondary/10 text-secondary border border-secondary/30 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-secondary hover:text-[#1a1c1c] transition-all duration-500 shadow-lg hover:shadow-2xl hover:-translate-y-1 group"
+            >
+              DANIŞMANLIK AL <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+          </div>
+
+          {/* Main grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-20 py-20 mb-4">
+
+            {/* Brand column */}
+            <div className="lg:col-span-5 flex flex-col">
+              <div className="mb-10">
+                <Logo color="#C5A022" size="h-36" />
               </div>
-              <p className="text-on-primary/60 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary/30 md:pl-10">
+              <p className="text-on-primary/50 text-base leading-relaxed font-light max-w-sm mb-10 border-l-2 border-secondary/30 pl-6 italic">
                 Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir gücü olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
-              <div className="flex gap-6 items-center pt-10 border-t border-outline-variant/10 w-full mb-12 justify-center md:justify-start">
-                 <a href="#" aria-label="LinkedIn profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
-                 <a href="#" aria-label="Instagram profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Instagram className="w-5 h-5" /></a>
-                 <a href="#" aria-label="Twitter profilimiz" className="p-4 bg-primary/5 text-primary hover:bg-secondary hover:text-on-primary transition-all duration-500"><Twitter className="w-5 h-5" /></a>
+              <div className="flex gap-4 pt-8 border-t border-on-primary/10">
+                <a href="#" aria-label="LinkedIn" className="w-11 h-11 flex items-center justify-center border border-on-primary/20 text-on-primary/40 hover:border-secondary hover:text-secondary transition-all duration-400">
+                  <Linkedin className="w-4 h-4" />
+                </a>
+                <a href="#" aria-label="Instagram" className="w-11 h-11 flex items-center justify-center border border-on-primary/20 text-on-primary/40 hover:border-secondary hover:text-secondary transition-all duration-400">
+                  <Instagram className="w-4 h-4" />
+                </a>
+                <a href="#" aria-label="Twitter" className="w-11 h-11 flex items-center justify-center border border-on-primary/20 text-on-primary/40 hover:border-secondary hover:text-secondary transition-all duration-400">
+                  <Twitter className="w-4 h-4" />
+                </a>
               </div>
             </div>
 
-            <div className="hidden md:block lg:col-span-2">
-              <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">HIZLI MENÜ</h4>
-              <ul className="space-y-6">
+            {/* Navigation */}
+            <div className="lg:col-span-2">
+              <h4 className="text-[9px] font-bold text-secondary tracking-[0.6em] uppercase mb-8 pb-4 border-b border-on-primary/10">MENÜ</h4>
+              <ul className="space-y-5">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path} aria-label={`${link.name} sayfasına git`} className="text-on-primary/50 hover:text-secondary transition-all text-xs uppercase tracking-[0.4em] font-medium block hover:pl-3">{link.name}</Link>
+                    <Link
+                      href={link.path}
+                      className="text-on-primary/50 hover:text-secondary transition-colors text-[10px] uppercase tracking-[0.4em] font-bold flex items-center gap-2 group"
+                    >
+                      <span className="w-4 h-px bg-on-primary/20 group-hover:w-8 group-hover:bg-secondary transition-all duration-500"></span>
+                      {link.name}
+                    </Link>
                   </li>
                 ))}
               </ul>
             </div>
 
+            {/* Disciplines */}
             <div className="lg:col-span-2">
-              <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">DİSİPLİNLER</h4>
-              <ul className="space-y-6">
-                <li><Link href="/uzmanlik#ceza-hukuku" className="text-on-primary/50 hover:text-on-primary transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">CEZA HUKUKU</Link></li>
-                <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-on-primary/50 hover:text-on-primary transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">FİKRİ MÜLKİYET</Link></li>
+              <h4 className="text-[9px] font-bold text-secondary tracking-[0.6em] uppercase mb-8 pb-4 border-b border-on-primary/10">DİSİPLİNLER</h4>
+              <ul className="space-y-5">
+                <li><Link href="/uzmanlik#sirketler" className="text-on-primary/50 hover:text-secondary transition-colors text-[10px] uppercase tracking-[0.3em] font-bold flex items-center gap-2 group"><span className="w-4 h-px bg-on-primary/20 group-hover:w-8 group-hover:bg-secondary transition-all duration-500"></span>Şirketler Hukuku</Link></li>
+                <li><Link href="/uzmanlik#gayrimenkul" className="text-on-primary/50 hover:text-secondary transition-colors text-[10px] uppercase tracking-[0.3em] font-bold flex items-center gap-2 group"><span className="w-4 h-px bg-on-primary/20 group-hover:w-8 group-hover:bg-secondary transition-all duration-500"></span>Gayrimenkul</Link></li>
+                <li><Link href="/uzmanlik#ceza-hukuku" className="text-on-primary/50 hover:text-secondary transition-colors text-[10px] uppercase tracking-[0.3em] font-bold flex items-center gap-2 group"><span className="w-4 h-px bg-on-primary/20 group-hover:w-8 group-hover:bg-secondary transition-all duration-500"></span>Ceza Hukuku</Link></li>
+                <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-on-primary/50 hover:text-secondary transition-colors text-[10px] uppercase tracking-[0.3em] font-bold flex items-center gap-2 group"><span className="w-4 h-px bg-on-primary/20 group-hover:w-8 group-hover:bg-secondary transition-all duration-500"></span>Fikri Mülkiyet</Link></li>
               </ul>
             </div>
 
-            <div className="lg:col-span-3 text-center md:text-left">
-               <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">İLETİŞİM</h4>
-               <div className="space-y-10">
-                  <div className="flex gap-6 justify-center md:justify-start">
-                     <MapPin className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <p className="text-on-primary/60 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
-                  </div>
-                  <div className="flex gap-6 justify-center md:justify-start">
-                     <Phone className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <a href="tel:+902122113345" className="text-on-primary/60 text-sm hover:text-secondary transition-colors">+90 (212) 211 3345</a>
-                  </div>
-                  <div className="flex gap-6 justify-center md:justify-start">
-                     <Mail className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <a href="mailto:av.ferdigul@gmail.com" className="text-on-primary/60 text-sm hover:text-secondary transition-colors italic">av.ferdigul@gmail.com</a>
-                  </div>
-               </div>
+            {/* Contact */}
+            <div className="lg:col-span-3">
+              <h4 className="text-[9px] font-bold text-secondary tracking-[0.6em] uppercase mb-8 pb-4 border-b border-on-primary/10">İLETİŞİM</h4>
+              <div className="space-y-6">
+                <a href="https://maps.google.com" target="_blank" className="flex gap-4 group">
+                  <MapPin className="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" />
+                  <p className="text-on-primary/50 text-sm leading-relaxed group-hover:text-on-primary/80 transition-colors">Esentepe, Kore Şehitleri Cd. No:30/10,<br/>34394 Şişli / İstanbul</p>
+                </a>
+                <a href="tel:+902122113345" className="flex gap-4 items-center group">
+                  <Phone className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <span className="text-on-primary/50 text-sm group-hover:text-secondary transition-colors">+90 (212) 211 33 45</span>
+                </a>
+                <a href="mailto:av.ferdigul@gmail.com" className="flex gap-4 items-center group">
+                  <Mail className="w-5 h-5 text-secondary flex-shrink-0" />
+                  <span className="text-on-primary/50 text-sm group-hover:text-secondary transition-colors italic">av.ferdigul@gmail.com</span>
+                </a>
+              </div>
             </div>
+
           </div>
 
-          <div className="pt-12 border-t border-on-primary/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
-            <div className="text-[10px] text-on-primary/40 font-bold tracking-[0.3em] uppercase">
-              © 2026 GÜL PARTNERS. ADALETİN TEMSİLCİLERİ.
+          {/* Bottom bar */}
+          <div className="py-8 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-6 text-center pb-28 md:pb-8">
+            <div className="text-[9px] text-on-primary/30 font-bold tracking-[0.3em] uppercase">
+              © 2026 Gül Partners. Tüm Hakları Saklıdır.
             </div>
-            
-            {/* Nextgen Medya Credit */}
-            <a 
-              href="https://nextgenmedya.com.tr" 
-              target="_blank" 
+
+            <a
+              href="https://nextgenmedya.com.tr"
+              target="_blank"
               className="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity group"
             >
               <div className="text-[9px] text-on-primary/50 font-bold tracking-[0.2em] uppercase">MADE BY</div>
-              <svg viewBox="0 0 100 100" className="h-6 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M25 75V25C25 25 25 15 35 15H65M75 25V75C75 75 75 85 65 85H35" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
-                 <path d="M45 40H60V60H45V40Z" fill="currentColor" />
+              <svg viewBox="0 0 100 100" className="h-5 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M25 75V25C25 25 25 15 35 15H65M75 25V75C75 75 75 85 65 85H35" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
+                <path d="M45 40H60V60H45V40Z" fill="currentColor" />
               </svg>
               <div className="text-[10px] text-on-primary/40 font-bold tracking-widest uppercase group-hover:text-secondary transition-colors">NEXTGEN MEDYA</div>
             </a>
 
-            <div className="flex gap-10">
-               <button onClick={() => openModal('privacy')} aria-label="Gizlilik Politikasını Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
-               <button onClick={() => openModal('kvkk')} aria-label="KVKK Aydınlatma Metnini Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
-               <button onClick={() => openModal('terms')} aria-label="Kullanım Şartlarını Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
+            <div className="flex gap-8">
+              <button onClick={() => openModal('privacy')} aria-label="Gizlilik" className="text-[9px] text-on-primary/30 hover:text-secondary transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
+              <button onClick={() => openModal('kvkk')} aria-label="KVKK" className="text-[9px] text-on-primary/30 hover:text-secondary transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
+              <button onClick={() => openModal('terms')} aria-label="Kullanım" className="text-[9px] text-on-primary/30 hover:text-secondary transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM</button>
             </div>
           </div>
+
         </div>
       </footer>
-
       <LegalModal 
         isOpen={legalModal.isOpen} 
         type={legalModal.type} 
