@@ -107,7 +107,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-14 relative" ref={navRef}>
               <div 
-                className="absolute bottom-0 h-[2px] bg-secondary-gold transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
+                className="absolute bottom-0 h-[2px] bg-accent-burgundy transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
                 style={{ 
                   left: `${indicatorStyle.left}px`, 
                   width: `${indicatorStyle.width}px`,
@@ -130,15 +130,14 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                   </Link>
                 );
               })}
-              
               <Link
                 href="/iletisim"
                 className={cn(
                    "relative group/cta px-8 lg:px-12 py-4 lg:py-5 text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-sm overflow-hidden",
-                   "bg-primary text-on-primary hover:bg-secondary"
+                   "bg-accent-burgundy text-on-primary hover:bg-primary"
                 )}
               >
-                İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block" />
+                İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1" />
               </Link>
             </div>
           </div>
@@ -174,9 +173,10 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           </div>
       </div>
 
-      <footer className="bg-surface-low text-primary pt-56 pb-12 overflow-hidden relative border-t border-outline-variant/10 md:pb-12 pb-32">
+      <footer className="bg-accent-navy text-on-primary pt-56 pb-12 overflow-hidden relative md:pb-12 pb-32">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary via-accent-burgundy to-secondary opacity-30"></div>
         <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-5">
-          <span className="text-[25vw] font-serif font-bold text-primary leading-none whitespace-nowrap tracking-tighter">
+          <span className="text-[25vw] font-serif font-bold text-on-primary leading-none whitespace-nowrap tracking-tighter">
             GÜL PARTNERS
           </span>
         </div>
@@ -185,9 +185,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 mb-32">
             <div className="lg:col-span-5 flex flex-col items-start text-center md:text-left items-center md:items-start">
               <div className="mb-14">
-                <Logo color="#735D00" size="h-44" />
+                <Logo color="#C5A022" size="h-44" />
               </div>
-              <p className="text-primary/60 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary/30 md:pl-10">
+              <p className="text-on-primary/60 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary/30 md:pl-10">
                 Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir gücü olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
               <div className="flex gap-6 items-center pt-10 border-t border-outline-variant/10 w-full mb-12 justify-center md:justify-start">
@@ -198,45 +198,45 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="hidden md:block lg:col-span-2">
-              <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">HIZLI MENÜ</h4>
+              <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">HIZLI MENÜ</h4>
               <ul className="space-y-6">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path} aria-label={`${link.name} sayfasına git`} className="text-gray-500 hover:text-secondary-gold transition-all text-xs uppercase tracking-[0.4em] font-medium block hover:pl-3">{link.name}</Link>
+                    <Link href={link.path} aria-label={`${link.name} sayfasına git`} className="text-on-primary/50 hover:text-secondary transition-all text-xs uppercase tracking-[0.4em] font-medium block hover:pl-3">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div className="lg:col-span-2">
-              <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">DİSİPLİNLER</h4>
+              <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">DİSİPLİNLER</h4>
               <ul className="space-y-6">
-                <li><Link href="/uzmanlik#ceza-hukuku" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">CEZA HUKUKU</Link></li>
-                <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">FİKRİ MÜLKİYET</Link></li>
+                <li><Link href="/uzmanlik#ceza-hukuku" className="text-on-primary/50 hover:text-on-primary transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">CEZA HUKUKU</Link></li>
+                <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-on-primary/50 hover:text-on-primary transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">FİKRİ MÜLKİYET</Link></li>
               </ul>
             </div>
 
             <div className="lg:col-span-3 text-center md:text-left">
-               <h4 className="font-serif text-xs font-bold mb-12 text-primary/30 uppercase tracking-[0.5em] py-2 border-b border-outline-variant/10 inline-block">İLETİŞİM</h4>
+               <h4 className="font-serif text-xs font-bold mb-12 text-on-primary/30 uppercase tracking-[0.5em] py-2 border-b border-on-primary/5 inline-block">İLETİŞİM</h4>
                <div className="space-y-10">
                   <div className="flex gap-6 justify-center md:justify-start">
                      <MapPin className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <p className="text-primary/60 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
+                     <p className="text-on-primary/60 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
                   </div>
                   <div className="flex gap-6 justify-center md:justify-start">
                      <Phone className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <a href="tel:+902122113345" className="text-primary/60 text-sm hover:text-secondary transition-colors">+90 (212) 211 3345</a>
+                     <a href="tel:+902122113345" className="text-on-primary/60 text-sm hover:text-secondary transition-colors">+90 (212) 211 3345</a>
                   </div>
                   <div className="flex gap-6 justify-center md:justify-start">
                      <Mail className="w-6 h-6 text-secondary flex-shrink-0" />
-                     <a href="mailto:av.ferdigul@gmail.com" className="text-primary/60 text-sm hover:text-secondary transition-colors italic">av.ferdigul@gmail.com</a>
+                     <a href="mailto:av.ferdigul@gmail.com" className="text-on-primary/60 text-sm hover:text-secondary transition-colors italic">av.ferdigul@gmail.com</a>
                   </div>
                </div>
             </div>
           </div>
 
-          <div className="pt-12 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
-            <div className="text-[10px] text-primary/40 font-bold tracking-[0.3em] uppercase">
+          <div className="pt-12 border-t border-on-primary/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
+            <div className="text-[10px] text-on-primary/40 font-bold tracking-[0.3em] uppercase">
               © 2026 GÜL PARTNERS. ADALETİN TEMSİLCİLERİ.
             </div>
             
@@ -246,18 +246,18 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               target="_blank" 
               className="flex items-center gap-3 opacity-30 hover:opacity-100 transition-opacity group"
             >
-              <div className="text-[9px] text-gray-500 font-bold tracking-[0.2em] uppercase">MADE BY</div>
+              <div className="text-[9px] text-on-primary/50 font-bold tracking-[0.2em] uppercase">MADE BY</div>
               <svg viewBox="0 0 100 100" className="h-6 w-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
                  <path d="M25 75V25C25 25 25 15 35 15H65M75 25V75C75 75 75 85 65 85H35" stroke="currentColor" strokeWidth="12" strokeLinecap="square" />
                  <path d="M45 40H60V60H45V40Z" fill="currentColor" />
               </svg>
-              <div className="text-[10px] text-gray-400 font-bold tracking-widest uppercase group-hover:text-secondary-gold transition-colors">NEXTGEN MEDYA</div>
+              <div className="text-[10px] text-on-primary/40 font-bold tracking-widest uppercase group-hover:text-secondary transition-colors">NEXTGEN MEDYA</div>
             </a>
 
             <div className="flex gap-10">
-               <button onClick={() => openModal('privacy')} aria-label="Gizlilik Politikasını Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
-               <button onClick={() => openModal('kvkk')} aria-label="KVKK Aydınlatma Metnini Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
-               <button onClick={() => openModal('terms')} aria-label="Kullanım Şartlarını Görüntüle" className="text-[10px] text-gray-600 hover:text-white transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
+               <button onClick={() => openModal('privacy')} aria-label="Gizlilik Politikasını Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">GİZLİLİK</button>
+               <button onClick={() => openModal('kvkk')} aria-label="KVKK Aydınlatma Metnini Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">KVKK</button>
+               <button onClick={() => openModal('terms')} aria-label="Kullanım Şartlarını Görüntüle" className="text-[10px] text-on-primary/40 hover:text-on-primary transition-colors uppercase tracking-widest font-bold focus:outline-none">KULLANIM ŞARTLARI</button>
             </div>
           </div>
         </div>
