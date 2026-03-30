@@ -139,27 +139,25 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
             <div className="group text-center">
-              <div className="aspect-[3/4] overflow-hidden mb-12 relative shadow-2xl bg-white transform transition-transform duration-700 group-hover:scale-[1.02]">
+              <div className="aspect-[3/4] overflow-hidden mb-12 relative shadow-2xl bg-surface-low transform transition-transform duration-700 group-hover:scale-[1.02]">
                 <img 
-                  className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105" 
                   src="https://www.bulutpartners.com/wp-content/uploads/2026/03/752a61fc-360e-486f-81b1-7a2ea41f1c90.jpg" 
                   alt="Av. LL.M. Batuhan Bulut" 
                 />
               </div>
               <h3 className="font-serif text-3xl font-bold text-primary-navy mb-2 group-hover:text-secondary-gold transition-colors">Av. LL.M. Batuhan Bulut</h3>
-              <p className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-[10px] font-bold">Kurucu Ortak</p>
             </div>
 
             <div className="group text-center mt-24 md:mt-48">
-              <div className="aspect-[3/4] overflow-hidden mb-12 relative shadow-2xl bg-white transform transition-transform duration-700 group-hover:scale-[1.02]">
+              <div className="aspect-[3/4] overflow-hidden mb-12 relative shadow-2xl bg-surface-low transform transition-transform duration-700 group-hover:scale-[1.02]">
                 <img 
-                  className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105" 
+                  className="w-full h-full object-cover transition-all duration-[1.5s] group-hover:scale-105" 
                   src="https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg" 
                   alt="Av. Ferdi Gül" 
                 />
               </div>
               <h3 className="font-serif text-3xl font-bold text-primary-navy mb-2 group-hover:text-secondary-gold transition-colors">Av. Ferdi Gül</h3>
-              <p className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-[10px] font-bold">Yönetici Ortak</p>
             </div>
           </div>
           
