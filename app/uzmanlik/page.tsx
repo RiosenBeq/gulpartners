@@ -65,7 +65,7 @@ export default function Expertise() {
        subtitle: 'İnovasyonun Mutlak Korunması',
        special: true,
        description: 'İnovasyonunuzun ve markanızın değeri, onu ne kadar iyi koruduğunuzla ölçülür. Patent, marka ve telif hakları yönetiminde yaratıcı zekayı hukukla zırhlıyoruz.',
-       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCffl1uHy2PfyQk9mQ58rukOqDEXx8TbFUrzvzcADshcIcssvr3fFYWC47airgqMlYOrddS81QLEUpYXdEDIZYZ5qg_KxKiUHfTC3jLUGG9TFbciEICcwJhDLgTjQupKJlzSrcRfLbF5ei3bupoAtjQUWeqq33HKLb_wyuewgLGKoqs5DnRvNRDW41-E3dFOCLt1NHKQTURVozJoDhw8PSAoINWPiBDSHlLv2s6n0KTyZoO52yBSHPAKzkTvNSougNx_nfzkdFdhYQ',
+       image: 'https://images.unsplash.com/photo-1589254065878-43c98864d06a?q=80&w=2000&auto=format&fit=crop',
        features: ['Marka Tescili', 'Patent Hakları', 'Telif Hakları', 'Tescil İptali']
     },
     {
