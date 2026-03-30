@@ -190,7 +190,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 <Logo color="#C5A022" size="h-44" />
               </div>
               <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary-gold/30 md:pl-10">
-                Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir mimarisi olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
+                Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir gücü olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
               <div className="flex gap-6 items-center pt-10 border-t border-white/10 w-full mb-12 justify-center md:justify-start">
                  <a href="#" aria-label="LinkedIn profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
@@ -239,7 +239,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
           <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center pb-20 md:pb-0">
             <div className="text-[10px] text-gray-500 font-bold tracking-[0.3em] uppercase">
-              © 2026 GÜL PARTNERS. ADALETİN MİMARLARI.
+              © 2026 GÜL PARTNERS. ADALETİN TEMSİLCİLERİ.
             </div>
             
             {/* Nextgen Medya Credit */}

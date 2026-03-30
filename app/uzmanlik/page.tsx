@@ -39,7 +39,7 @@ export default function Expertise() {
       id: 'gayrimenkul',
       title: 'Gayrimenkul Hukuku',
       subtitle: 'Mülkiyet ve Geliştirme',
-      description: 'Büyük ölçekli gayrimenkul projelerinin hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.',
+      description: 'Büyük ölçekli gayrimenkul davalarının ve uyuşmazlıklarının hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.',
       image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
@@ -117,12 +117,12 @@ export default function Expertise() {
         
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
           <div className="max-w-4xl">
-            <span className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-xs font-bold mb-8 block animate-fade-in">KÜRATÖRLÜĞÜNDE HUKUKİ MÜKEMMELLİK</span>
+            <span className="text-secondary-gold font-sans uppercase tracking-[0.4em] text-xs font-bold mb-8 block animate-fade-in">LİDERLİĞİNDE HUKUKİ MÜKEMMELLİK</span>
             <h1 className="font-serif text-5xl md:text-[8rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic reveal-up">
-              Karmaşık <br/> <span className="not-italic text-4xl md:text-[8rem] text-gray-400">Mimari Hassasiyet.</span>
+              Karmaşık <br/> <span className="not-italic text-4xl md:text-[8rem] text-gray-400">Hukuki Hassasiyet.</span>
             </h1>
             <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10 reveal-up">
-              Her vaka bir yapı, her strateji bir temeldir. Gül Partners, hukuki zorlukları birer mimari disiplinle ele alarak kalıcı ve güvenli çözümler inşa eder.
+              Her vaka bir strateji, her çözüm bir temeldir. Gül Partners, hukuki zorlukları profesyonel bir disiplinle ele alarak kalıcı ve güvenli sonuçlar tesis eder.
             </p>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function Expertise() {
                         <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100">
                           <div>
                             <span className="block text-3xl font-serif font-bold text-primary-navy">500+</span>
-                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Başarılı Proje Teslimi</span>
+                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Başarılı Dava Sonucu</span>
                           </div>
                           <div>
                             <span className="block text-3xl font-serif font-bold text-primary-navy">15+</span>
@@ -260,7 +260,7 @@ export default function Expertise() {
             
             <div className="p-12 border-l-2 border-secondary-gold/30 italic">
                <p className="text-gray-400 text-sm font-light leading-relaxed">
-                  "Hukuk sadece bir kurallar bütünü değil; her detayında sarsılmaz bir güvenin inşa edildiği bir mimaridir."
+                  "Hukuk sadece bir kurallar bütünü değil; her detayında sarsılmaz bir güvenin inşa edildiği bir temel taştır."
                </p>
             </div>
           </aside>

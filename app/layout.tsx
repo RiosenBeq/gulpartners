@@ -23,11 +23,11 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://gulpartners.com'),
   title: {
-    default: 'Gül Partners | Hukuki Mükemmellik için Mimari Hassasiyet',
+    default: 'Gül Partners | Hukuki Mükemmellik için Hukuki Titizlik',
     template: '%s | Gül Partners Hukuk'
   },
-  description: 'Gül Partners, karmaşık hukuki süreçlerde mimari hassasiyetle inşa edilmiş, stratejik ve sonuç odaklı çözümler sunan yeni nesil bir hukuk bürosudur. İstanbul merkezli uzman avukat kadrosu ile gayrimenkul, ticaret ve ceza hukuku alanlarında hizmet vermektedir.',
-  keywords: ['Gül Partners', 'Hukuk Bürosu', 'İstanbul Avukat', 'Gayrimenkul Hukuku', 'Ticaret Hukuku', 'Şirketler Hukuku', 'Ceza Hukuku', 'KVKK Danışmanlığı', 'İş Hukuku', 'Arabuluculuk', 'Adaletin Mimarları'],
+  description: 'Gül Partners, karmaşık hukuki süreçlerde sarsılmaz bir disiplinle inşa edilmiş, stratejik ve sonuç odaklı çözümler sunan yeni nesil bir hukuk bürosudur. İstanbul merkezli uzman avukat kadrosu ile gayrimenkul, ticaret ve ceza hukuku alanlarında hizmet vermektedir.',
+  keywords: ['Gül Partners', 'Hukuk Bürosu', 'İstanbul Avukat', 'Gayrimenkul Hukuku', 'Ticaret Hukuku', 'Şirketler Hukuku', 'Ceza Hukuku', 'KVKK Danışmanlığı', 'İş Hukuku', 'Arabuluculuk', 'Adaletin Temsilcileri'],
   authors: [{ name: 'Gül Partners' }],
   creator: 'Gül Partners',
   publisher: 'Gül Partners',
@@ -37,8 +37,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    title: 'Gül Partners | Hukuki Mükemmellik için Mimari Hassasiyet',
-    description: 'Stratejik ve sonuç odaklı hukuk mimarisi. İstanbul merkezli uzman hukuk çözümleri.',
+    title: 'Gül Partners | Hukuki Mükemmellik için Hukuki Titizlik',
+    description: 'Stratejik ve sonuç odaklı hukuk çözümleri. İstanbul merkezli uzman hukuk hizmetleri.',
     url: 'https://gulpartners.com',
     siteName: 'Gül Partners',
     locale: 'tr_TR',
@@ -54,8 +54,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gül Partners | Hukuk Mimarisi',
-    description: 'Karmaşık hukuki süreçlerde mimari hassasiyet ve stratejik derinlik.',
+    title: 'Gül Partners | Stratejik Hukuk',
+    description: 'Karmaşık hukuki süreçlerde hukuki titizlik ve stratejik derinlik.',
     images: ['/og-image.jpg'],
   },
   robots: {

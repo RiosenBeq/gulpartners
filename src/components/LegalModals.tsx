@@ -61,7 +61,7 @@ const CONTENT = {
       Bu web sitesini kullanarak aşağıdaki kullanım koşullarını kabul etmiş sayılırsınız.
 
       1. FİKRİ MÜLKİYET
-      Sitede yer alan tüm metinler, görseller, "Adaletin Mimarları" konsepti ve tasarım öğeleri Gül Partners'a aittir. Yazılı izin olmaksızın kopyalanamaz veya çoğaltılamaz.
+      Sitede yer alan tüm metinler, görseller, "Hukukun Partnerleri" konsepti ve tasarım öğeleri Gül Partners'a aittir. Yazılı izin olmaksızın kopyalanamaz veya çoğaltılamaz.
 
       2. BİLGİLENDİRME AMAÇLI KULLANIM
       Bu sitedeki içerikler yalnızca genel bilgilendirme amaçlıdır ve hukuki tavsiye niteliği taşımaz. Site üzerinden kurulan iletişim, avukat-müvekkil ilişkisi tesis etmez.
@@ -106,7 +106,7 @@ export default function LegalModal({ isOpen, type, onClose }: LegalModalProps) {
             </div>
             <div>
               <h2 className="font-serif text-3xl font-bold text-primary-navy tracking-tight">{content.title}</h2>
-              <span className="text-[10px] text-gray-400 font-bold tracking-[0.4em] uppercase">GÜL PARTNERS • ADALETİN MİMARLARI</span>
+              <span className="text-[10px] text-gray-400 font-bold tracking-[0.4em] uppercase">GÜL PARTNERS • HUKUKUN PARTNERLERİ</span>
             </div>
           </div>
           <button 

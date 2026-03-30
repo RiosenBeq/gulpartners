@@ -44,7 +44,7 @@ export default function Contact() {
               Zihinsel <br/> <span className="not-italic text-4xl md:text-[9rem] text-gray-400">İletişim.</span>
             </h1>
             <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
-              Gül Partners hukuk mimarları, taleplerinizi 24 saat içinde stratejik bir ön incelemeye tabi tutar.
+              Gül Partners hukuk profesyonelleri, taleplerinizi 24 saat içinde stratejik bir ön incelemeye tabi tutar.
             </p>
           </div>
         </div>

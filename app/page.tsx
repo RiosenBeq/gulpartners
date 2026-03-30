@@ -50,7 +50,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-12 relative z-20 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
             <div className="lg:col-span-8">
-              <span className="inline-block text-secondary-gold font-sans tracking-[0.6em] text-[10px] font-bold mb-12 uppercase">Geleceğin Hukuk Mimarları</span>
+              <span className="inline-block text-secondary-gold font-sans tracking-[0.6em] text-[10px] font-bold mb-12 uppercase">Hukukun Stratejik Partnerleri</span>
               <h1 className="font-serif text-5xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 md:mb-16 italic">
                 Gül <br />
                 <span className="text-gray-100 not-italic">Partners.</span>
@@ -66,7 +66,7 @@ export default function Home() {
             </div>
             <div className="lg:col-span-4 lg:text-right">
                <p className="text-white/60 text-2xl font-light italic leading-relaxed max-w-sm ml-auto">
-                 "Hukuk sadece bir kurallar bütünü değil, toplumu bir arada tutan bir mimaridir."
+                 "Hukuk sadece bir kurallar bütünü değil, toplumu bir arada tutan bir temel taştır."
                </p>
             </div>
           </div>
@@ -105,7 +105,7 @@ export default function Home() {
                <div className="h-12 w-px bg-gray-200"></div>
                <div>
                   <span className="block text-4xl font-serif font-bold text-secondary-gold leading-none mb-2">500+</span>
-                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Başarılı Proje</span>
+                  <span className="text-[10px] font-bold text-gray-400 uppercase tracking-widest">Başarılı Dava</span>
                </div>
             </div>
           </div>

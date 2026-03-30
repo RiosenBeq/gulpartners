@@ -10,7 +10,7 @@ const allServices = [
     title: "Kira ve Gayrimenkul Hukuku",
     slug: "gayrimenkul-ve-kira-hukuku",
     icon: <Landmark className="w-16 h-16" />,
-    longDesc: "Gül Partners, gayrimenkul sektörünün karmaşık doğasını ve kira uyuşmazlıklarının hassasiyetini derinlemesine anlayan bir hukuk bürosudur. Taşınmaz mülkiyetinden doğan her türlü ihtilafta, kentsel dönüşüm projelerinde ve kira sözleşmelerinin yönetiminde müvekkillerimize stratejik rehberlik sunuyoruz.",
+    longDesc: "Gül Partners, gayrimenkul sektörünün karmaşık doğasını ve kira uyuşmazlıklarının hassasiyetini derinlemesine anlayan bir hukuk bürosudur. Taşınmaz mülkiyetinden doğan her türlü ihtilafta, kentsel dönüşüm davalarında ve kira sözleşmelerinin yönetiminde müvekkillerimize stratejik rehberlik sunuyoruz.",
     features: [
       "Tahliye davaları ve kira bedeli tespit süreçleri",
       "Kentsel dönüşüm uyuşmazlıkları ve sözleşme yönetimi",

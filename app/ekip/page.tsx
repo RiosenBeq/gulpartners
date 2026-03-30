@@ -62,7 +62,7 @@ export default function Team() {
               <span className="text-gray-400 not-italic text-4xl md:text-[9rem]">Hukuki Gücü.</span>
             </h1>
             <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
-              Gül & Partners ekibi, her biri alanında derinleşmiş, stratejik analitik kabiliyete sahip hukuk mimarlarından oluşur.
+              Gül & Partners ekibi, her biri alanında derinleşmiş, stratejik analitik kabiliyete sahip hukuk profesyonellerinden oluşur.
             </p>
           </div>
         </div>
