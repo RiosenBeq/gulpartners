@@ -168,59 +168,86 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         {children}
       </main>
 
-      <footer className="bg-primary-navy text-white pt-40 pb-20 overflow-hidden relative">
-        <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-gold/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-[120px]"></div>
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-24 mb-32">
-            <div className="md:col-span-5">
-              <div className="flex items-center mb-12">
+      <footer className="bg-primary-navy text-white pt-64 pb-20 overflow-hidden relative border-t border-white/5">
+        {/* Monumental Watermark */}
+        <div className="absolute top-20 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96">
+          <span className="text-[18vw] font-serif font-bold text-white/[0.03] leading-none whitespace-nowrap tracking-tighter">
+            GÜL & PARTNERS
+          </span>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-10 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-20 lg:gap-32 pb-40">
+            <div className="lg:col-span-4">
+              <div className="mb-16">
                 <img
                   src="/logo.png"
-                  alt="Bulut & Partners Logo"
+                  alt="Gül & Partners Logo"
                   style={{ mixBlendMode: 'lighten', filter: 'brightness(0) invert(1)' }}
-                  className="h-32 w-auto object-contain opacity-80"
+                  className="h-28 w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
                 />
               </div>
-              <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md">
-                Karmaşık hukuki süreçleri stratejik birer avantaja dönüştüren, vizyoner ve sonuç odaklı hukuk mimarları.
+              <p className="text-gray-400 text-lg leading-relaxed italic font-light max-w-sm mb-12">
+                Karmaşık hukuki süreçleri stratejik birer avantaja dönüştüren, vizyoner ve disiplin odaklı hukuk mimarlarından oluşan seçkin bir topluluk.
               </p>
+              <div className="flex gap-8 items-center pt-8 border-t border-white/5">
+                 <Link href="/iletisim" className="text-secondary-gold text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors">YOL TARİFİ ALIN</Link>
+                 <div className="w-12 h-px bg-white/10"></div>
+                 <Link href="/uzmanlik" className="text-gray-500 text-[10px] font-bold tracking-[0.4em] uppercase hover:text-white transition-colors">UZMANLIKLARIMIZ</Link>
+              </div>
             </div>
 
-            <div className="md:col-span-3">
-              <h4 className="font-serif text-2xl font-bold mb-12 text-white tracking-tight">Navigasyon</h4>
+            <div className="lg:col-span-2">
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Kurumsal</h4>
               <ul className="space-y-6">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path} className="text-gray-400 hover:text-secondary-gold transition-colors text-xs uppercase tracking-[0.3em] font-bold">{link.name}</Link>
+                    <Link href={link.path} className="text-gray-500 hover:text-secondary-gold transition-colors text-[10px] uppercase tracking-[0.3em] font-bold">{link.name}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
-            <div className="md:col-span-4">
-              <h4 className="font-serif text-2xl font-bold mb-12 text-white tracking-tight">Merkez Ofis</h4>
-              <div className="space-y-10">
+            <div className="lg:col-span-3">
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Disiplinler</h4>
+              <ul className="space-y-6">
+                <li><Link href="/uzmanlik#gayrimenkul" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Gayrimenkul Hukuku</Link></li>
+                <li><Link href="/uzmanlik#ticaret-hukuku" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Ticaret ve Şirketler</Link></li>
+                <li><Link href="/uzmanlik#ceza-hukuku" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Ceza Eliti</Link></li>
+                <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Fikri Mülkiyet</Link></li>
+              </ul>
+            </div>
+
+            <div className="lg:col-span-3">
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Merkez Kampüs</h4>
+              <div className="space-y-12">
                 <div className="text-gray-400 text-sm leading-relaxed">
-                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.2em] text-[10px]">İstanbul</span>
-                  Esentepe, Kore Şehitleri Cd. No:30/10, <br/> 34394 Şişli/İstanbul
+                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.3em] text-[10px]">İLETİŞİM HATTI</span>
+                  <a href="tel:+902122113345" className="text-2xl font-serif text-white hover:text-secondary-gold transition-colors block mb-2 tracking-tight">+90 (212) 211 3345</a>
                 </div>
                 <div className="text-gray-400 text-sm leading-relaxed">
-                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.2em] text-[10px]">İletişim Hattı</span>
-                  <a href="tel:+902122113345" className="text-3xl font-serif text-white hover:text-secondary-gold transition-colors block mb-2">+90 (212) 211 3345</a>
-                  <a href="mailto:info@bulutpartners.com" className="hover:text-white transition-colors block italic">info@bulutpartners.com</a>
+                  <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.3em] text-[10px]">OFİS ADRESİ</span>
+                  Esentepe, Kore Şehitleri Cd. No:30/10 <br/> 34394 Şişli/İstanbul
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center gap-10">
-            <p className="text-gray-500 text-[10px] uppercase font-bold tracking-[0.3em]">
-              &copy; {new Date().getFullYear()} Bulut & Partners. All Rights Reserved.
+          <div className="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center gap-12 group">
+            <p className="text-gray-600 text-[9px] uppercase font-bold tracking-[0.5em]">
+              &copy; {new Date().getFullYear()} GÜL & PARTNERS. ARCHITECTS OF JUSTICE.
             </p>
-            <div className="flex gap-12">
-               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.3em] transition-colors">Privacy</Link>
-               <Link href="#" className="text-gray-500 hover:text-white text-[10px] uppercase font-bold tracking-[0.3em] transition-colors">Legal</Link>
+            <div className="flex gap-16">
+               <Link href="#" className="text-gray-600 hover:text-white text-[9px] uppercase font-bold tracking-[0.4em] transition-colors">PRIVACY POLICY</Link>
+               <Link href="#" className="text-gray-600 hover:text-white text-[9px] uppercase font-bold tracking-[0.4em] transition-colors">TERMS OF SERVICE</Link>
             </div>
+            {/* Scroll to Top */}
+            <button 
+               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+               className="bg-white/5 p-4 rounded-full hover:bg-secondary-gold hover:text-primary-navy transition-all duration-500 group-hover:scale-110"
+            >
+               <ArrowUpRight className="-rotate-45 w-5 h-5" />
+            </button>
           </div>
         </div>
       </footer>

@@ -1,4 +1,4 @@
-import { Mail, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, Linkedin, ArrowUpRight, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Team() {
@@ -36,53 +36,56 @@ export default function Team() {
     {
       id: 7,
       name: 'Menekşe Çelik',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-3.png',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg', // Adjusted photo mapping
     },
   ];
 
-  // Founding partners to highlight
   const foundingPartners = teamMembers.filter(m => [1, 2].includes(m.id));
   const otherTeam = teamMembers.filter(m => ![1, 2].includes(m.id));
 
   return (
-    <div className="bg-white selection:bg-secondary-gold/30 antialiased overflow-x-hidden">
-      {/* Hero Section */}
-      <section className="relative pt-48 pb-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="flex flex-col md:flex-row items-end gap-16">
-            <div className="w-full md:w-2/3">
-              <span className="inline-block text-secondary-gold font-sans tracking-[0.4em] text-[10px] font-bold mb-8 uppercase animate-fade-in">Yetkin Kadro</span>
-              <h1 className="font-serif text-5xl md:text-8xl text-primary-navy font-bold leading-[1.05] tracking-tighter mb-10">
-                Hukuki Mükemmelliğin <br />
-                <span className="italic font-light text-gray-400">Mimarları.</span>
-              </h1>
-              <p className="text-xl text-gray-500 font-light max-w-2xl leading-relaxed italic">
-                Bulut & Partners, küresel vizyonu ve yerel uzmanlığıyla karmaşık hukuki süreçleri stratejik birer avantaja dönüştürür. Ekibimiz, disiplin ve tutkuyla şekillenmiş bir tecrübe mirasını temsil eder.
-              </p>
-            </div>
+    <div className="bg-white selection:bg-secondary-gold/20 antialiased overflow-x-hidden">
+      {/* Editorial Header Section */}
+      <section className="relative pt-64 pb-32 bg-primary-navy overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20 filter grayscale">
+           <img 
+            className="w-full h-full object-cover" 
+            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
+            alt="Law Library Background" 
+          />
+        </div>
+        <div className="max-w-7xl mx-auto px-12 relative z-10">
+          <div className="max-w-4xl">
+            <span className="inline-block text-secondary-gold font-sans tracking-[0.5em] text-[10px] font-bold mb-10 uppercase animate-fade-in">Disiplin & Vizyon</span>
+            <h1 className="font-serif text-6xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 italic">
+              Zihnin <br />
+              <span className="text-gray-400 not-italic">Hukuki Gücü.</span>
+            </h1>
+            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
+              Gül & Partners ekibi, her biri alanında derinleşmiş, stratejik analitik kabiliyete sahip hukuk mimarlarından oluşur.
+            </p>
           </div>
         </div>
-        <div className="absolute top-0 right-0 w-1/4 h-full bg-surface-low -z-10 translate-x-1/2 rounded-full blur-[120px] opacity-40"></div>
       </section>
 
-      {/* Highlights: Founding Partners */}
-      <section className="py-24 bg-surface-low relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-8 relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-24">
+      {/* Leading Minds Split Layout */}
+      <section className="py-48 bg-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
             {foundingPartners.map((partner) => (
-              <div key={partner.id} className="group">
-                <div className="aspect-[3/4] overflow-hidden relative shadow-2xl shadow-primary-navy/5 transform transition-transform duration-700 group-hover:scale-[1.02] mb-10">
+              <div key={partner.id} className="group reveal-up opacity-100 translate-y-0">
+                <div className="aspect-[3/4] overflow-hidden relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] mb-16">
                   <img
                     src={partner.image}
                     alt={partner.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-700"></div>
+                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-1000"></div>
                 </div>
-                <div className="text-center">
-                  <h3 className="font-serif text-4xl font-bold text-primary-navy mb-8 leading-tight group-hover:text-secondary-gold transition-colors">{partner.name}</h3>
-                  <Link href="/iletisim" className="group/link inline-flex items-center gap-3 text-primary-navy font-bold text-xs tracking-widest uppercase pb-1 border-b border-secondary-gold hover:gap-6 transition-all duration-500">
-                    İLETİŞİME GEÇİN <ArrowRight className="w-4 h-4 text-secondary-gold" />
+                <div className="flex justify-between items-end gap-12 border-b border-gray-100 pb-12 transition-all group-hover:border-secondary-gold">
+                  <h3 className="font-serif text-5xl font-bold text-primary-navy group-hover:text-secondary-gold transition-colors">{partner.name}</h3>
+                  <Link href="/iletisim" className="text-primary-navy group/link flex items-center gap-4 text-xs font-bold tracking-widest uppercase mb-4">
+                    STRATEJİ <ArrowUpRight className="w-5 h-5 text-secondary-gold transition-all group-hover/link:translate-x-2" />
                   </Link>
                 </div>
               </div>
@@ -91,47 +94,44 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Team: Grid Layout */}
-      <section className="py-32 max-w-7xl mx-auto px-8">
-        <div className="mb-24 text-center">
-          <h2 className="font-serif text-5xl font-bold text-primary-navy mb-4 tracking-tight">Uzman Kadromuz</h2>
-          <div className="h-1 w-20 bg-secondary-gold mx-auto"></div>
-        </div>
-        
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
-          {otherTeam.map((member) => (
-            <div key={member.id} className="group text-center">
-              <div className="aspect-square overflow-hidden bg-surface-low mb-8 relative shadow-lg shadow-primary-navy/5 group-hover:shadow-2xl transition-shadow duration-500">
-                <img
-                  src={member.image}
-                  alt={member.name}
-                  className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
-                />
+      {/* Grid: Architectural Excellence */}
+      <section className="py-48 bg-surface-low border-y border-gray-100">
+        <div className="max-w-7xl mx-auto px-12">
+          <div className="mb-32 text-left max-w-2xl">
+            <span className="text-secondary-gold text-[10px] font-sans tracking-[0.4em] uppercase font-bold mb-6 block">Kolektif Uzmanlık</span>
+            <h2 className="font-serif text-6xl font-bold text-primary-navy leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-gray-400">Takvim Yönetimi.</span></h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-200 border border-gray-200 overflow-hidden shadow-2xl">
+            {otherTeam.map((member) => (
+              <div key={member.id} className="group bg-white p-2 text-center transition-all duration-700 hover:bg-primary-navy">
+                <div className="aspect-square overflow-hidden mb-8 relative">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                  />
+                </div>
+                <div className="px-6 pb-12 h-24 flex flex-col justify-center">
+                   <h4 className="font-serif text-xl font-bold text-primary-navy transition-colors group-hover:text-white leading-tight">{member.name}</h4>
+                   <div className="mt-4 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
+                     <a href="#" className="text-secondary-gold hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
+                     <a href="mailto:info@bulutpartners.com" className="text-secondary-gold hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
+                   </div>
+                </div>
               </div>
-              <h4 className="font-serif text-2xl font-bold text-primary-navy group-hover:text-secondary-gold transition-colors">{member.name}</h4>
-              <div className="mt-8 flex justify-center gap-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                <a href="#" className="text-gray-400 hover:text-secondary-gold transition-colors"><Linkedin className="w-5 h-5" /></a>
-                <a href="mailto:info@bulutpartners.com" className="text-gray-400 hover:text-secondary-gold transition-colors"><Mail className="w-5 h-5" /></a>
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Immersive CTA Area */}
-      <section className="relative h-[600px] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 scale-105">
-           <img 
-            className="w-full h-full object-cover grayscale brightness-50" 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop" 
-            alt="Elite boardroom"
-          />
-          <div className="absolute inset-0 bg-primary-navy/80 backdrop-blur-[2px]"></div>
-        </div>
-        <div className="relative z-10 max-w-4xl mx-auto px-8 text-center text-white">
-          <h2 className="font-serif text-6xl font-bold mb-10 tracking-tight">Hukuki Gücünüzü <br/><span className="text-secondary-gold italic font-light">Bizimle Şekillendirin.</span></h2>
-          <Link href="/iletisim" className="bg-secondary-gold text-primary-navy px-16 py-6 font-bold text-sm tracking-[0.3em] uppercase hover:bg-white transition-all duration-500 shadow-2xl inline-block mt-8 font-sans">
-            RANDEVU ALIN
+      {/* Contact Banner: Minimalist Architectural */}
+      <section className="py-48 bg-white border-t border-gray-100 relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-96 h-96 bg-secondary-gold/5 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-12 text-center group">
+          <h2 className="font-serif text-7xl font-bold text-primary-navy mb-16 tracking-tight leading-[0.9]">Hukuki Geleceğinizi <br/><span className="italic font-light text-gray-400">Bize Emanet Edin.</span></h2>
+          <Link href="/iletisim" className="relative bg-primary-navy text-white px-20 py-8 font-bold text-xs tracking-[0.4em] uppercase inline-block hover:bg-secondary-gold hover:text-primary-navy transition-all duration-700 shadow-2xl">
+            DANIŞMANLIK TALEP EDİN
           </Link>
         </div>
       </section>
