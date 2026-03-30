@@ -24,7 +24,7 @@ export default function Expertise() {
       title: 'Şirketler Hukuku',
       subtitle: 'Kurumsal Çözümler',
       description: 'Küresel pazarda stratejik hamleler yaparken, kurumsal yapınızın hukuki güvenliğini en üst düzeyde sağlıyoruz. Birleşme ve devralmalardan genel kurul yönetimine kadar her aşamada titizlikle yanınızdayız.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHKkO8PLZzI0kd8KNFkbB10_o62qki9ozu1XnWxmti0z6O_dX-AusLEk8m1Pv-QmXUCznLxt_I_hHueezHIBP6s4eTlWFEuCZ-5BO7t2D3sPP2Xnj6fXE633_z1SN2zq3APMjDIGN_SCrJheRJ33bEAgf4KL3Q0RmJ_BFt-QXc8hkLZlYO_Sm8msjBxKaYC87cw2V8BQhVfkIPw2XoGevoRMRg7p0GFvcv17Lk97DLcKsFOzNHHscN6oE4cS4NVB7cK199xNKJMFA',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2600&auto=format&fit=crop',
       features: ['Birleşme ve Devralmalar (M&A)', 'Kurumsal Yönetişim', 'Stratejik Ortaklıklar', 'Uyum ve Regülasyon']
     },
     {
@@ -32,7 +32,7 @@ export default function Expertise() {
       title: 'Dava ve Uyuşmazlık Çözümü',
       subtitle: 'Savunma ve Tahkim',
       description: 'Karmaşık uyuşmazlıkların çözümünde sadece savunma yapmıyor, davanın her aşamasını bir satranç ustası hassasiyetiyle planlıyoruz. Ulusal ve uluslararası tahkim süreçlerinde sarsılmaz bir temsil sağlıyoruz.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEtDQOm4zozEVEQiHKzUMRAYUccmohabmHiDKnmodhdJjWKmizVH5ZjoQPCboNScVYIot8eQdyo2_f5m6dSD0fQO1f_GY4knD4dd5HJRMClxr2sFRG1f_Naw0fquRwYlrD0JLMceqM6Y5aNUGHbvBEie0QmAbrvwUEWDqY4izlZNFDxpEF-dHjddO5vDWIMtfyhWBPB9KwRhZ3moTWO5WzdisMyKqa9fOcdOXqi6pCBqn2fvLBPbMPsMnz1xe8weVJbF4qzmDUIcA',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2600&auto=format&fit=crop',
       features: ['Ağır Ceza', 'Bilişim Suçları', 'Tahkim', 'İnfaz Hukuku']
     },
     {
@@ -40,7 +40,7 @@ export default function Expertise() {
       title: 'Gayrimenkul Hukuku',
       subtitle: 'Mülkiyet ve Geliştirme',
       description: 'Büyük ölçekli gayrimenkul projelerinin hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.',
-      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkbK-vPnhpFpixWgDcOoVXVaPrFWgQvHJQOzR2SFVNH_90lrU1x3J_hCpN7WoMHiq8rY4NBP0UALbfiGnkkVQ1wwIsmRu_2b5WDJUIY3nBnX3XZNd3eoF-mlZQURwpx2eB_UvZ_vL4IQNDPB0vT_KwkEmduZf9wJaULGK-C6XPpVFHlY83DH0gZdWvs7veA5yaqb0d_ogmfIvqxeMDdZESeekqFf2cvPI4VeeH-dqOB9dC8IRa3cNn2_Y1_99RNjpTdGdB4ZJCDWA',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
     {
@@ -89,7 +89,7 @@ export default function Expertise() {
       title: 'Alternatif Uyuşmazlık Çözümleri',
       subtitle: 'Moderne Çözüm Metotları',
       description: 'Arabuluculuk süreçlerinde profesyonel danışmanlık ve uyuşmazlıkların mahkemeye gitmeden hızlıca çözümlenmesi.',
-      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2600&auto=format&fit=crop',
       features: ['Arabuluculuk', 'Uzlaştırma', 'Protokol Hazırlama', 'Tahkim']
     },
     {
@@ -97,13 +97,13 @@ export default function Expertise() {
       title: 'İmar, İdare ve Vergi Hukuku',
       subtitle: 'Kamu İlişkilerinde Denge',
       description: 'İdari işlemlerin iptali, tam yargı davaları ve vergi cezalarına karşı hukuki koruma ve itiraz süreçleri.',
-      image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2600&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2600&auto=format&fit=crop',
       features: ['İptal Davaları', 'Vergi İtirazları', 'İmar Davaları', 'Kamulaştırma']
     }
   ];
 
   return (
-    <div className="bg-white antialiased selection:bg-secondary-gold/20">
+    <div className="bg-white antialiased selection:bg-secondary-gold/20 scroll-smooth">
       {/* Hero Section: Architectural Header */}
       <header className="pt-40 pb-24 px-8 max-w-7xl mx-auto reveal-up">
         <div className="max-w-4xl">
@@ -117,7 +117,7 @@ export default function Expertise() {
         </div>
       </header>
 
-      <main className="max-w-7xl mx-auto px-8 pb-32">
+      <main className="max-w-7xl mx-auto px-6 md:px-8 pb-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Main List */}
@@ -125,8 +125,8 @@ export default function Expertise() {
             {allServices.map((service, index) => (
               service.special ? (
                 /* Special Highlighted Section ( Intellectual Property ) */
-                <section key={service.id} id={service.id} className="bg-primary-navy p-12 text-white reveal-up">
-                  <div className="flex flex-col md:flex-row gap-12 items-center">
+                <section key={service.id} id={service.id} className="bg-primary-navy p-6 md:p-12 text-white reveal-up scroll-mt-32">
+                  <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
                     <div className="flex-1">
                       <span className="material-symbols-outlined text-secondary-gold text-5xl mb-6">lightbulb</span>
                       <h2 className="font-serif text-3xl font-bold mb-6">{service.title}</h2>
@@ -146,7 +146,7 @@ export default function Expertise() {
                 </section>
               ) : (
                 /* Regular Modern Section */
-                <section key={service.id} id={service.id} className="group reveal-up">
+                <section key={service.id} id={service.id} className="group reveal-up scroll-mt-32">
                   <div className="mb-12 overflow-hidden aspect-[21/9] bg-gray-50 relative shadow-2xl transition-all duration-700">
                     <img 
                       className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 grayscale group-hover:grayscale-0" 
@@ -196,7 +196,7 @@ export default function Expertise() {
           </div>
 
           {/* Luxury Redesigned Sidebar */}
-          <aside className="lg:col-span-4 sticky top-40 space-y-12 h-fit pb-12">
+          <aside className="hidden lg:block lg:col-span-4 sticky top-40 space-y-12 h-fit pb-12">
             <div className="bg-gray-50 p-12 border border-gray-100 shadow-sm relative overflow-hidden group">
               <div className="absolute top-0 right-0 w-24 h-24 bg-secondary-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
               

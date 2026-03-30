@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { Menu, X, ArrowUpRight, Linkedin, Instagram, Twitter, Phone, Mail, MapPin } from 'lucide-react';
+import { Menu, X, ArrowUpRight, Linkedin, Instagram, Twitter, Phone, Mail, MapPin, Home, Gavel, Users, Send } from 'lucide-react';
 import { cn } from "@/src/lib/utils";
 import LegalModal from './LegalModals';
 
@@ -32,7 +32,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       setIsScrolled(window.scrollY > 50);
     };
 
-    // More robust Intersection Observer
     const revealObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -41,7 +40,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
       });
     }, { 
       threshold: 0.1,
-      rootMargin: '0px 0px -50px 0px' // Trigger slightly before entering
+      rootMargin: '0px 0px -50px 0px'
     });
 
     const observeElements = () => {
@@ -50,11 +49,8 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     };
 
     window.addEventListener('scroll', handleScroll);
-    
-    // Initial and mutation-based observation
     observeElements();
     
-    // MutationObserver to watch for dynamic DOM changes (Next.js page content)
     const mutationObserver = new MutationObserver(observeElements);
     mutationObserver.observe(document.body, { childList: true, subtree: true });
 
@@ -66,10 +62,10 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   }, [pathname]);
 
   const navLinks = [
-    { name: 'ANA SAYFA', path: '/' },
-    { name: 'UZMANLIK', path: '/uzmanlik' },
-    { name: 'EKİBİMİZ', path: '/ekip' },
-    { name: 'İLETİŞİM', path: '/iletisim' },
+    { name: 'ANA SAYFA', path: '/', icon: Home },
+    { name: 'UZMANLIK', path: '/uzmanlik', icon: Gavel },
+    { name: 'EKİBİMİZ', path: '/ekip', icon: Users },
+    { name: 'İLETİŞİM', path: '/iletisim', icon: Send },
   ];
 
   useEffect(() => {
@@ -92,21 +88,22 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
   };
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <nav className="fixed top-0 left-0 w-full z-[100] p-6 lg:p-10 transition-all duration-700">
+    <div className="flex flex-col min-h-screen relative">
+      <nav className="fixed top-0 left-0 w-full z-[100] p-4 lg:p-10 transition-all duration-700">
         <div 
           className={cn(
             "max-w-[1700px] mx-auto transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]",
             isScrolled 
-              ? "bg-white/98 backdrop-blur-3xl border-b border-gray-100 py-3 px-12 shadow-[0_15px_40px_rgba(0,0,0,0.08)]" 
-              : "bg-primary-navy/20 backdrop-blur-lg rounded-2xl border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.2)] px-12"
+              ? "bg-white/98 backdrop-blur-3xl border-b border-gray-100 py-3 px-6 lg:px-12 shadow-[0_15px_40px_rgba(0,0,0,0.08)]" 
+              : "bg-primary-navy/20 backdrop-blur-lg rounded-2xl border border-white/10 shadow-[0_30px_70px_rgba(0,0,0,0.2)] px-6 lg:px-12"
           )}
         >
-          <div className="flex justify-between items-center h-28 transition-all duration-700">
+          <div className="flex justify-between items-center h-20 lg:h-28 transition-all duration-700">
             <Link href="/" className="flex-shrink-0 flex items-center group relative z-10 py-4">
-              <Logo color={isScrolled ? "#000D24" : "#C5A022"} size={isScrolled ? "h-20" : "h-28"} className="transition-all duration-700" />
+              <Logo color={isScrolled ? "#000D24" : "#C5A022"} size={isScrolled ? "h-14 lg:h-20" : "h-16 lg:h-28"} className="transition-all duration-700" />
             </Link>
 
+            {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-14 relative" ref={navRef}>
               <div 
                 className="absolute bottom-0 h-[2px] bg-secondary-gold transition-all duration-500 ease-[cubic-bezier(0.65,0,0.35,1)]"
@@ -138,55 +135,54 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <Link
                 href="/iletisim"
                 className={cn(
-                   "relative group/cta px-12 py-5 rounded-sm text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-xl overflow-hidden",
+                   "relative group/cta px-8 lg:px-12 py-4 lg:py-5 rounded-sm text-[10px] font-bold tracking-[0.45em] uppercase transition-all duration-700 shadow-xl overflow-hidden",
                    isScrolled ? "bg-primary-navy text-white hover:bg-secondary-gold hover:text-primary-navy" : "bg-white text-primary-navy hover:bg-secondary-gold hover:text-white"
                 )}
               >
-                İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block transition-transform group-hover/cta:translate-x-1 group-hover/cta:-translate-y-1" />
+                İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block" />
               </Link>
             </div>
 
-            <div className="md:hidden flex items-center">
-              <button
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className={cn("transition-all duration-300 hover:text-secondary-gold", isScrolled ? "text-primary-navy" : "text-white")}
-              >
-                {mobileMenuOpen ? <X className="w-9 h-9" /> : <Menu className="w-9 h-9" />}
-              </button>
+            {/* Top right contact info (only on desktop/large screens) */}
+            <div className="md:hidden">
+                <Link href="/iletisim" className={cn("p-3 rounded-full transition-all", isScrolled ? "bg-primary-navy text-white" : "bg-white text-primary-navy")}>
+                    <Send className="w-5 h-5" />
+                </Link>
             </div>
           </div>
         </div>
 
-        {/* Mobile Menu Overlay */}
-        <div className={cn(
-          "md:hidden fixed inset-0 bg-white z-[110] transition-all duration-700 ease-[cubic-bezier(0.77,0,0.175,1)] p-10 flex flex-col",
-          mobileMenuOpen ? "translate-y-0" : "-translate-y-full"
-        )}>
-           <div className="flex justify-between items-center mb-20">
-              <Logo color="#000D24" size="h-20" />
-              <button onClick={() => setMobileMenuOpen(false)} className="text-primary-navy p-2"><X className="w-10 h-10" /></button>
-           </div>
-           
-           <div className="flex-grow flex flex-col justify-center space-y-8">
-              {navLinks.map((link, idx) => (
-                <Link
-                  key={link.name}
-                  href={link.path}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block text-5xl font-serif font-bold text-primary-navy hover:text-secondary-gold transition-all duration-500"
-                >
-                  {link.name}
-                </Link>
-              ))}
-           </div>
-        </div>
+        {/* Traditional Hamburger Menu is now replaced by Bottom Nav for better mobile UX */}
       </nav>
 
-      <main className="flex-grow">
+      {/* Main Content Area */}
+      <main className={cn("flex-grow transition-all duration-500", "pb-24 md:pb-0")}>
         {children}
       </main>
 
-      <footer className="bg-primary-navy text-white pt-56 pb-12 overflow-hidden relative border-t border-white/5">
+      {/* FIXED BOTTOM NAVIGATION (MOBILE ONLY) */}
+      <div className="md:hidden fixed bottom-0 left-0 w-full z-[150] px-4 pb-6 animate-fade-in">
+          <div className="bg-primary-navy/95 backdrop-blur-2xl border border-white/10 shadow-[0_-20px_50px_rgba(0,0,0,0.3)] rounded-3xl flex justify-around items-center p-4">
+              {navLinks.map((link) => {
+                  const isActive = pathname === link.path;
+                  return (
+                      <Link 
+                        key={link.path} 
+                        href={link.path}
+                        className={cn(
+                            "flex flex-col items-center gap-2 transition-all duration-300 px-4 py-2 rounded-2xl",
+                            isActive ? "text-secondary-gold bg-white/5" : "text-gray-400 hover:text-white"
+                        )}
+                      >
+                          <link.icon className={cn("w-6 h-6", isActive ? "stroke-[2.5px]" : "stroke-[1.5px]")} />
+                          <span className="text-[10px] font-bold tracking-widest uppercase">{link.name.split(' ')[0]}</span>
+                      </Link>
+                  );
+              })}
+          </div>
+      </div>
+
+      <footer className="bg-primary-navy text-white pt-56 pb-12 overflow-hidden relative border-t border-white/5 md:pb-12 pb-32">
         <div className="absolute top-10 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96 opacity-[0.03]">
           <span className="text-[25vw] font-serif font-bold text-white leading-none whitespace-nowrap tracking-tighter">
             GÜL PARTNERS
@@ -195,21 +191,21 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
         <div className="max-w-[1500px] mx-auto px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-24 mb-32">
-            <div className="lg:col-span-5 flex flex-col items-start">
+            <div className="lg:col-span-5 flex flex-col items-start text-center md:text-left items-center md:items-start">
               <div className="mb-14">
                 <Logo color="#C5A022" size="h-44" />
               </div>
-              <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-2 border-secondary-gold/30 pl-10">
+              <p className="text-gray-400 text-xl leading-relaxed italic font-light max-w-md mb-12 border-l-0 md:border-l-2 border-secondary-gold/30 md:pl-10">
                 Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir mimarisi olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
-              <div className="flex gap-6 items-center pt-10 border-t border-white/10 w-full mb-12">
+              <div className="flex gap-6 items-center pt-10 border-t border-white/10 w-full mb-12 justify-center md:justify-start">
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Instagram className="w-5 h-5" /></a>
                  <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
 
-            <div className="lg:col-span-2">
+            <div className="hidden md:block lg:col-span-2">
               <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">HIZLI MENÜ</h4>
               <ul className="space-y-6">
                 {navLinks.map((link) => (
@@ -230,18 +226,18 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               </ul>
             </div>
 
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 text-center md:text-left">
                <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">İLETİŞİM</h4>
                <div className="space-y-10">
-                  <div className="flex gap-6">
+                  <div className="flex gap-6 justify-center md:justify-start">
                      <MapPin className="w-6 h-6 text-secondary-gold flex-shrink-0" />
                      <p className="text-gray-400 text-sm leading-relaxed font-light italic">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
                   </div>
-                  <div className="flex gap-6">
+                  <div className="flex gap-6 justify-center md:justify-start">
                      <Phone className="w-6 h-6 text-secondary-gold flex-shrink-0" />
                      <a href="tel:+902122113345" className="text-gray-400 text-sm hover:text-white transition-colors">+90 (212) 211 3345</a>
                   </div>
-                  <div className="flex gap-6">
+                  <div className="flex gap-6 justify-center md:justify-start">
                      <Mail className="w-6 h-6 text-secondary-gold flex-shrink-0" />
                      <a href="mailto:av.ferdigul@gmail.com" className="text-gray-400 text-sm hover:text-white transition-colors italic">av.ferdigul@gmail.com</a>
                   </div>
@@ -249,7 +245,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
           </div>
 
-          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8">
+          <div className="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-8 text-center">
             <div className="text-[10px] text-gray-500 font-bold tracking-[0.3em] uppercase">
               © 2026 GÜL PARTNERS. ADALETİN MİMARLARI.
             </div>
