@@ -1,7 +1,23 @@
+'use client';
+
 import Link from 'next/link';
+import { useEffect } from 'react';
 import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 export default function Expertise() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal-visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.reveal-up').forEach(el => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   const allServices = [
     {
       id: 'ticaret-hukuku',
