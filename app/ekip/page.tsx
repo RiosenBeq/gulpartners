@@ -116,7 +116,7 @@ export default function Team() {
                    <h4 className="font-serif text-xl font-bold text-primary-navy transition-colors group-hover:text-white leading-tight">{member.name}</h4>
                    <div className="mt-4 flex justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity translate-y-4 group-hover:translate-y-0">
                      <a href="#" className="text-secondary-gold hover:text-white transition-colors"><Linkedin className="w-4 h-4" /></a>
-                     <a href="mailto:info@bulutpartners.com" className="text-secondary-gold hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
+                     <a href="mailto:av.ferdigul@gmail.com" className="text-secondary-gold hover:text-white transition-colors"><Mail className="w-4 h-4" /></a>
                    </div>
                 </div>
               </div>

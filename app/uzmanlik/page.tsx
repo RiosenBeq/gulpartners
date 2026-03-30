@@ -162,9 +162,9 @@ export default function Expertise() {
                    <span className="block text-[10px] uppercase tracking-[0.3em] font-bold text-secondary-gold mb-4 opacity-100">01. Telefon</span>
                    <span className="text-2xl font-serif font-bold text-white group-hover:text-secondary-gold transition-colors">+90 212 211 3345</span>
                 </a>
-                <a className="group block" href="mailto:info@bulutpartners.com">
+                <a className="group block" href="mailto:av.ferdigul@gmail.com">
                    <span className="block text-[10px] uppercase tracking-[0.3em] font-bold text-secondary-gold mb-4 opacity-100">02. E-Posta</span>
-                   <span className="text-lg font-serif italic text-white group-hover:text-secondary-gold transition-all">info@bulutpartners.com</span>
+                   <span className="text-lg font-serif italic text-white group-hover:text-secondary-gold transition-all">av.ferdigul@gmail.com</span>
                 </a>
               </div>
               

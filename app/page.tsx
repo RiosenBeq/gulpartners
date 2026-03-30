@@ -21,6 +21,9 @@ export default function Home() {
       {/* Editorial Hero Section */}
       <section className="relative min-h-[100vh] flex items-center pt-20 overflow-hidden">
         <div className="absolute inset-0 z-0">
+          {/* Header Contrast Gradient */}
+          <div className="absolute top-0 left-0 w-full h-40 bg-gradient-to-b from-primary-navy/80 to-transparent z-20 pointer-events-none"></div>
+          
           <div className="absolute inset-0 bg-primary-navy/40 z-10 backdrop-blur-[1px]"></div>
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 

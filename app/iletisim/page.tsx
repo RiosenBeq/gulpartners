@@ -102,7 +102,7 @@ export default function Contact() {
                     <input 
                       type="email" 
                       className="w-full bg-transparent border-b-2 border-gray-200 py-4 focus:outline-none focus:border-secondary-gold transition-colors font-serif text-lg"
-                      placeholder="info@gulpartners.com"
+                      placeholder="av.ferdigul@gmail.com"
                     />
                   </div>
                 </div>
