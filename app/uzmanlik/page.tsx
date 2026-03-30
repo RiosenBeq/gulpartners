@@ -65,7 +65,7 @@ export default function Expertise() {
        subtitle: 'İnovasyonun Mutlak Korunması',
        special: true,
        description: 'İnovasyonunuzun ve markanızın değeri, onu ne kadar iyi koruduğunuzla ölçülür. Patent, marka ve telif hakları yönetiminde yaratıcı zekayı hukukla zırhlıyoruz.',
-       image: 'https://images.unsplash.com/photo-1589254065878-43c98864d06a?q=80&w=2000&auto=format&fit=crop',
+       image: 'https://images.unsplash.com/photo-1507679799987-c7377f323b88?q=80&w=2000&auto=format&fit=crop',
        features: ['Marka Tescili', 'Patent Hakları', 'Telif Hakları', 'Tescil İptali']
     },
     {
@@ -73,7 +73,7 @@ export default function Expertise() {
       title: 'Tazminat ve Değer Kaybı',
       subtitle: 'Adil Hak Kazanımı',
       description: 'Trafik kazaları, sigorta hukuku ve iş kazaları sonrası oluşan maddi-manevi zararların ve araç değer kaybı süreçlerinin takibi.',
-      image: 'https://images.unsplash.com/photo-1591189863430-ab87e120f312?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1575505586569-6bc21f5d27af?q=80&w=2000&auto=format&fit=crop',
       features: ['Maddi Tazminat', 'Değer Kaybı', 'Destekten Yoksunluk', 'Maluliyet']
     },
     {
@@ -81,7 +81,7 @@ export default function Expertise() {
       title: 'Boşanma ve Miras Hukuku',
       subtitle: 'Hassas Süreç Yönetimi',
       description: 'Anlaşmalı ve çekişmeli boşanma, mal rejimi tasfiyesi, velayet ve miras paylaşımı konularında hassas bir süreç yönetimi.',
-      image: 'https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1589391500112-d246c8194c25?q=80&w=2000&auto=format&fit=crop',
       features: ['Boşanma', 'Mal Paylaşımı', 'Vasiyetname', 'İzale-i Şuyu']
     },
     {
@@ -97,7 +97,7 @@ export default function Expertise() {
       title: 'İmar, İdare ve Vergi Hukuku',
       subtitle: 'Kamu İlişkilerinde Denge',
       description: 'İdari işlemlerin iptali, tam yargı davaları ve vergi cezalarına karşı hukuki koruma ve itiraz süreçleri.',
-      image: 'https://images.unsplash.com/photo-1447069387593-a5de0862481e?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop',
       features: ['İptal Davaları', 'Vergi İtirazları', 'İmar Davaları', 'Kamulaştırma']
     }
   ];
