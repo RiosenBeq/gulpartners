@@ -2,7 +2,7 @@ import { Mail, Share2, Linkedin, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Team() {
-  const partners = [
+  const teamMembers = [
     {
       id: 1,
       name: 'Av. LL.M. Batuhan Bulut',
@@ -24,9 +24,6 @@ export default function Team() {
       expertise: 'İş Hukuku ve Sosyal Güvenlik mevzuatında kapsamlı hukuki destek.',
       image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-2.png',
     },
-  ];
-
-  const associates = [
     {
       id: 4,
       name: 'Av. Türkan Topçu',
@@ -77,83 +74,47 @@ export default function Team() {
         </div>
       </section>
 
-      {/* Partners Grid - Premium Styling */}
+      {/* Unified Team Grid */}
       <section className="py-40 bg-surface-lowest">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="mb-24 flex items-end justify-between border-b border-gray-100 pb-12">
             <div>
-              <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Liderlik</span>
-              <h2 className="font-serif text-4xl md:text-5xl text-primary-navy font-bold tracking-tight">Ortaklarımız</h2>
+              <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Yetkin Kadro</span>
+              <h2 className="font-serif text-4xl md:text-5xl text-primary-navy font-bold tracking-tight">Ekibimiz</h2>
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16">
-            {partners.map((partner) => (
-              <div key={partner.id} className="group flex flex-col">
-                <div className="aspect-[3/4] overflow-hidden rounded-sm mb-10 relative bg-surface-low border border-gray-100 shadow-xl shadow-primary-navy/5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-12 xl:gap-8">
+            {teamMembers.map((member) => (
+              <div key={member.id} className="group flex flex-col items-center text-center">
+                <div className="aspect-[3/4] w-full overflow-hidden rounded-sm mb-8 relative bg-surface-low shadow-lg shadow-primary-navy/5">
                   <img
-                    src={partner.image}
-                    alt={partner.name}
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-end p-8">
-                    <div className="flex gap-4">
-                      <a href="#" className="w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all duration-300">
-                        <Linkedin className="w-4 h-4" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                    <div className="flex gap-4 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                      <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all">
+                        <Linkedin className="w-5 h-5" />
                       </a>
-                      <a href="#" className="w-10 h-10 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all duration-300">
-                        <Mail className="w-4 h-4" />
+                      <a href="#" className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-secondary-gold hover:text-primary-navy transition-all">
+                        <Mail className="w-5 h-5" />
                       </a>
                     </div>
                   </div>
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-primary-navy mb-2 group-hover:text-secondary-gold transition-colors duration-300">
-                  {partner.name}
+                <h3 className="font-serif text-xl font-bold text-primary-navy mb-2 group-hover:text-secondary-gold transition-colors duration-300">
+                  {member.name}
                 </h3>
-                <p className="text-secondary-gold text-xs font-bold uppercase tracking-[0.2em] mb-4">
-                  {partner.role}
+                <p className="text-secondary-gold text-[10px] font-bold uppercase tracking-[0.2em] mb-4">
+                  {member.role}
                 </p>
-                <p className="text-gray-600 text-sm leading-relaxed mb-6 font-light">
-                  {partner.expertise}
-                </p>
-                <Link href="#" className="mt-auto inline-flex items-center gap-2 text-[10px] font-bold text-primary-navy uppercase tracking-widest group-hover:translate-x-2 transition-transform">
-                  Tam Profili İncele &rarr;
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Associates Grid - Modern Card List */}
-      <section className="py-40 bg-surface-low">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="mb-24 text-center">
-            <span className="text-secondary-gold text-sm font-bold tracking-[0.2em] uppercase mb-4 block">Uzman Kadro</span>
-            <h2 className="font-serif text-4xl md:text-5xl text-primary-navy font-bold tracking-tight">Avukatlarımız & Ekibimiz</h2>
-          </div>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {associates.map((associate) => (
-              <div key={associate.id} className="bg-white p-6 rounded-sm border border-gray-100 hover:shadow-2xl hover:shadow-primary-navy/10 transition-all duration-500 group">
-                <div className="aspect-square overflow-hidden rounded-sm mb-8 relative">
-                  <img
-                    src={associate.image}
-                    alt={associate.name}
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                  />
-                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors"></div>
-                </div>
-                <h3 className="font-serif text-lg font-bold text-primary-navy mb-1 group-hover:text-secondary-gold transition-colors duration-300">
-                  {associate.name}
-                </h3>
-                <p className="text-gray-500 text-[10px] font-bold uppercase tracking-wider mb-6">
-                  {associate.role}
-                </p>
-                <div className="hidden group-hover:flex items-center gap-3 animate-fade-in">
-                   <a href="#" className="text-gray-400 hover:text-secondary-gold transition-colors"><Linkedin className="w-4 h-4" /></a>
-                   <a href="#" className="text-gray-400 hover:text-secondary-gold transition-colors"><Mail className="w-4 h-4" /></a>
-                </div>
+                {"expertise" in member && (
+                  <p className="text-gray-500 text-xs leading-relaxed font-light line-clamp-2 px-4 italic">
+                    {member.expertise}
+                  </p>
+                )}
               </div>
             ))}
           </div>

@@ -35,11 +35,18 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
     <div className="min-h-screen flex flex-col font-sans bg-surface-lowest text-gray-900">
       <nav
         className={cn(
-          'fixed w-full z-50 transition-all duration-300',
-          isScrolled ? 'glass-nav border-b border-gray-100 shadow-sm' : 'bg-transparent'
+          'fixed w-full z-50 transition-all duration-500 px-6 py-4',
+          isScrolled ? 'top-2' : 'top-0'
         )}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div 
+          className={cn(
+            "max-w-7xl mx-auto px-6 lg:px-10 transition-all duration-500 rounded-full",
+            isScrolled 
+              ? "bg-white/70 backdrop-blur-2xl border border-white/20 shadow-[0_8px_32px_rgba(0,13,36,0.08)] py-1" 
+              : "bg-transparent py-4"
+          )}
+        >
           <div className="flex justify-between items-center h-24">
             <Link href="/" className="flex-shrink-0 flex items-center gap-3 group">
               <img
@@ -57,7 +64,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               </div>
             </Link>
 
-            <div className="hidden md:flex items-center space-x-10">
+            <div className="hidden md:flex items-center space-x-12">
               {navLinks.map((link) => {
                 const isActive = pathname === link.path;
                 return (
@@ -65,21 +72,29 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                     key={link.path}
                     href={link.path}
                     className={cn(
-                      'text-sm font-medium transition-colors duration-300',
+                      'relative text-[13px] font-semibold tracking-widest uppercase transition-all duration-300 group/nav',
                       isActive
                         ? 'text-primary-navy'
                         : 'text-gray-500 hover:text-primary-navy'
                     )}
                   >
                     {link.name}
+                    <span className={cn(
+                      "absolute -bottom-1 left-1/2 -translate-x-1/2 h-[1.5px] bg-secondary-gold transition-all duration-300",
+                      isActive ? "w-full" : "w-0 group-hover/nav:w-full"
+                    )}></span>
                   </Link>
                 );
               })}
+              
               <Link
                 href="/iletisim"
-                className="bg-primary-navy text-white px-6 py-2.5 rounded-sm text-sm font-medium hover:bg-opacity-90 transition-all duration-300 flex items-center gap-2"
+                className="relative group/cta overflow-hidden bg-primary-navy text-white px-8 py-3 rounded-full text-[11px] font-bold tracking-[0.2em] uppercase transition-all duration-500 hover:shadow-[0_10px_25px_rgba(0,13,36,0.2)] hover:-translate-y-0.5"
               >
-                Danışmanlık Alın <ArrowUpRight className="w-4 h-4" />
+                <div className="absolute inset-0 bg-secondary-gold translate-y-full group-hover/cta:translate-y-0 transition-transform duration-500"></div>
+                <span className="relative flex items-center gap-2 group-hover/cta:text-primary-navy transition-colors duration-500">
+                  Danışmanlık Alın <ArrowUpRight className="w-3.5 h-3.5" />
+                </span>
               </Link>
             </div>
 
