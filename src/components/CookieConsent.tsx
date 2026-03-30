@@ -30,7 +30,7 @@ export default function CookieConsent({ onOpenPrivacy }: CookieConsentProps) {
 
   return (
     <div className={cn(
-      "fixed bottom-28 md:bottom-10 right-4 md:right-10 z-[200] w-[calc(100%-2rem)] max-w-[340px]",
+      "fixed bottom-36 md:bottom-10 right-4 md:right-10 z-[200] w-[calc(100%-2rem)] max-w-[340px]",
       "animate-in fade-in slide-in-from-right-10 duration-1000 ease-out"
     )}>
       <div className="bg-primary-navy/80 backdrop-blur-3xl border border-white/5 p-6 rounded-2xl shadow-[0_30px_60px_rgba(0,0,0,0.4)] relative group">
