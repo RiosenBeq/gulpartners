@@ -1,14 +1,30 @@
 import Link from 'next/link';
-import { Mail, Phone, ArrowUpRight, CheckCircle2 } from 'lucide-react';
+import { ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
 export default function Expertise() {
   const allServices = [
     {
+      id: 'ticaret-hukuku',
+      title: 'Şirketler Hukuku',
+      subtitle: 'Kurumsal Çözümler',
+      description: 'Küresel pazarda stratejik hamleler yaparken, kurumsal yapınızın hukuki güvenliğini en üst düzeyde sağlıyoruz. Birleşme ve devralmalardan genel kurul yönetimine kadar her aşamada titizlikle yanınızdayız.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBHKkO8PLZzI0kd8KNFkbB10_o62qki9ozu1XnWxmti0z6O_dX-AusLEk8m1Pv-QmXUCznLxt_I_hHueezHIBP6s4eTlWFEuCZ-5BO7t2D3sPP2Xnj6fXE633_z1SN2zq3APMjDIGN_SCrJheRJ33bEAgf4KL3Q0RmJ_BFt-QXc8hkLZlYO_Sm8msjBxKaYC87cw2V8BQhVfkIPw2XoGevoRMRg7p0GFvcv17Lk97DLcKsFOzNHHscN6oE4cS4NVB7cK199xNKJMFA',
+      features: ['Birleşme ve Devralmalar (M&A)', 'Kurumsal Yönetişim', 'Stratejik Ortaklıklar', 'Uyum ve Regülasyon']
+    },
+    {
+      id: 'ceza-hukuku',
+      title: 'Dava ve Uyuşmazlık Çözümü',
+      subtitle: 'Savunma ve Tahkim',
+      description: 'Karmaşık uyuşmazlıkların çözümünde sadece savunma yapmıyor, davanın her aşamasını bir satranç ustası hassasiyetiyle planlıyoruz. Ulusal ve uluslararası tahkim süreçlerinde sarsılmaz bir temsil sağlıyoruz.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCEtDQOm4zozEVEQiHKzUMRAYUccmohabmHiDKnmodhdJjWKmizVH5ZjoQPCboNScVYIot8eQdyo2_f5m6dSD0fQO1f_GY4knD4dd5HJRMClxr2sFRG1f_Naw0fquRwYlrD0JLMceqM6Y5aNUGHbvBEie0QmAbrvwUEWDqY4izlZNFDxpEF-dHjddO5vDWIMtfyhWBPB9KwRhZ3moTWO5WzdisMyKqa9fOcdOXqi6pCBqn2fvLBPbMPsMnz1xe8weVJbF4qzmDUIcA',
+      features: ['Ağır Ceza', 'Bilişim Suçları', 'Tahkim', 'İnfaz Hukuku']
+    },
+    {
       id: 'gayrimenkul',
-      title: 'Gayrimenkul ve Kira Hukuku',
-      subtitle: 'Mülkiyet & Kentsel Dönüşüm',
-      description: 'Tapu iptali ve tescili, kat karşılığı inşaat sözleşmeleri ve kentsel dönüşüm süreçlerinde uçtan uca hukuki destek sağlıyoruz.',
-      image: 'https://images.unsplash.com/photo-1460317442991-0ec2392c676d?q=80&w=2600&auto=format&fit=crop',
+      title: 'Gayrimenkul Hukuku',
+      subtitle: 'Mülkiyet ve Geliştirme',
+      description: 'Büyük ölçekli gayrimenkul projelerinin hukuki altyapısını kuruyor, imar süreçlerinden tapu iptal davalarına kadar geniş bir yelpazede mülkiyetinizi güvence altına alıyoruz.',
+      image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBkbK-vPnhpFpixWgDcOoVXVaPrFWgQvHJQOzR2SFVNH_90lrU1x3J_hCpN7WoMHiq8rY4NBP0UALbfiGnkkVQ1wwIsmRu_2b5WDJUIY3nBnX3XZNd3eoF-mlZQURwpx2eB_UvZ_vL4IQNDPB0vT_KwkEmduZf9wJaULGK-C6XPpVFHlY83DH0gZdWvs7veA5yaqb0d_ogmfIvqxeMDdZESeekqFf2cvPI4VeeH-dqOB9dC8IRa3cNn2_Y1_99RNjpTdGdB4ZJCDWA',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
     {
@@ -28,27 +44,12 @@ export default function Expertise() {
       features: ['Alacak Tahsili', 'Konkordato', 'İflas Erteleme', 'Rehin Hukuku']
     },
     {
-      id: 'ticaret-hukuku',
-      title: 'Sözleşmeler ve Ticaret Hukuku',
-      subtitle: 'Global Ticaret Hukuku',
-      description: 'Yerli ve yabancı ortaklı şirketlerin kuruluş, birleşme, devralma ve günlük ticari operasyonlarının hukuki zeminini oluşturuyoruz.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2600&auto=format&fit=crop',
-      features: ['Şirket Kuruluşu', 'Birleşme & Devralma', 'Haksız Rekabet', 'Genel Kurul Yönetimi']
-    },
-    {
-      id: 'ceza-hukuku',
-      title: 'Ceza ve İnfaz Hukuku',
-      subtitle: 'Kararlı & Stratejik Savunma',
-      description: 'Ekonomik ve bilişim suçları başta olmak üzere, soruşturma ve kovuşturma evrelerinde stratejik savunma çözümleri sunuyoruz.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2600&auto=format&fit=crop',
-      features: ['Ağır Ceza', 'Bilişim Suçları', 'Ekonomik Suçlar', 'İnfaz Hukuku']
-    },
-    {
        id: 'fikri-mulkiyet',
-       title: 'Marka ve Fikri Mülkiyet Hukuku',
+       title: 'Fikri Mülkiyet',
        subtitle: 'İnovasyonun Mutlak Korunması',
-       description: 'Marka, patent ve endüstriyel tasarım tescilleri ile bu hakların ihlali durumunda koruma süreçlerini yönetiyoruz.',
-       image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2600&auto=format&fit=crop',
+       special: true,
+       description: 'İnovasyonunuzun ve markanızın değeri, onu ne kadar iyi koruduğunuzla ölçülür. Patent, marka ve telif hakları yönetiminde yaratıcı zekayı hukukla zırhlıyoruz.',
+       image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCffl1uHy2PfyQk9mQ58rukOqDEXx8TbFUrzvzcADshcIcssvr3fFYWC47airgqMlYOrddS81QLEUpYXdEDIZYZ5qg_KxKiUHfTC3jLUGG9TFbciEICcwJhDLgTjQupKJlzSrcRfLbF5ei3bupoAtjQUWeqq33HKLb_wyuewgLGKoqs5DnRvNRDW41-E3dFOCLt1NHKQTURVozJoDhw8PSAoINWPiBDSHlLv2s6n0KTyZoO52yBSHPAKzkTvNSougNx_nfzkdFdhYQ',
        features: ['Marka Tescili', 'Patent Hakları', 'Telif Hakları', 'Tescil İptali']
     },
     {
@@ -87,101 +88,151 @@ export default function Expertise() {
 
   return (
     <div className="bg-white antialiased selection:bg-secondary-gold/20">
-      {/* Hero Section: Editorial Header */}
-      <header className="relative pt-64 pb-32 overflow-hidden bg-primary-navy">
-        <div className="absolute inset-0 opacity-20 grayscale">
-           <img 
-            className="w-full h-full object-cover" 
-            src="https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2600&auto=format&fit=crop" 
-            alt="Law Library" 
-          />
-        </div>
-        <div className="max-w-7xl mx-auto px-12 relative z-10">
-          <div className="max-w-5xl">
-            <span className="text-secondary-gold font-sans uppercase tracking-[0.6em] text-[11px] font-bold mb-10 block animate-fade-in">UZMANLIK ALANLARIMIZ</span>
-            <h1 className="font-serif text-5xl md:text-[9rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic">
-              Disiplinle <br/> <span className="text-gray-400 not-italic text-4xl md:text-[9rem]">Şekillenen Adalet.</span>
-            </h1>
-            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
-              Gül Partners, disiplinlerarası bir yaklaşımla karmaşık hukuki sorunları mimari bir hassasiyetle çözer. Karmaşıklığı stratejik bir avantaja dönüştüren 10 ana disiplinde hizmetinizdeyiz.
-            </p>
-          </div>
+      {/* Hero Section: Architectural Header */}
+      <header className="pt-40 pb-24 px-8 max-w-7xl mx-auto reveal-up">
+        <div className="max-w-4xl">
+          <span className="text-secondary-gold font-sans uppercase tracking-[0.3em] text-xs font-semibold mb-6 block">KÜRATÖRLÜĞÜNDE HUKUKİ MÜKEMMELLİK</span>
+          <h1 className="font-serif text-5xl md:text-7xl font-bold leading-[1.1] text-primary-navy tracking-tight mb-8">
+            Karmaşık Hukuk Süreçlerinde Mimari Hassasiyet.
+          </h1>
+          <p className="text-gray-500 text-xl leading-relaxed max-w-2xl font-light italic border-l border-secondary-gold/20 pl-8">
+            Her vaka bir yapı, her strateji bir temeldir. Gül Partners, hukuki zorlukları birer mimari disiplinle ele alarak kalıcı ve güvenli çözümler inşa eder.
+          </p>
         </div>
       </header>
 
-      <main className="max-w-[1440px] mx-auto px-6 md:px-12 pb-32 md:pb-48 pt-20 md:pt-32">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-32 items-start">
+      <main className="max-w-7xl mx-auto px-8 pb-32">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           
           {/* Main List */}
-          <div className="lg:col-span-8 space-y-48">
+          <div className="lg:col-span-8 space-y-32">
             {allServices.map((service, index) => (
-              <section key={service.id} id={service.id} className="group reveal-up opacity-100 translate-y-0">
-                <div className="mb-16 overflow-hidden aspect-[21/10] bg-surface-low relative shadow-[0_40px_100px_rgba(0,0,0,0.08)]">
-                  <img 
-                    className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 grayscale group-hover:grayscale-0" 
-                    src={service.image} 
-                    alt={service.title}
-                  />
-                  <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-1000"></div>
-                </div>
-                <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-                  <div className="md:w-2/5">
-                    <span className="text-secondary-gold text-[10px] font-sans tracking-[0.4em] uppercase font-bold mb-6 block">
-                      {service.subtitle}
-                    </span>
-                    <h2 className="font-serif text-4xl font-bold text-primary-navy mb-8 leading-[1.1] transition-colors group-hover:text-secondary-gold">
-                      {service.title}
-                    </h2>
-                  </div>
-                  <div className="md:w-3/5">
-                    <p className="text-gray-500 mb-12 leading-relaxed font-light text-xl italic">{service.description}</p>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-12 pt-12 border-t border-gray-100">
-                      {service.features.map(feature => (
-                        <div key={feature} className="flex items-center gap-4 text-[10px] font-bold text-primary-navy uppercase tracking-[0.2em] opacity-70">
-                          <CheckCircle2 className="w-4 h-4 text-secondary-gold" />
-                          {feature}
-                        </div>
-                      ))}
+              service.special ? (
+                /* Special Highlighted Section ( Intellectual Property ) */
+                <section key={service.id} id={service.id} className="bg-primary-navy p-12 text-white reveal-up">
+                  <div className="flex flex-col md:flex-row gap-12 items-center">
+                    <div className="flex-1">
+                      <span className="material-symbols-outlined text-secondary-gold text-5xl mb-6">lightbulb</span>
+                      <h2 className="font-serif text-3xl font-bold mb-6">{service.title}</h2>
+                      <p className="text-slate-400 leading-relaxed mb-8 italic">{service.description}</p>
+                      <button className="border border-secondary-gold text-secondary-gold px-8 py-3 font-semibold hover:bg-secondary-gold hover:text-primary-navy transition-all uppercase text-[10px] tracking-widest font-sans">
+                        Marka Tescil Danışmanlığı
+                      </button>
+                    </div>
+                    <div className="flex-1 w-full aspect-square bg-slate-900 overflow-hidden">
+                      <img 
+                        className="w-full h-full object-cover opacity-60 mix-blend-luminosity grayscale transition-all duration-[2s] hover:grayscale-0 hover:opacity-100" 
+                        src={service.image} 
+                        alt={service.title}
+                      />
                     </div>
                   </div>
-                </div>
-              </section>
+                </section>
+              ) : (
+                /* Regular Modern Section */
+                <section key={service.id} id={service.id} className="group reveal-up">
+                  <div className="mb-12 overflow-hidden aspect-[21/9] bg-gray-50 relative shadow-2xl transition-all duration-700">
+                    <img 
+                      className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-105 grayscale group-hover:grayscale-0" 
+                      src={service.image} 
+                      alt={service.title}
+                    />
+                    <div className="absolute inset-0 bg-primary-navy/5 group-hover:bg-transparent transition-colors duration-1000"></div>
+                  </div>
+                  <div className="flex flex-col md:flex-row gap-8 md:gap-16">
+                    <div className="md:w-1/3">
+                      <h2 className="font-serif text-3xl font-bold text-primary-navy mb-4 group-hover:text-secondary-gold transition-colors">{service.title}</h2>
+                      <span className="text-secondary-gold text-[10px] font-sans tracking-widest uppercase font-bold">{service.subtitle}</span>
+                    </div>
+                    <div className="md:w-2/3">
+                      <p className="text-gray-500 mb-8 leading-relaxed italic font-light">{service.description}</p>
+                      {service.id === 'gayrimenkul' ? (
+                        <div className="grid grid-cols-2 gap-8 py-8 border-t border-gray-100">
+                          <div>
+                            <span className="block text-3xl font-serif font-bold text-primary-navy">500+</span>
+                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Başarılı Proje Teslimi</span>
+                          </div>
+                          <div>
+                            <span className="block text-3xl font-serif font-bold text-primary-navy">15+</span>
+                            <span className="text-[10px] text-gray-400 uppercase tracking-widest font-bold">Yıllık Derin Tecrübe</span>
+                          </div>
+                        </div>
+                      ) : (
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        {service.features.map(feature => (
+                          <li key={feature} className="flex items-center gap-3 text-[11px] font-bold text-primary-navy uppercase tracking-wider opacity-80">
+                             <CheckCircle2 className="w-5 h-5 text-secondary-gold" />
+                             {feature}
+                          </li>
+                        ))}
+                      </ul>
+                      )}
+                      {(service.id === 'ceza-hukuku') && (
+                        <Link href="/iletisim" className="inline-flex items-center gap-3 text-primary-navy font-bold border-b-2 border-secondary-gold pb-1 hover:text-secondary-gold transition-colors mt-8 text-xs tracking-widest uppercase">
+                          Detaylı Süreç Analizi <ArrowUpRight className="w-4 h-4" />
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </section>
+              )
             ))}
           </div>
 
-          {/* Luxury Sidebar */}
-          <aside className="lg:col-span-4 sticky top-40">
-            <div className="bg-primary-navy p-16 text-white shadow-3xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-secondary-gold/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+          {/* Luxury Redesigned Sidebar */}
+          <aside className="lg:col-span-4 sticky top-40 space-y-12 h-fit pb-12">
+            <div className="bg-gray-50 p-12 border border-gray-100 shadow-sm relative overflow-hidden group">
+              <div className="absolute top-0 right-0 w-24 h-24 bg-secondary-gold/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
               
-              <h3 className="font-serif text-3xl font-bold mb-8 tracking-tight">Hızlı Danışmanlık</h3>
-              <p className="text-gray-400 mb-16 leading-relaxed font-light italic text-lg">Acil ve kritik hukuki ihtiyaçlarınız için bir kahve eşliğinde strateji geliştirelim.</p>
+              <h3 className="font-serif text-xl font-bold mb-6 text-primary-navy">Acil hukuki destek mi gerekiyor?</h3>
+              <p className="text-sm text-gray-500 mb-10 leading-relaxed font-light italic">Kritik durumlarda zaman en büyük varlıktır. Uzman ekibimizle anında iletişime geçin.</p>
               
-              <div className="space-y-12">
-                <a className="group block" href="tel:+902122113345">
-                   <span className="block text-[10px] uppercase tracking-[0.3em] font-bold text-secondary-gold mb-4 opacity-100">01. Telefon</span>
-                   <span className="text-2xl font-serif font-bold text-white group-hover:text-secondary-gold transition-colors">+90 212 211 3345</span>
+              <div className="space-y-6">
+                <a className="flex items-center gap-6 bg-white p-6 shadow-sm border border-gray-50 group transition-all hover:bg-primary-navy hover:text-white" href="tel:+902122113345">
+                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white">
+                    <span className="material-symbols-outlined">call</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-widest font-bold opacity-60">7/24 Telefon</span>
+                    <span className="font-bold font-serif text-base">+90 (212) 211 3345</span>
+                  </div>
                 </a>
-                <a className="group block" href="mailto:av.ferdigul@gmail.com">
-                   <span className="block text-[10px] uppercase tracking-[0.3em] font-bold text-secondary-gold mb-4 opacity-100">02. E-Posta</span>
-                   <span className="text-lg font-serif italic text-white group-hover:text-secondary-gold transition-all">av.ferdigul@gmail.com</span>
+                <a className="flex items-center gap-6 bg-white p-6 shadow-sm border border-gray-50 group transition-all hover:bg-primary-navy hover:text-white" href="mailto:av.ferdigul@gmail.com">
+                  <div className="w-12 h-12 rounded-full bg-secondary-gold/10 flex items-center justify-center text-secondary-gold group-hover:bg-white/10 group-hover:text-white">
+                    <span className="material-symbols-outlined">mail</span>
+                  </div>
+                  <div>
+                    <span className="block text-[10px] uppercase tracking-widest font-bold opacity-60">E-Posta Hattı</span>
+                    <span className="font-bold font-serif text-base italic">av.ferdigul@gmail.com</span>
+                  </div>
                 </a>
               </div>
-              
-              <button className="w-full mt-20 bg-secondary-gold text-primary-navy py-6 font-bold text-[11px] tracking-[0.3em] uppercase hover:bg-white transition-all duration-700 shadow-2xl">
-                RANDEVU OLUŞTURUN
+              <button className="w-full mt-10 bg-secondary-gold text-white py-6 font-bold tracking-[0.4em] uppercase text-[10px] hover:bg-primary-navy transition-all duration-700 shadow-xl">
+                Hızlı Randevu Alın
               </button>
             </div>
 
-            <div className="mt-16 p-12 bg-surface-low border border-gray-100 relative overflow-hidden group hover:bg-white transition-all duration-700">
-               <div className="flex items-center gap-6 mb-8 text-primary-navy font-bold text-[10px] tracking-[0.4em] uppercase">
-                 <Link href="/iletisim" className="hover:text-secondary-gold transition-colors">Ofis Konumu</Link>
-                 <ArrowUpRight className="w-4 h-4 text-secondary-gold" />
-               </div>
-               <p className="text-gray-400 text-sm italic font-light leading-relaxed">Esentepe, Kore Şehitleri Cd. No:30/10, 34394 Şişli/İstanbul</p>
+            <div className="p-12 bg-primary-navy text-white relative overflow-hidden group">
+              <div className="absolute right-0 bottom-0 opacity-10 blur-3xl w-48 h-48 bg-secondary-gold rounded-full"></div>
+              <h4 className="text-[10px] uppercase tracking-widest font-bold text-secondary-gold mb-10 pb-4 border-b border-white/5">Yayınlarımız</h4>
+              <div className="space-y-10">
+                <a className="block group/item" href="#">
+                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary-gold transition-colors leading-tight mb-3">2024 Yılı Vergi Mevzuatı Değişiklikleri Rehberi</h5>
+                  <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest block">5 Dakika Okuma • Hukuk Bülteni</span>
+                </a>
+                <a className="block group/item" href="#">
+                  <h5 className="font-serif text-lg font-bold group-hover/item:text-secondary-gold transition-colors leading-tight mb-3">Yapay Zeka ve Fikri Mülkiyet Hakları</h5>
+                  <span className="text-[10px] text-gray-500 uppercase font-bold tracking-widest block">8 Dakika Okuma • Makale</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="p-12 border-l-2 border-secondary-gold/30 italic">
+               <p className="text-gray-400 text-sm font-light leading-relaxed">
+                  "Hukuk sadece bir kurallar bütünü değil; her detayında sarsılmaz bir güvenin inşa edildiği bir mimaridir."
+               </p>
             </div>
           </aside>
-
         </div>
       </main>
     </div>
