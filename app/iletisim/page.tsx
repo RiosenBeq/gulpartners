@@ -13,12 +13,11 @@ export default function Contact() {
         <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 text-center md:text-left">
           <div className="max-w-3xl">
             <span className="text-secondary-gold text-sm font-bold tracking-[0.4em] uppercase mb-8 block font-sans">İletişim</span>
-            <h1 className="font-serif text-5xl md:text-7xl text-white font-bold tracking-tight leading-tight mb-8">
-              Stratejik Bir <br />
-              <span className="italic font-light text-secondary-gold">Başlangıç İçin</span>
+            <h1 className="font-serif text-6xl md:text-[9rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic">
+              Zihinsel <br/> <span className="not-italic text-gray-400">İletişim.</span>
             </h1>
-            <p className="font-sans text-xl text-gray-400 font-light leading-relaxed">
-              Hukuki süreçlerinizi güvenle yönetmek ve proaktif çözümlerimizden yararlanmak için bizimle iletişime geçin.
+            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
+              Gül Partners hukuk mimarları, taleplerinizi 24 saat içinde stratejik bir ön incelemeye tabi tutar.
             </p>
           </div>
         </div>

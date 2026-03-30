@@ -59,11 +59,16 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
           isScrolled ? 'top-0 py-2' : 'top-4 py-4 px-8'
         )}
       >
+        {/* Top-down gradient for header contrast on dark hero backgrounds */}
+        {!isScrolled && (
+          <div className="fixed top-0 left-0 w-full h-64 bg-gradient-to-b from-primary-navy/80 via-primary-navy/20 to-transparent pointer-events-none z-[-1]"></div>
+        )}
+        
         <div 
           className={cn(
             "max-w-[1440px] mx-auto transition-all duration-1000 ease-in-out px-10 relative overflow-hidden",
             isScrolled 
-              ? "bg-white/90 backdrop-blur-3xl border-b border-gray-100 py-2 shadow-[0_10px_40px_rgba(0,0,0,0.06)]" 
+              ? "bg-white/95 backdrop-blur-3xl border-b border-gray-100 py-2 shadow-[0_10px_40px_rgba(0,0,0,0.06)]" 
               : "bg-primary-navy/40 backdrop-blur-md rounded-2xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.15)]"
           )}
         >
@@ -181,7 +186,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         {/* Monumental Watermark */}
         <div className="absolute top-20 left-0 w-full flex justify-center pointer-events-none select-none overflow-hidden h-96">
           <span className="text-[18vw] font-serif font-bold text-white/[0.03] leading-none whitespace-nowrap tracking-tighter">
-            GÜL & PARTNERS
+            GÜL PARTNERS
           </span>
         </div>
 
@@ -191,7 +196,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <div className="mb-16">
                 <img
                   src="/logo.png"
-                  alt="Gül & Partners Logo"
+                  alt="Gül Partners Logo"
                   style={{ mixBlendMode: 'lighten', filter: 'brightness(0) invert(1)' }}
                   className="h-28 w-auto object-contain opacity-90 transition-opacity hover:opacity-100"
                 />
@@ -207,7 +212,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="lg:col-span-2">
-              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Kurumsal</h4>
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90 uppercase tracking-widest text-xs py-2 border-b border-white/10">Menü</h4>
               <ul className="space-y-6">
                 {navLinks.map((link) => (
                   <li key={link.path}>
@@ -218,7 +223,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="lg:col-span-3">
-              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Disiplinler</h4>
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90 uppercase tracking-widest text-xs py-2 border-b border-white/10">Uzmanlıklar</h4>
               <ul className="space-y-6">
                 <li><Link href="/uzmanlik#gayrimenkul" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Gayrimenkul Hukuku</Link></li>
                 <li><Link href="/uzmanlik#ticaret-hukuku" className="text-gray-500 hover:text-white transition-colors text-[10px] uppercase tracking-[0.2em] font-bold">Ticaret ve Şirketler</Link></li>
@@ -228,11 +233,11 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             </div>
 
             <div className="lg:col-span-3">
-              <h4 className="font-serif text-xl font-bold mb-12 text-white/90">Merkez Kampüs</h4>
+              <h4 className="font-serif text-xl font-bold mb-12 text-white/90 uppercase tracking-widest text-xs py-2 border-b border-white/10">Merkez Kampüs</h4>
               <div className="space-y-12">
                 <div className="text-gray-400 text-sm leading-relaxed">
                   <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.3em] text-[10px]">İLETİŞİM HATTI</span>
-                  <a href="tel:+902122113345" className="text-2xl font-serif text-white hover:text-secondary-gold transition-colors block mb-2 tracking-tight">+90 (212) 211 3345</a>
+                  <a href="tel:+902122113345" className="text-2xl font-serif text-white hover:text-secondary-gold transition-colors block mb-2 tracking-tight">+90 (212) 211 33 45</a>
                 </div>
                 <div className="text-gray-400 text-sm leading-relaxed">
                   <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.3em] text-[10px]">OFİS ADRESİ</span>
@@ -240,7 +245,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 </div>
                 <div className="text-gray-400 text-sm leading-relaxed">
                   <span className="block text-secondary-gold font-bold mb-4 uppercase tracking-[0.3em] text-[10px]">E-POSTA</span>
-                  <a href="mailto:av.ferdigul@gmail.com" className="hover:text-white transition-colors block italic">av.ferdigul@gmail.com</a>
+                  <a href="mailto:av.ferdigul@gmail.com" className="text-white hover:text-secondary-gold transition-colors block italic">av.ferdigul@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -248,7 +253,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
 
           <div className="border-t border-white/5 pt-16 flex flex-col md:flex-row justify-between items-center gap-12 group">
             <p className="text-gray-600 text-[9px] uppercase font-bold tracking-[0.5em]">
-              &copy; {new Date().getFullYear()} GÜL & PARTNERS. ARCHITECTS OF JUSTICE.
+              &copy; {new Date().getFullYear()} GÜL PARTNERS. ARCHITECTS OF JUSTICE.
             </p>
             <div className="flex gap-16">
                <Link href="#" className="text-gray-600 hover:text-white text-[9px] uppercase font-bold tracking-[0.4em] transition-colors">PRIVACY POLICY</Link>

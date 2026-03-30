@@ -59,7 +59,7 @@ export default function Home() {
                 <Link href="/uzmanlik" className="bg-white text-primary-navy px-14 py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-secondary-gold hover:text-white transition-all duration-700 shadow-2xl">
                   KURUMSAL ÇÖZÜMLER
                 </Link>
-                <Link href="/iletisim" className="border border-white/30 text-white px-14 py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-primary-navy transition-all duration-700 backdrop-blur-sm">
+                <Link href="/iletisim" className="bg-secondary-gold text-white px-14 py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-primary-navy transition-all duration-700 shadow-xl border border-secondary-gold">
                   İLETİŞİME GEÇİN
                 </Link>
               </div>
@@ -95,7 +95,7 @@ export default function Home() {
               <span className="italic font-light text-gray-400">Koruma Altına Alıyoruz.</span>
             </h2>
             <p className="text-2xl text-gray-500 font-light leading-relaxed">
-              Gül & Partners, sadece müvekkillerine hizmet vermekle kalmaz; her uyuşmazlığı stratejik bir kazanım olarak yeniden tasarlar. Küresel vizyonumuz, yerel derinlikteki uzmanlığımızla birleşir.
+              Gül Partners, sadece müvekkillerine hizmet vermekle kalmaz; her uyuşmazlığı stratejik bir kazanım olarak yeniden tasarlar. Küresel vizyonumuz, yerel derinlikteki uzmanlığımızla birleşir.
             </p>
             <div className="pt-8 flex gap-12">
                <div>

@@ -102,8 +102,8 @@ export default function Expertise() {
             <h1 className="font-serif text-6xl md:text-[9rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-16 italic">
               Disiplinle <br/> <span className="text-gray-400 not-italic">Şekillenen Adalet.</span>
             </h1>
-            <p className="text-gray-400 text-2xl leading-relaxed max-w-3xl font-light italic border-l border-white/10 pl-10">
-              Gül & Partners, her hukuki süreci bir mimari proje hassasiyetiyle ele alır. Karmaşıklığı stratejik bir avantaja dönüştüren 10 ana disiplinde hizmetinizdeyiz.
+            <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
+              Gül Partners, disiplinlerarası bir yaklaşımla karmaşık hukuki sorunları mimari bir hassasiyetle çözer. Karmaşıklığı stratejik bir avantaja dönüştüren 10 ana disiplinde hizmetinizdeyiz.
             </p>
           </div>
         </div>

@@ -109,7 +109,7 @@ export default function Team() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale opacity-80 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-700 transform group-hover:scale-105"
+                    className="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-all duration-700 transform group-hover:scale-105"
                   />
                 </div>
                 <div className="px-6 pb-12 h-24 flex flex-col justify-center">
