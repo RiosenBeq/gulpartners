@@ -142,13 +142,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 İLETİŞİM <ArrowUpRight className="w-4 h-4 ml-2 inline-block" />
               </Link>
             </div>
-
-            {/* Top right contact info (only on desktop/large screens) */}
-            <div className="md:hidden">
-                <Link href="/iletisim" className={cn("p-3 rounded-full transition-all", isScrolled ? "bg-primary-navy text-white" : "bg-white text-primary-navy")}>
-                    <Send className="w-5 h-5" />
-                </Link>
-            </div>
           </div>
         </div>
 
@@ -199,9 +192,9 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
                 Hukuku sadece bir kural bütünü değil, adaletin estetik ve stratejik bir mimarisi olarak görüyoruz. Karmaşık süreçleri kusursuz disiplinle yönetiyoruz.
               </p>
               <div className="flex gap-6 items-center pt-10 border-t border-white/10 w-full mb-12 justify-center md:justify-start">
-                 <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
-                 <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Instagram className="w-5 h-5" /></a>
-                 <a href="#" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Twitter className="w-5 h-5" /></a>
+                 <a href="#" aria-label="LinkedIn profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Linkedin className="w-5 h-5" /></a>
+                 <a href="#" aria-label="Instagram profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Instagram className="w-5 h-5" /></a>
+                 <a href="#" aria-label="Twitter profilimiz" className="p-4 bg-white/5 rounded-full text-white hover:bg-secondary-gold transition-all duration-500"><Twitter className="w-5 h-5" /></a>
               </div>
             </div>
 
@@ -210,7 +203,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
               <ul className="space-y-6">
                 {navLinks.map((link) => (
                   <li key={link.path}>
-                    <Link href={link.path} className="text-gray-500 hover:text-secondary-gold transition-all text-xs uppercase tracking-[0.4em] font-medium block hover:pl-3">{link.name}</Link>
+                    <Link href={link.path} aria-label={`${link.name} sayfasına git`} className="text-gray-500 hover:text-secondary-gold transition-all text-xs uppercase tracking-[0.4em] font-medium block hover:pl-3">{link.name}</Link>
                   </li>
                 ))}
               </ul>
@@ -219,8 +212,6 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
             <div className="lg:col-span-2">
               <h4 className="font-serif text-xs font-bold mb-12 text-white/30 uppercase tracking-[0.5em] py-2 border-b border-white/5 inline-block">DİSİPLİNLER</h4>
               <ul className="space-y-6">
-                <li><Link href="/uzmanlik#gayrimenkul" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">GAYRİMENKUL</Link></li>
-                <li><Link href="/uzmanlik#ticaret-hukuku" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">TİCARET & ŞİRKETLER</Link></li>
                 <li><Link href="/uzmanlik#ceza-hukuku" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">CEZA HUKUKU</Link></li>
                 <li><Link href="/uzmanlik#fikri-mulkiyet" className="text-gray-500 hover:text-white transition-all text-xs uppercase tracking-[0.3em] font-medium block hover:pl-3">FİKRİ MÜLKİYET</Link></li>
               </ul>
