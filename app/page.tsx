@@ -32,16 +32,16 @@ export default function Home() {
   return (
     <div className="bg-white selection:bg-secondary-gold/20 overflow-x-hidden">
       
-      <section className="relative w-full h-[100vh] min-h-[800px] flex items-center overflow-hidden bg-surface-low">
-        <div className="absolute inset-0 z-0 opacity-40 grayscale mix-blend-multiply">
+      <section className="relative w-full h-[100vh] min-h-[800px] flex items-center overflow-hidden bg-[#0A0A0A]">
+        <div className="absolute inset-0 z-0 opacity-50">
           <img 
             alt="Gul Partners Background" 
-            className="w-full h-full object-cover" 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop"
+            className="w-full h-full object-cover mix-blend-luminosity brightness-110" 
+            src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2600&auto=format&fit=crop"
           />
         </div>
-        <div className="absolute inset-0 z-1 bg-secondary opacity-5 mix-blend-color"></div>
-        <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/90 to-transparent"></div>
+        <div className="absolute inset-0 z-1 bg-gradient-to-tr from-secondary/40 to-transparent mix-blend-overlay"></div>
+        <div className="absolute inset-0 z-10 bg-gradient-to-r from-surface via-surface/95 to-transparent"></div>
         <div className="relative z-20 max-w-[1700px] mx-auto px-6 lg:px-12 w-full pt-20">
           <div className="max-w-4xl">
             <span className="inline-block px-4 py-2 bg-secondary/10 text-secondary text-[10px] font-bold uppercase tracking-[0.3em] mb-10 font-sans backdrop-blur-md">
@@ -91,12 +91,12 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="relative aspect-square reveal-up">
-              <div className="absolute inset-0 bg-primary/5 translate-x-12 translate-y-12"></div>
+            <div className="relative aspect-square reveal-up group">
+              <div className="absolute inset-0 bg-secondary/10 translate-x-6 translate-y-6 transition-transform duration-700 group-hover:translate-x-3 group-hover:translate-y-3"></div>
               <img 
                 src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2600&auto=format&fit=crop" 
                 alt="Justice Statue" 
-                className="relative z-10 w-full h-full object-cover grayscale"
+                className="relative z-10 w-full h-full object-cover shadow-2xl transition-all duration-700 group-hover:scale-[1.02]"
               />
             </div>
           </div>
@@ -111,17 +111,17 @@ export default function Home() {
                    <img 
                       src="https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg" 
                       alt="Av. Ferdi Gül"
-                      className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                    />
                 </div>
                 <h3 className="font-serif text-5xl font-bold text-primary group-hover:text-secondary transition-colors">Av. Ferdi Gül</h3>
              </div>
              <div className="group reveal-up delay-200">
-                <div className="aspect-[3/4] overflow-hidden relative shadow-sm mb-12">
+                <div className="aspect-[3/4] overflow-hidden relative shadow-md mb-12">
                    <img 
                       src="https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg" 
                       alt="Av. LL.M. Batuhan Bulut"
-                      className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
+                      className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
                    />
                 </div>
                 <h3 className="font-serif text-5xl font-bold text-primary group-hover:text-secondary transition-colors">Av. LL.M. Batuhan Bulut</h3>

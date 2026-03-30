@@ -7,7 +7,7 @@ The Creative North Star for this design system is **"The Editorial Authority."**
 To break the "template" look, we employ:
 - **Intentional Asymmetry:** Utilizing staggered column layouts and generous, uneven whitespace (e.g., combining `spacing.20` and `spacing.24`) to guide the eye.
 - **Tonal Depth:** Replacing harsh structural lines with soft shifts in surface values.
-- **Cinematic Photography:** Using muted or black-and-white imagery as a fundamental UI building block, not just decoration.
+- **Cinematic Premium Photography:** Using rich, vibrant, high-resolution imagery as a fundamental UI building block. Photography should be warm, bringing life to the deeper architectural tones of the UI rather than remaining muted or strictly black-and-white.
 
 ## 2. Colors
 
@@ -58,7 +58,7 @@ Forbid the use of horizontal dividers. Use `spacing.8` (2.75rem) to separate lis
 Inputs should feel like a legal document. Use a "Ghost Border" at the bottom only, using `outline_variant`. The background should be `surface_container_lowest`. Error states use the `error` token (`#ba1a1a`) but must remain sophisticated—avoiding heavy red boxes in favor of a 2px left-accent bar.
 
 ### Signature Component: The "Case Header"
-A full-width `surface_container_low` section using `display-md` typography, paired with a black-and-white image that utilizes a `secondary_fixed_dim` (Gold) overlay at 5% opacity to "warm" the photo.
+A full-width `surface_container_low` section using `display-md` typography, paired with a stunning, full-color premium image that utilizes a `secondary` (Gold/Brass) overlay at 5-10% opacity to organically "warm" the photograph, without washing out its vibrant detail.
 
 ## 6. Do's and Don'ts
 
@@ -69,5 +69,5 @@ A full-width `surface_container_low` section using `display-md` typography, pair
 
 ### Don't:
 - **Don't use 100% black.** Use `on_background` (`#1a1c1c`) for text to ensure it feels like ink on paper rather than pixels on a screen.
-- **Don't use standard "Rounded" buttons.** Stick to `rounded.sm` or `none` to maintain the architectural feel of the brand.
-- **Don't use saturated colors.** Apart from the `secondary` (Brass) accent, all colors should remain muted and desaturated.
+- **Don't use standard "Rounded" buttons.** Stick to `rounded.none` (0px) to maintain the brutalist, architectural feel of the brand.
+- **Don't over-desaturate photos.** Apart from the `secondary` (Brass) accent giving structural integrity, photos themselves should provide natural vibrancy to counter the dark/neutral UI palette.

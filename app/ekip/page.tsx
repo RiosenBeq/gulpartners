@@ -52,7 +52,7 @@ export default function Team() {
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
             alt="Background" 
-            className="w-full h-full object-cover grayscale mix-blend-multiply opacity-10"
+            className="w-full h-full object-cover mix-blend-multiply opacity-20"
           />
         </div>
         
@@ -75,11 +75,11 @@ export default function Team() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-40 items-center">
             {foundingPartners.map((member) => (
               <div key={member.id} className="group reveal-up">
-                <div className="relative aspect-[3/4] overflow-hidden bg-surface-low mb-10 transition-all duration-700">
+                <div className="relative aspect-[3/4] overflow-hidden bg-surface-low mb-10 transition-all duration-700 shadow-lg group-hover:shadow-2xl">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105 group-hover:grayscale-0"
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-[1.03]"
                   />
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </div>
@@ -116,7 +116,7 @@ export default function Team() {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full object-cover grayscale transition-all duration-1000 transform group-hover:scale-105 group-hover:grayscale-0 mix-blend-multiply"
+                    className="w-full h-full object-cover transition-all duration-1000 transform group-hover:scale-110"
                   />
                 </div>
                 <div className="px-6 pb-12 h-24 flex flex-col justify-center">

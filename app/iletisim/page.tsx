@@ -38,7 +38,7 @@ export default function Contact() {
           <img 
             src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop" 
             alt="Background" 
-            className="w-full h-full object-cover grayscale mix-blend-multiply opacity-10"
+            className="w-full h-full object-cover mix-blend-multiply opacity-20"
           />
         </div>
         
@@ -186,7 +186,7 @@ export default function Contact() {
 
       {/* Map Placeholder */}
       <section className="h-[600px] w-full bg-surface-low flex items-center justify-center relative group overflow-hidden">
-        <div className="absolute inset-0 grayscale contrast-125 opacity-30 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-1000">
+        <div className="absolute inset-0 opacity-80 group-hover:opacity-100 transition-all duration-1000">
            <iframe 
              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3008.232334812376!2d29.006859776510304!3d41.06385221664426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab652f75845c1%3A0xc66519183617349b!2sEsentepe%2C%20Kore%20Şehitleri%20Cd.%20No%3A30%2C%2034394%20Şişli%2Fİstanbul!5e0!3m2!1str!2str!4v1711550000000!5m2!1str!2str" 
              width="100%" 
