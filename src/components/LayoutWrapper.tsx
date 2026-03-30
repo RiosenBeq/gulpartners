@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, ArrowUpRight, Linkedin, Instagram, Twitter, Phone, Mail, MapPin, Home, Gavel, Users, Send } from 'lucide-react';
 import { cn } from "@/src/lib/utils";
 import LegalModal from './LegalModals';
+import CookieConsent from './CookieConsent';
 
 const Logo = ({ className, color = "currentColor", size = "h-12" }: { className?: string, color?: string, size?: string }) => (
   <div className={cn("flex items-center gap-3", className)}>
@@ -254,6 +255,7 @@ export default function LayoutWrapper({ children }: { children: React.ReactNode 
         type={legalModal.type} 
         onClose={() => setLegalModal({ isOpen: false, type: null })} 
       />
+      <CookieConsent onOpenPrivacy={() => openModal('privacy')} />
     </div>
   );
 }
