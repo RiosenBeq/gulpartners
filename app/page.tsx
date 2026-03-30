@@ -112,6 +112,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Leading Minds: Founding Partners Sync */}
+      <section className="py-48 bg-white overflow-hidden border-t border-gray-100">
+        <div className="max-w-7xl mx-auto px-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
+             <div className="group reveal-up">
+                <div className="aspect-[3/4] overflow-hidden relative shadow-2xl mb-12">
+                   <img 
+                      src="https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg" 
+                      alt="Av. LL.M. Batuhan Bulut"
+                      className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
+                   />
+                </div>
+                <h3 className="font-serif text-5xl font-bold text-primary-navy group-hover:text-secondary-gold transition-colors">Av. LL.M. Batuhan Bulut</h3>
+             </div>
+             <div className="group reveal-up delay-200">
+                <div className="aspect-[3/4] overflow-hidden relative shadow-2xl mb-12">
+                   <img 
+                      src="https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg" 
+                      alt="Av. Ferdi Gül"
+                      className="w-full h-full object-cover grayscale transition-all duration-[1.5s] group-hover:grayscale-0 group-hover:scale-105"
+                   />
+                </div>
+                <h3 className="font-serif text-5xl font-bold text-primary-navy group-hover:text-secondary-gold transition-colors">Av. Ferdi Gül</h3>
+             </div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Grid: Bento Layout */}
       <section className="py-48 bg-surface-low border-y border-gray-100">
         <div className="max-w-7xl mx-auto px-12">

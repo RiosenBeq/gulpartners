@@ -6,27 +6,27 @@ export default function Team() {
     {
       id: 1,
       name: 'Av. LL.M. Batuhan Bulut',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/752a61fc-360e-486f-81b1-7a2ea41f1c90.jpg',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg',
     },
     {
       id: 2,
       name: 'Av. Ferdi Gül',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg',
     },
     {
       id: 3,
       name: 'Av. Ceren Akgün',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-2.png',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/752a61fc-360e-486f-81b1-7a2ea41f1c90.jpg',
     },
     {
       id: 4,
       name: 'Av. Türkan Topçu',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-3.png',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg',
     },
     {
       id: 5,
       name: 'Av. Sümeyye Avcı',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg',
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-2.png',
     },
     {
       id: 6,
@@ -36,7 +36,7 @@ export default function Team() {
     {
       id: 7,
       name: 'Menekşe Çelik',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg', // Adjusted photo mapping
+      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-3.png',
     },
   ];
 
