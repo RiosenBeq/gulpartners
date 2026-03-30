@@ -8,7 +8,7 @@ export default function Expertise() {
       title: 'Gayrimenkul ve Kira Hukuku',
       subtitle: 'Mülkiyet & Kentsel Dönüşüm',
       description: 'Tapu iptali ve tescili, kat karşılığı inşaat sözleşmeleri ve kentsel dönüşüm süreçlerinde uçtan uca hukuki destek sağlıyoruz.',
-      image: 'https://images.unsplash.com/photo-1449844908441-8829872d2607?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1460317442991-0ec2392c676d?q=80&w=2600&auto=format&fit=crop',
       features: ['Kentsel Dönüşüm', 'Tapu Tescil', 'Kira Kontratları', 'İmar Uygulamaları']
     },
     {
@@ -16,7 +16,7 @@ export default function Expertise() {
       title: 'İş ve Sosyal Güvenlik Hukuku',
       subtitle: 'Kurumsal Uyum Stratejileri',
       description: 'İşçi-işveren ilişkilerinin düzenlenmesi, kıdem-ihbar tazminatları ve sendikal süreçlerin yönetiminde uzman kadromuzla yanınızdayız.',
-      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1521791136064-7986c2959210?q=80&w=2600&auto=format&fit=crop',
       features: ['İşe İade Davaları', 'Kıdem Tazminatı', 'Hizmet Tespiti', 'İş Kazaları']
     },
     {
@@ -24,7 +24,7 @@ export default function Expertise() {
       title: 'İcra ve İflas Hukuku',
       subtitle: 'Alacak & Risk Yönetimi',
       description: 'Alacak tahsil süreçleri, konkordato ilanları ve şirketlerin finansal yapılandırma süreçlerini profesyonel bir titizlikle yönetiyoruz.',
-      image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1505664194779-8beaceb93744?q=80&w=2600&auto=format&fit=crop',
       features: ['Alacak Tahsili', 'Konkordato', 'İflas Erteleme', 'Rehin Hukuku']
     },
     {
@@ -32,7 +32,7 @@ export default function Expertise() {
       title: 'Sözleşmeler ve Ticaret Hukuku',
       subtitle: 'Global Ticaret Hukuku',
       description: 'Yerli ve yabancı ortaklı şirketlerin kuruluş, birleşme, devralma ve günlük ticari operasyonlarının hukuki zeminini oluşturuyoruz.',
-      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2600&auto=format&fit=crop',
       features: ['Şirket Kuruluşu', 'M&A Süreçleri', 'Haksız Rekabet', 'Genel Kurul Yönetimi']
     },
     {
@@ -40,7 +40,7 @@ export default function Expertise() {
       title: 'Ceza ve İnfaz Hukuku',
       subtitle: 'Kararlı & Stratejik Savunma',
       description: 'Ekonomik ve bilişim suçları başta olmak üzere, soruşturma ve kovuşturma evrelerinde stratejik savunma çözümleri sunuyoruz.',
-      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2600&auto=format&fit=crop',
       features: ['Ağır Ceza', 'Bilişim Suçları', 'Ekonomik Suçlar', 'İnfaz Hukuku']
     },
     {
@@ -48,7 +48,7 @@ export default function Expertise() {
        title: 'Marka ve Fikri Mülkiyet Hukuku',
        subtitle: 'İnovasyonun Mutlak Korunması',
        description: 'Marka, patent ve endüstriyel tasarım tescilleri ile bu hakların ihlali durumunda koruma süreçlerini yönetiyoruz.',
-       image: 'https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2000&auto=format&fit=crop',
+       image: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2600&auto=format&fit=crop',
        features: ['Marka Tescili', 'Patent Hakları', 'Telif Hakları', 'Tescil İptali']
     },
     {
@@ -56,7 +56,7 @@ export default function Expertise() {
       title: 'Tazminat ve Değer Kaybı',
       subtitle: 'Adil Hak Kazanımı',
       description: 'Trafik kazaları, sigorta hukuku ve iş kazaları sonrası oluşan maddi-manevi zararların ve araç değer kaybı süreçlerinin takibi.',
-      image: 'https://images.unsplash.com/photo-1453948588355-75e888c99a5d?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1453948588355-75e888c99a5d?q=80&w=2600&auto=format&fit=crop',
       features: ['Maddi Tazminat', 'Değer Kaybı', 'Destekten Yoksunluk', 'Maluliyet']
     },
     {
@@ -64,7 +64,7 @@ export default function Expertise() {
       title: 'Boşanma ve Miras Hukuku',
       subtitle: 'Hassas Süreç Yönetimi',
       description: 'Anlaşmalı ve çekişmeli boşanma, mal rejimi tasfiyesi, velayet ve miras paylaşımı konularında hassas bir süreç yönetimi.',
-      image: 'https://images.unsplash.com/photo-1533227268408-a774695d9ae9?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1593115057322-e94b77572f20?q=80&w=2600&auto=format&fit=crop',
       features: ['Boşanma', 'Mal Paylaşımı', 'Vasiyetname', 'İzale-i Şuyu']
     },
     {
@@ -72,7 +72,7 @@ export default function Expertise() {
       title: 'Alternatif Uyuşmazlık Çözümleri',
       subtitle: 'Moderne Çözüm Metotları',
       description: 'Arabuluculuk süreçlerinde profesyonel danışmanlık ve uyuşmazlıkların mahkemeye gitmeden hızlıca çözümlenmesi.',
-      image: 'https://images.unsplash.com/photo-1544650039-2287232258aa?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2600&auto=format&fit=crop',
       features: ['Arabuluculuk', 'Uzlaştırma', 'Protokol Hazırlama', 'Tahkim']
     },
     {
@@ -80,7 +80,7 @@ export default function Expertise() {
       title: 'İmar, İdare ve Vergi Hukuku',
       subtitle: 'Kamu İlişkilerinde Denge',
       description: 'İdari işlemlerin iptali, tam yargı davaları ve vergi cezalarına karşı hukuki koruma ve itiraz süreçleri.',
-      image: 'https://images.unsplash.com/photo-1541888946425-d81bb19480c5?q=80&w=2000&auto=format&fit=crop',
+      image: 'https://images.unsplash.com/photo-1523293182086-7651a899d37f?q=80&w=2600&auto=format&fit=crop',
       features: ['İptal Davaları', 'Vergi İtirazları', 'İmar Davaları', 'Kamulaştırma']
     }
   ];
@@ -99,8 +99,8 @@ export default function Expertise() {
         <div className="max-w-7xl mx-auto px-12 relative z-10">
           <div className="max-w-5xl">
             <span className="text-secondary-gold font-sans uppercase tracking-[0.6em] text-[11px] font-bold mb-10 block animate-fade-in">UZMANLIK ALANLARIMIZ</span>
-            <h1 className="font-serif text-6xl md:text-[9rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-16 italic">
-              Disiplinle <br/> <span className="text-gray-400 not-italic">Şekillenen Adalet.</span>
+            <h1 className="font-serif text-5xl md:text-[9rem] font-bold leading-[0.85] text-white tracking-[-0.04em] mb-12 italic">
+              Disiplinle <br/> <span className="text-gray-400 not-italic text-4xl md:text-[9rem]">Şekillenen Adalet.</span>
             </h1>
             <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
               Gül Partners, disiplinlerarası bir yaklaşımla karmaşık hukuki sorunları mimari bir hassasiyetle çözer. Karmaşıklığı stratejik bir avantaja dönüştüren 10 ana disiplinde hizmetinizdeyiz.
@@ -109,7 +109,7 @@ export default function Expertise() {
         </div>
       </header>
 
-      <main className="max-w-[1440px] mx-auto px-12 pb-48 pt-32">
+      <main className="max-w-[1440px] mx-auto px-6 md:px-12 pb-32 md:pb-48 pt-20 md:pt-32">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-32 items-start">
           
           {/* Main List */}

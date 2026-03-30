@@ -51,15 +51,15 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-end">
             <div className="lg:col-span-8">
               <span className="inline-block text-secondary-gold font-sans tracking-[0.6em] text-[10px] font-bold mb-12 uppercase">Geleceğin Hukuk Mimarları</span>
-              <h1 className="font-serif text-6xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-16 italic">
+              <h1 className="font-serif text-5xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 md:mb-16 italic">
                 Gül <br />
                 <span className="text-gray-100 not-italic">Partners.</span>
               </h1>
-              <div className="flex flex-wrap gap-8 items-center">
-                <Link href="/uzmanlik" className="bg-white text-primary-navy px-14 py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-secondary-gold hover:text-white transition-all duration-700 shadow-2xl">
+              <div className="flex flex-col sm:flex-row gap-6 md:gap-8 items-start sm:items-center">
+                <Link href="/uzmanlik" className="w-full sm:w-auto bg-white text-primary-navy px-10 md:px-14 py-5 md:py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-secondary-gold hover:text-white transition-all duration-700 shadow-2xl text-center">
                   KURUMSAL ÇÖZÜMLER
                 </Link>
-                <Link href="/iletisim" className="bg-secondary-gold text-white px-14 py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-primary-navy transition-all duration-700 shadow-xl border border-secondary-gold">
+                <Link href="/iletisim" className="w-full sm:w-auto bg-secondary-gold text-white px-10 md:px-14 py-5 md:py-7 font-bold text-[10px] tracking-[0.4em] uppercase hover:bg-white hover:text-primary-navy transition-all duration-700 shadow-xl border border-secondary-gold text-center">
                   İLETİŞİME GEÇİN
                 </Link>
               </div>
@@ -74,7 +74,7 @@ export default function Home() {
       </section>
 
       {/* Philosophy Section: Split Layout */}
-      <section className="py-48 max-w-7xl mx-auto px-12">
+      <section className="py-24 md:pt-48 md:pb-24 max-w-7xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-32 items-center">
           <div className="relative group">
             <div className="aspect-[4/5] overflow-hidden grayscale brightness-75 hover:grayscale-0 transition-all duration-[2s] shadow-2xl">
@@ -90,7 +90,7 @@ export default function Home() {
             </div>
           </div>
           <div className="space-y-16">
-            <h2 className="font-serif text-6xl font-bold text-primary-navy leading-[1.1] tracking-tight">
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary-navy leading-[1.1] tracking-tight">
               Değerlerinizi <br/>
               <span className="italic font-light text-gray-400">Koruma Altına Alıyoruz.</span>
             </h2>
@@ -113,7 +113,7 @@ export default function Home() {
       </section>
 
       {/* Leading Minds: Founding Partners Sync */}
-      <section className="py-48 bg-white overflow-hidden border-t border-gray-100">
+      <section className="pt-24 pb-48 bg-white overflow-hidden border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-32">
              <div className="group reveal-up">

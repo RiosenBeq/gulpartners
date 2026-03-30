@@ -6,37 +6,37 @@ export default function Team() {
     {
       id: 1,
       name: 'Av. LL.M. Batuhan Bulut',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/9b8f5f8b-9db0-4245-a1ee-09cd07e6c17a.jpeg',
+      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 2,
       name: 'Av. Ferdi Gül',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.080-2.jpeg',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 3,
       name: 'Av. Ceren Akgün',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/752a61fc-360e-486f-81b1-7a2ea41f1c90.jpg',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 4,
       name: 'Av. Türkan Topçu',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/03/WhatsApp-Image-2026-03-03-at-17.11.08-3.jpeg',
+      image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 5,
       name: 'Av. Sümeyye Avcı',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-2.png',
+      image: 'https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 6,
       name: 'Av. Anıl Pederlioğlu',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-1.png',
+      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2000&auto=format&fit=crop',
     },
     {
       id: 7,
       name: 'Menekşe Çelik',
-      image: 'https://www.bulutpartners.com/wp-content/uploads/2026/01/Adsiz-tasarim-3.png',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=2000&auto=format&fit=crop',
     },
   ];
 
@@ -57,9 +57,9 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-12 relative z-10">
           <div className="max-w-4xl">
             <span className="inline-block text-secondary-gold font-sans tracking-[0.5em] text-[10px] font-bold mb-10 uppercase animate-fade-in">Disiplin & Vizyon</span>
-            <h1 className="font-serif text-6xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 italic">
+            <h1 className="font-serif text-5xl md:text-[9rem] font-bold text-white leading-[0.85] tracking-[-0.04em] mb-12 italic">
               Zihnin <br />
-              <span className="text-gray-400 not-italic">Hukuki Gücü.</span>
+              <span className="text-gray-400 not-italic text-4xl md:text-[9rem]">Hukuki Gücü.</span>
             </h1>
             <p className="text-2xl text-slate-300 font-light max-w-2xl leading-relaxed italic border-l border-white/10 pl-10">
               Gül & Partners ekibi, her biri alanında derinleşmiş, stratejik analitik kabiliyete sahip hukuk mimarlarından oluşur.
@@ -70,8 +70,8 @@ export default function Team() {
 
       {/* Leading Minds Split Layout */}
       <section className="py-48 bg-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-40 items-center">
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 md:gap-40 items-center">
             {foundingPartners.map((partner) => (
               <div key={partner.id} className="group reveal-up opacity-100 translate-y-0">
                 <div className="aspect-[3/4] overflow-hidden relative shadow-[0_50px_100px_-20px_rgba(0,0,0,0.15)] mb-16">
@@ -99,7 +99,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-12">
           <div className="mb-32 text-left max-w-2xl">
             <span className="text-secondary-gold text-[10px] font-sans tracking-[0.4em] uppercase font-bold mb-6 block">Kolektif Uzmanlık</span>
-            <h2 className="font-serif text-6xl font-bold text-primary-navy leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-gray-400">Takvim Yönetimi.</span></h2>
+            <h2 className="font-serif text-4xl md:text-6xl font-bold text-primary-navy leading-tight tracking-tight">Kusursuz Bir <br/><span className="italic font-light text-gray-400">Takvim Yönetimi.</span></h2>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-px bg-gray-200 border border-gray-200 overflow-hidden shadow-2xl">
